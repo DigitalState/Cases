@@ -1,0 +1,18 @@
+web8015:
+    build: .
+    environment:
+        SYMFONY_ENV: dev
+    links:
+        - database8015
+    volumes:
+        - .:/app
+    ports:
+        - 8015:80
+
+database8015:
+    image: mysql
+    environment:
+        MYSQL_ROOT_PASSWORD: root
+        MYSQL_DATABASE: ds_cases
+        MYSQL_USER: ds_cases
+        MYSQL_PASSWORD: ds_cases

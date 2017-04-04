@@ -1,0 +1,7 @@
+services:
+    ds_case.serializer.context_builder.case:
+        decorates: api_platform.serializer.context_builder
+        class: Ds\Bundle\CaseBundle\Serializer\ContextBuilder\CaseContextBuilder
+        arguments:
+            - "@ds_case.serializer.context_builder.case.inner"
+            - "@security.authorization_checker"

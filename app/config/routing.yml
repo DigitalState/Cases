@@ -1,0 +1,7 @@
+api:
+    resource: .
+    type: api_platform
+
+#ds_case:
+#    resource: "@DsCaseBundle/Action/"
+#    type: annotation

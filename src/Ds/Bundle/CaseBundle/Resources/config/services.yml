@@ -1,0 +1,3 @@
+services:
+    ds_case.service.case:
+        class: Ds\Bundle\CaseBundle\Service\CaseService
