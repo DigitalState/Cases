@@ -1,3 +1,6 @@
-parameters:
+imports:
+    - { resource: "../../vendor/digitalstate/core/src/Ds/Component/Entity/Resources/config/event_listener/uuid.yml" }
+    - { resource: "../../vendor/digitalstate/core/src/Ds/Component/Entity/Resources/config/event_listener/translation.yml" }
+    - { resource: "../../vendor/digitalstate/core/src/Ds/Component/Entity/Resources/config/event_listener/request/locale.yml" }
 
 services:

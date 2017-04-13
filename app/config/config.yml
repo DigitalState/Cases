@@ -1,7 +1,5 @@
 imports:
-    - { resource: parameters.yml }
     - { resource: security.yml }
-    - { resource: listeners.yml }
     - { resource: services.yml }
 
 parameters:
@@ -9,7 +7,7 @@ parameters:
 
 framework:
     #esi: ~
-    #translator: { fallbacks: ["%locale%"] }
+    translator: { fallbacks: ["%locale%"] }
     secret: "%secret%"
     router:
         resource: "%kernel.root_dir%/config/routing.yml"
@@ -45,42 +43,20 @@ doctrine:
         user: "%database_user%"
         password: "%database_password%"
         charset: UTF8
-
     orm:
         auto_generate_proxy_classes: "%kernel.debug%"
         naming_strategy: doctrine.orm.naming_strategy.underscore
         auto_mapping: true
-        mappings:
-            gedmo_translatable:
-                type: annotation
-                prefix: Gedmo\Translatable\Entity
-                dir: "%kernel.root_dir%/../vendor/gedmo/doctrine-extensions/lib/Gedmo/Translatable/Entity"
-                alias: GedmoTranslatable
-                is_bundle: false
-            gedmo_translator:
-                type: annotation
-                prefix: Gedmo\Translator\Entity
-                dir: "%kernel.root_dir%/../vendor/gedmo/doctrine-extensions/lib/Gedmo/Translator/Entity"
-                alias: GedmoTranslator
-                is_bundle: false
-            gedmo_loggable:
-                type: annotation
-                prefix: Gedmo\Loggable\Entity
-                dir: "%kernel.root_dir%/../vendor/gedmo/doctrine-extensions/lib/Gedmo/Loggable/Entity"
-                alias: GedmoLoggable
-                is_bundle: false
-            gedmo_tree:
-                type: annotation
-                prefix: Gedmo\Tree\Entity
-                dir: "%kernel.root_dir%/../vendor/gedmo/doctrine-extensions/lib/Gedmo/Tree/Entity"
-                alias: GedmoTree
-                is_bundle: false
 
-stof_doctrine_extensions:
-    default_locale: "%locale%"
-    orm:
-        default:
-            timestampable: true
+knp_doctrine_behaviors:
+    blameable: true
+    geocodable: false
+    loggable: false
+    sluggable: false
+    sortable: false
+    timestampable: true
+    translatable: true
+    tree: false
 
 swiftmailer:
     transport: "%mailer_transport%"

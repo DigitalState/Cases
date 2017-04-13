@@ -1,3 +1,6 @@
+imports:
+    - { resource: "../../vendor/digitalstate/core/src/Ds/Component/Security/Resources/config/security.yml" }
+
 security:
     providers:
         in_memory:

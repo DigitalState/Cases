@@ -1,7 +1,14 @@
 services:
     ds_case.serializer.context_builder.case:
         decorates: api_platform.serializer.context_builder
-        class: Ds\Bundle\CaseBundle\Serializer\ContextBuilder\CaseContextBuilder
+        class: Ds\Component\Security\Serializer\ContextBuilder\AuthorizationContextBuilder
         arguments:
+            - Ds\Bundle\CaseBundle\Entity\CaseEntity
+            -
+                ROLE_ADMIN:
+                    normalization:
+                        - case_output_admin
+                    denormalization:
+                        - case_input_admin
             - "@ds_case.serializer.context_builder.case.inner"
             - "@security.authorization_checker"
