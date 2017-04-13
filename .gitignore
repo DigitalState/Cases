@@ -16,4 +16,3 @@
 !var/SymfonyRequirements.php
 /vendor/
 /web/bundles/
-/web/adminer.php
