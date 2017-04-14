@@ -67,6 +67,7 @@ class CaseEntity implements Uuidentifiable, Translatable, Ownable, Handleable
      * @Serializer\Groups({"case_output"})
      * @Assert\Uuid
      * @ORM\Column(name="uuid", type="guid", unique=true)
+     * @Assert\Uuid
      */
     protected $uuid;
 
