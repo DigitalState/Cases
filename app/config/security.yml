@@ -2,20 +2,5 @@ imports:
     - { resource: "../../vendor/digitalstate/core/src/Ds/Component/Security/Resources/config/security.yml" }
 
 security:
-    providers:
-        jwt:
-            lexik_jwt: ~
-
-    firewalls:
-        dev:
-            pattern: ^/(_(profiler|wdt)|css|images|js)/
-            security: false
-
-        main:
-            pattern: ^/
-            stateless: true
-            anonymous: true
-            lexik_jwt: ~
-
     access_control:
         - { path: ^/cases, role: IS_AUTHENTICATED_FULLY }
