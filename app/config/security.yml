@@ -3,8 +3,8 @@ imports:
 
 security:
     providers:
-        in_memory:
-            memory: ~
+        jwt:
+            lexik_jwt: ~
 
     firewalls:
         dev:
@@ -12,4 +12,10 @@ security:
             security: false
 
         main:
-            anonymous: ~
+            pattern: ^/
+            stateless: true
+            anonymous: true
+            lexik_jwt: ~
+
+    access_control:
+        - { path: ^/cases, role: IS_AUTHENTICATED_FULLY }
