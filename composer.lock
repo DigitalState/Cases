@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "b0cc6ae2fcfe81ea78c2be382c71370d",
+    "content-hash": "63152b4e98b6706e60a809cd1e5caf68",
     "packages": [
         {
             "name": "api-platform/core",
@@ -212,17 +212,18 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/DigitalState/Core.git",
-                "reference": "77a6f0def937aacd87de996f20aa21e41d4c133b"
+                "reference": "b8f1a31a679a6cce3644622a44b5e12e277417ce"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/DigitalState/Core/zipball/77a6f0def937aacd87de996f20aa21e41d4c133b",
-                "reference": "77a6f0def937aacd87de996f20aa21e41d4c133b",
+                "url": "https://api.github.com/repos/DigitalState/Core/zipball/b8f1a31a679a6cce3644622a44b5e12e277417ce",
+                "reference": "b8f1a31a679a6cce3644622a44b5e12e277417ce",
                 "shasum": ""
             },
             "require": {
                 "api-platform/core": "^2.0",
                 "doctrine/orm": "^2.5",
+                "lexik/jwt-authentication-bundle": "^2.2",
                 "php": ">=7.0",
                 "ramsey/uuid": "^3.6",
                 "symfony/symfony": "3.2.*"
@@ -242,7 +243,7 @@
             ],
             "description": "The DigitalState Core",
             "homepage": "https://digitalstate.ca",
-            "time": "2017-04-13 11:14:24"
+            "time": "2017-04-14 10:52:20"
         },
         {
             "name": "doctrine/annotations",
