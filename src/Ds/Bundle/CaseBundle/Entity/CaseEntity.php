@@ -2,10 +2,11 @@
 
 namespace Ds\Bundle\CaseBundle\Entity;
 
+use Ds\Component\Entity\Entity\Identifiable;
 use Ds\Component\Entity\Entity\Uuidentifiable;
+use Ds\Component\Entity\Entity\Identitiable;
 use Ds\Component\Entity\Entity\Translatable;
 use Ds\Component\Entity\Entity\Ownable;
-use Ds\Component\Entity\Entity\Handleable;
 use Ds\Component\Entity\Entity\Accessor;
 use Knp\DoctrineBehaviors\Model As Behavior;
 
@@ -35,26 +36,25 @@ use Symfony\Bridge\Doctrine\Validator\Constraints as ORMAssert;
  * @ORM\HasLifecycleCallbacks
  * @ORMAssert\UniqueEntity(fields="uuid")
  */
-class CaseEntity implements Uuidentifiable, Translatable, Ownable, Handleable
+class CaseEntity implements Identifiable, Uuidentifiable, Identitiable, Ownable, Translatable
 {
     use Behavior\Translatable\Translatable;
     use Behavior\Timestampable\Timestampable;
-    use Behavior\Blameable\Blameable;
     use Behavior\SoftDeletable\SoftDeletable;
 
     use Accessor\Id;
     use Accessor\Uuid;
     use Accessor\Owner;
     use Accessor\OwnerUuid;
-    use Accessor\Handler;
-    use Accessor\HandlerUuid;
+    use Accessor\Identity;
+    use Accessor\IdentityUuid;
     use Accessor\Translation\Title;
     use Accessor\Translation\Presentation;
 
     /**
      * @var integer
      * @ApiProperty(identifier=false)
-     * @Serializer\Groups({"case_output_user"})
+     * @Serializer\Groups({"case_output_tier_2"})
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="AUTO")
      * @ORM\Column(name="id", type="integer")
@@ -64,7 +64,7 @@ class CaseEntity implements Uuidentifiable, Translatable, Ownable, Handleable
     /**
      * @var string
      * @ApiProperty(identifier=true)
-     * @Serializer\Groups({"case_output"})
+     * @Serializer\Groups({"case_output_tier_1"})
      * @Assert\Uuid
      * @ORM\Column(name="uuid", type="guid", unique=true)
      * @Assert\Uuid
@@ -73,43 +73,42 @@ class CaseEntity implements Uuidentifiable, Translatable, Ownable, Handleable
 
     /**
      * @var \DateTime
-     * @Serializer\Groups({"case_output_user"})
+     * @Serializer\Groups({"case_output_tier_2"})
      */
     protected $createdAt;
 
     /**
      * @var \DateTime
-     * @Serializer\Groups({"case_output_user"})
+     * @Serializer\Groups({"case_output_tier_2"})
      */
     protected $updatedAt;
 
     /**
      * @var \DateTime
-     * @Serializer\Groups({"case_output_user"})
+     * @Serializer\Groups({"case_output_tier_2"})
      */
     protected $deletedAt;
 
     /**
      * @var string
-     * @Serializer\Groups({"case_output_user"})
+     * @Serializer\Groups({"case_output_tier_2", "case_input_tier_2"})
+     * @ORM\Column(name="identity", type="string", length=255, nullable=true)
+     * @Assert\NotBlank
      */
-    protected $createdBy;
+    protected $identity;
 
     /**
      * @var string
-     * @Serializer\Groups({"case_output_user"})
+     * @Serializer\Groups({"case_output_tier_2", "case_input_tier_2"})
+     * @ORM\Column(name="identity_uuid", type="guid", nullable=true)
+     * @Assert\NotBlank
+     * @Assert\Uuid
      */
-    protected $updatedBy;
+    protected $identityUuid;
 
     /**
      * @var string
-     * @Serializer\Groups({"case_output_user"})
-     */
-    protected $deletedBy;
-
-    /**
-     * @var string
-     * @Serializer\Groups({"case_output_user", "case_input_user"})
+     * @Serializer\Groups({"case_output_tier_2", "case_input_tier_2"})
      * @ORM\Column(name="`owner`", type="string", length=255, nullable=true)
      * @Assert\NotBlank
      */
@@ -117,7 +116,7 @@ class CaseEntity implements Uuidentifiable, Translatable, Ownable, Handleable
 
     /**
      * @var string
-     * @Serializer\Groups({"case_output_user", "case_input_user"})
+     * @Serializer\Groups({"case_output_tier_2", "case_input_tier_2"})
      * @ORM\Column(name="owner_uuid", type="guid", nullable=true)
      * @Assert\NotBlank
      * @Assert\Uuid
@@ -125,25 +124,8 @@ class CaseEntity implements Uuidentifiable, Translatable, Ownable, Handleable
     protected $ownerUuid;
 
     /**
-     * @var string
-     * @Serializer\Groups({"case_output_user", "case_input_user"})
-     * @ORM\Column(name="`handler`", type="string", length=255, nullable=true)
-     * @Assert\NotBlank
-     */
-    protected $handler;
-
-    /**
-     * @var string
-     * @Serializer\Groups({"case_output_user", "case_input_user"})
-     * @ORM\Column(name="handler_uuid", type="guid", nullable=true)
-     * @Assert\NotBlank
-     * @Assert\Uuid
-     */
-    protected $handlerUuid;
-
-    /**
      * @var array
-     * @Serializer\Groups({"case_output", "case_input_user"})
+     * @Serializer\Groups({"case_output_tier_1", "case_input_tier_2"})
      * @Assert\Type("array")
      * @Assert\NotBlank
      * @Translate
@@ -156,6 +138,5 @@ class CaseEntity implements Uuidentifiable, Translatable, Ownable, Handleable
     public function __construct()
     {
         $this->title = [];
-        $this->presentation = [];
     }
 }

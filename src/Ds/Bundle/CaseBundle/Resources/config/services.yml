@@ -1,3 +1,23 @@
 services:
     ds_case.service.case:
         class: Ds\Bundle\CaseBundle\Service\CaseService
+
+    ds_case.doctrine.orm.query_extension.anonymous:
+        class: Ds\Component\Security\Doctrine\ORM\QueryExtension\AnonymousExtension
+        public: false
+        autowire: true
+        arguments:
+            - Ds\Bundle\CaseBundle\Entity\CaseEntity
+        tags:
+            - { name: api_platform.doctrine.orm.query_extension.collection, priority: 9 }
+            - { name: api_platform.doctrine.orm.query_extension.item }
+
+    ds_case.doctrine.orm.query_extension.individual:
+        class: Ds\Component\Security\Doctrine\ORM\QueryExtension\IndividualExtension
+        public: false
+        autowire: true
+        arguments:
+            - Ds\Bundle\CaseBundle\Entity\CaseEntity
+        tags:
+            - { name: api_platform.doctrine.orm.query_extension.collection, priority: 9 }
+            - { name: api_platform.doctrine.orm.query_extension.item }

@@ -17,7 +17,6 @@ class CaseEntityTranslation
 {
     use Behavior\Translatable\Translation;
     use Behavior\Timestampable\Timestampable;
-    use Behavior\Blameable\Blameable;
     use Behavior\SoftDeletable\SoftDeletable;
 
     use Accessor\Title;
