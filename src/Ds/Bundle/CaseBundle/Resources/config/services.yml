@@ -2,6 +2,9 @@ services:
     ds_case.service.case:
         class: Ds\Bundle\CaseBundle\Service\CaseService
 
+    ds_case.service.case_association:
+        class: Ds\Bundle\CaseBundle\Service\CaseAssociationService
+
     ds_case.doctrine.orm.query_extension.anonymous:
         class: Ds\Component\Security\Doctrine\ORM\QueryExtension\AnonymousExtension
         public: false

@@ -25,8 +25,8 @@ use Symfony\Bridge\Doctrine\Validator\Constraints as ORMAssert;
  *      shortName="Case",
  *      attributes={
  *          "filters"={"ds_case.case.filter"},
- *          "normalization_context"={"groups"={"case_output"}},
- *          "denormalization_context"={"groups"={"case_input"}}
+ *          "normalization_context"={"groups"={}},
+ *          "denormalization_context"={"groups"={}}
  *      }
  * )
  * @ORM\Entity(repositoryClass="Ds\Bundle\CaseBundle\Repository\CaseRepository")
@@ -54,7 +54,7 @@ class CaseEntity implements Identifiable, Uuidentifiable, Identitiable, Ownable,
     /**
      * @var integer
      * @ApiProperty(identifier=false)
-     * @Serializer\Groups({"case_output_tier_2"})
+     * @Serializer\Groups({"case_id"})
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="AUTO")
      * @ORM\Column(name="id", type="integer")
@@ -64,8 +64,7 @@ class CaseEntity implements Identifiable, Uuidentifiable, Identitiable, Ownable,
     /**
      * @var string
      * @ApiProperty(identifier=true)
-     * @Serializer\Groups({"case_output_tier_1"})
-     * @Assert\Uuid
+     * @Serializer\Groups({"case_uuid"})
      * @ORM\Column(name="uuid", type="guid", unique=true)
      * @Assert\Uuid
      */
@@ -73,25 +72,25 @@ class CaseEntity implements Identifiable, Uuidentifiable, Identitiable, Ownable,
 
     /**
      * @var \DateTime
-     * @Serializer\Groups({"case_output_tier_2"})
+     * @Serializer\Groups({"case_created_at"})
      */
     protected $createdAt;
 
     /**
      * @var \DateTime
-     * @Serializer\Groups({"case_output_tier_2"})
+     * @Serializer\Groups({"case_updated_at"})
      */
     protected $updatedAt;
 
     /**
      * @var \DateTime
-     * @Serializer\Groups({"case_output_tier_2"})
+     * @Serializer\Groups({"case_deleted_at"})
      */
     protected $deletedAt;
 
     /**
      * @var string
-     * @Serializer\Groups({"case_output_tier_2", "case_input_tier_2"})
+     * @Serializer\Groups({"case_identity"})
      * @ORM\Column(name="identity", type="string", length=255, nullable=true)
      * @Assert\NotBlank
      */
@@ -99,7 +98,7 @@ class CaseEntity implements Identifiable, Uuidentifiable, Identitiable, Ownable,
 
     /**
      * @var string
-     * @Serializer\Groups({"case_output_tier_2", "case_input_tier_2"})
+     * @Serializer\Groups({"case_identity_uuid"})
      * @ORM\Column(name="identity_uuid", type="guid", nullable=true)
      * @Assert\NotBlank
      * @Assert\Uuid
@@ -108,7 +107,7 @@ class CaseEntity implements Identifiable, Uuidentifiable, Identitiable, Ownable,
 
     /**
      * @var string
-     * @Serializer\Groups({"case_output_tier_2", "case_input_tier_2"})
+     * @Serializer\Groups({"case_owner"})
      * @ORM\Column(name="`owner`", type="string", length=255, nullable=true)
      * @Assert\NotBlank
      */
@@ -116,7 +115,7 @@ class CaseEntity implements Identifiable, Uuidentifiable, Identitiable, Ownable,
 
     /**
      * @var string
-     * @Serializer\Groups({"case_output_tier_2", "case_input_tier_2"})
+     * @Serializer\Groups({"case_owner_uuid"})
      * @ORM\Column(name="owner_uuid", type="guid", nullable=true)
      * @Assert\NotBlank
      * @Assert\Uuid
@@ -125,7 +124,7 @@ class CaseEntity implements Identifiable, Uuidentifiable, Identitiable, Ownable,
 
     /**
      * @var array
-     * @Serializer\Groups({"case_output_tier_1", "case_input_tier_2"})
+     * @Serializer\Groups({"case_title"})
      * @Assert\Type("array")
      * @Assert\NotBlank
      * @Translate
@@ -133,10 +132,71 @@ class CaseEntity implements Identifiable, Uuidentifiable, Identitiable, Ownable,
     protected $title;
 
     /**
+     * @var \Doctrine\Common\Collections\ArrayCollection
+     *
+     * @Serializer\Groups({"case_associations"})
+     * @ORM\OneToMany(targetEntity="Ds\Bundle\CaseBundle\Entity\CaseAssociation", mappedBy="case", cascade={"persist", "remove"})
+     */
+    protected $associations; # region accessors
+
+    /**
+     * Add association
+     *
+     * @param \Ds\Bundle\CaseBundle\Entity\CaseAssociation $association
+     * @return \Ds\Bundle\CaseBundle\Entity\CaseEntity
+     */
+    public function addAssociation(CaseAssociation $association)
+    {
+        if (!$this->associations->contains($association)) {
+            $association->setCase($this);
+            $this->associations->add($association);
+        }
+
+        return $this;
+    }
+
+    /**
+     * Remove association
+     *
+     * @param \Ds\Bundle\CaseBundle\Entity\CaseAssociation $association
+     * @return \Ds\Bundle\CaseBundle\Entity\CaseEntity
+     */
+    public function removeAssociation(CaseAssociation $association)
+    {
+        if ($this->associations->contains($association)) {
+            $this->associations->removeElement($association);
+        }
+
+        return $this;
+    }
+
+    /**
+     * Get associations
+     *
+     * @return array
+     */
+    public function getAssociations()
+    {
+        return $this->associations->toArray();
+    }
+
+    # endregion
+
+    /**
      * Constructor
      */
     public function __construct()
     {
         $this->title = [];
+    }
+
+    /**
+     * Returns translation entity class name
+     *
+     * @return string
+     */
+    public static function getTranslationEntityClass()
+    {
+        return 'CaseTranslation';
     }
 }

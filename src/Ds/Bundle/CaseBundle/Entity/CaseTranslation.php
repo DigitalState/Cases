@@ -13,7 +13,7 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\Entity
  * @ORM\Table(name="ds_case_translation")
  */
-class CaseEntityTranslation
+class CaseTranslation
 {
     use Behavior\Translatable\Translation;
     use Behavior\Timestampable\Timestampable;
@@ -26,4 +26,14 @@ class CaseEntityTranslation
      * @ORM\Column(name="title", type="string", length=255)
      */
     protected $title;
+
+    /**
+     * Returns the translatable entity class name.
+     *
+     * @return string
+     */
+    public static function getTranslatableEntityClass()
+    {
+        return 'CaseEntity';
+    }
 }
