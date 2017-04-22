@@ -2,19 +2,19 @@
 
 namespace Ds\Bundle\CaseBundle\Entity;
 
-use Ds\Component\Entity\Entity\Identifiable;
-use Ds\Component\Entity\Entity\Uuidentifiable;
-use Ds\Component\Entity\Entity\Identitiable;
-use Ds\Component\Entity\Entity\Translatable;
-use Ds\Component\Entity\Entity\Ownable;
-use Ds\Component\Entity\Entity\Accessor;
+use Ds\Component\Model\Type\Identifiable;
+use Ds\Component\Model\Type\Uuidentifiable;
+use Ds\Component\Model\Type\Identitiable;
+use Ds\Component\Model\Type\Translatable;
+use Ds\Component\Model\Type\Ownable;
+use Ds\Component\Model\Accessor;
 use Knp\DoctrineBehaviors\Model As Behavior;
 
 use ApiPlatform\Core\Annotation\ApiResource;
 use ApiPlatform\Core\Annotation\ApiProperty;
 use Symfony\Component\Serializer\Annotation As Serializer;
 use Symfony\Component\Validator\Constraints as Assert;
-use Ds\Component\Entity\Annotation\Translate;
+use Ds\Component\Model\Annotation\Translate;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Bridge\Doctrine\Validator\Constraints as ORMAssert;
 

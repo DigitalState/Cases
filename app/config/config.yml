@@ -92,3 +92,15 @@ api_platform:
     default_operation_path_resolver: api_platform.operation_path_resolver.dash
     eager_loading:
         force_eager: false
+
+ds_model:
+    behavior:
+        uuidentifiable: true
+        translatable: true
+        localizable: true
+
+ds_security:
+    token:
+        ip: true
+        client: true
+        identity: true

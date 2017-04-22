@@ -1,6 +1,3 @@
-imports:
-    - { resource: "../../vendor/digitalstate/core/src/Ds/Component/Security/Resources/config/security.yml" }
-
 security:
     firewalls:
         dev:
@@ -17,4 +14,6 @@ security:
                     - lexik_jwt_authentication.jwt_token_authenticator
 
     access_control:
+        - { path: ^/acl/permissions, role: IS_AUTHENTICATED_FULLY }
         - { path: ^/cases, role: IS_AUTHENTICATED_FULLY }
+        - { path: ^/case-associations, role: IS_AUTHENTICATED_FULLY }

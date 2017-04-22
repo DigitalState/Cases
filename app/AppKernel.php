@@ -26,6 +26,8 @@ class AppKernel extends Kernel
             new Nelmio\CorsBundle\NelmioCorsBundle(),
             new Knp\DoctrineBehaviors\Bundle\DoctrineBehaviorsBundle(),
             new Lexik\Bundle\JWTAuthenticationBundle\LexikJWTAuthenticationBundle(),
+            new Ds\Component\Model\Bridge\Symfony\Bundle\DsModelBundle(),
+            new Ds\Component\Security\Bridge\Symfony\Bundle\DsSecurityBundle(),
             new Ds\Bundle\CaseBundle\DsCaseBundle(),
         ];
 
