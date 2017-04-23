@@ -104,3 +104,6 @@ ds_security:
         ip: true
         client: true
         identity: true
+    filter:
+        anonymous: true
+        individual: true

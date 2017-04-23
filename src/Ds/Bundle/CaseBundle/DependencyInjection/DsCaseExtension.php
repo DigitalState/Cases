@@ -19,7 +19,7 @@ class DsCaseExtension extends Extension implements PrependExtensionInterface
     public function prepend(ContainerBuilder $container)
     {
         $loader = new Loader\YamlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
-        $loader->load('security.yml');
+        $loader->load('config.yml');
     }
 
     /**
