@@ -95,15 +95,15 @@ api_platform:
 
 ds_model:
     behavior:
-        uuidentifiable: true
-        translatable: true
-        localizable: true
+        uuidentifiable: ~
+        translatable: ~
+        localizable: ~
 
 ds_security:
     token:
-        ip: true
-        client: true
-        identity: true
+        ip: ~
+        client: ~
+        identity: ~
     filter:
-        anonymous: true
-        individual: true
+        anonymous: ~
+        individual: ~

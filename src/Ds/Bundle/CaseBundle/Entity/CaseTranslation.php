@@ -22,12 +22,6 @@ class CaseTranslation
     use Accessor\Title;
 
     /**
-     * @var string
-     * @ORM\Column(name="title", type="string", length=255)
-     */
-    protected $title;
-
-    /**
      * Returns the translatable entity class name.
      *
      * @return string
@@ -36,4 +30,10 @@ class CaseTranslation
     {
         return 'CaseEntity';
     }
+
+    /**
+     * @var string
+     * @ORM\Column(name="title", type="string", length=255)
+     */
+    protected $title;
 }
