@@ -8,9 +8,7 @@ use Ds\Component\Model\Type\Translatable;
 use Ds\Component\Model\Type\Ownable;
 use Ds\Component\Model\Type\Identitiable;
 use Ds\Component\Model\Accessor;
-use Ds\Component\Entity\Accessor as EntityAccessor;
 use Knp\DoctrineBehaviors\Model as Behavior;
-use Doctrine\Common\Collections\ArrayCollection;
 
 use ApiPlatform\Core\Annotation\ApiResource;
 use ApiPlatform\Core\Annotation\ApiProperty;
@@ -50,7 +48,6 @@ class CaseEntity implements Identifiable, Uuidentifiable, Ownable, Translatable,
     use Accessor\IdentityUuid;
     use Accessor\Translation\Title;
     use Accessor\Translation\Presentation;
-    use EntityAccessor\Associations;
 
     /**
      * Returns translation entity class name
@@ -151,18 +148,10 @@ class CaseEntity implements Identifiable, Uuidentifiable, Ownable, Translatable,
     protected $title;
 
     /**
-     * @var \Doctrine\Common\Collections\ArrayCollection
-     * @ApiProperty(readable=false, writable=false)
-     * @ORM\OneToMany(targetEntity="Ds\Bundle\CaseBundle\Entity\CaseAssociation", mappedBy="case", cascade={"persist", "remove"})
-     */
-    protected $associations;
-
-    /**
      * Constructor
      */
     public function __construct()
     {
         $this->title = [];
-        $this->associations = new ArrayCollection;
     }
 }

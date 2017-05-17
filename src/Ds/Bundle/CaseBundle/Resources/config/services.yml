@@ -2,22 +2,12 @@ services:
     ds_case.service.case:
         class: Ds\Bundle\CaseBundle\Service\CaseService
 
-    ds_case.service.case_association:
-        class: Ds\Bundle\CaseBundle\Service\CaseAssociationService
-
     ds_case.case.filter:
         parent: api_platform.doctrine.orm.search_filter
         arguments:
             - { uuid: exact }
         tags:
             - { name: api_platform.filter, id: ds_case.case.filter }
-
-    ds_case.case_association.filter:
-        parent: api_platform.doctrine.orm.search_filter
-        arguments:
-            - { uuid: exact }
-        tags:
-            - { name: api_platform.filter, id: ds_case.case_association.filter }
 
     ds_case.serializer.context_builder.case:
         decorates: api_platform.serializer.context_builder
