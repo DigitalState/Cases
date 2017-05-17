@@ -4,17 +4,17 @@ namespace Ds\Bundle\CaseBundle\Entity;
 
 use Ds\Component\Model\Type\Identifiable;
 use Ds\Component\Model\Type\Uuidentifiable;
-use Ds\Component\Model\Type\Identitiable;
 use Ds\Component\Model\Type\Translatable;
 use Ds\Component\Model\Type\Ownable;
+use Ds\Component\Model\Type\Identitiable;
 use Ds\Component\Model\Accessor;
 use Ds\Component\Entity\Accessor as EntityAccessor;
-use Knp\DoctrineBehaviors\Model As Behavior;
+use Knp\DoctrineBehaviors\Model as Behavior;
 use Doctrine\Common\Collections\ArrayCollection;
 
 use ApiPlatform\Core\Annotation\ApiResource;
 use ApiPlatform\Core\Annotation\ApiProperty;
-use Symfony\Component\Serializer\Annotation As Serializer;
+use Symfony\Component\Serializer\Annotation as Serializer;
 use Symfony\Component\Validator\Constraints as Assert;
 use Ds\Component\Model\Annotation\Translate;
 use Doctrine\ORM\Mapping as ORM;
@@ -36,7 +36,7 @@ use Symfony\Bridge\Doctrine\Validator\Constraints as ORMAssert;
  * @ORM\HasLifecycleCallbacks
  * @ORMAssert\UniqueEntity(fields="uuid")
  */
-class CaseEntity implements Identifiable, Uuidentifiable, Identitiable, Ownable, Translatable
+class CaseEntity implements Identifiable, Uuidentifiable, Ownable, Translatable, Identitiable
 {
     use Behavior\Translatable\Translatable;
     use Behavior\Timestampable\Timestampable;
@@ -106,25 +106,6 @@ class CaseEntity implements Identifiable, Uuidentifiable, Identitiable, Ownable,
      * @var string
      * @ApiProperty
      * @Serializer\Groups({"case_output", "case_input"})
-     * @ORM\Column(name="identity", type="string", length=255, nullable=true)
-     * @Assert\NotBlank
-     */
-    protected $identity;
-
-    /**
-     * @var string
-     * @ApiProperty
-     * @Serializer\Groups({"case_output", "case_input"})
-     * @ORM\Column(name="identity_uuid", type="guid", nullable=true)
-     * @Assert\NotBlank
-     * @Assert\Uuid
-     */
-    protected $identityUuid;
-
-    /**
-     * @var string
-     * @ApiProperty
-     * @Serializer\Groups({"case_output", "case_input"})
      * @ORM\Column(name="`owner`", type="string", length=255, nullable=true)
      * @Assert\NotBlank
      */
@@ -139,6 +120,25 @@ class CaseEntity implements Identifiable, Uuidentifiable, Identitiable, Ownable,
      * @Assert\Uuid
      */
     protected $ownerUuid;
+
+    /**
+     * @var string
+     * @ApiProperty
+     * @Serializer\Groups({"case_output", "case_input"})
+     * @ORM\Column(name="identity", type="string", length=255, nullable=true)
+     * @Assert\NotBlank
+     */
+    protected $identity;
+
+    /**
+     * @var string
+     * @ApiProperty
+     * @Serializer\Groups({"case_output", "case_input"})
+     * @ORM\Column(name="identity_uuid", type="guid", nullable=true)
+     * @Assert\NotBlank
+     * @Assert\Uuid
+     */
+    protected $identityUuid;
 
     /**
      * @var array
