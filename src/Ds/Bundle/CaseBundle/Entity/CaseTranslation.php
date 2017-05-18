@@ -8,7 +8,7 @@ use Knp\DoctrineBehaviors\Model as Behavior;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Class CaseEntityTranslation
+ * Class CaseTranslation
  *
  * @ORM\Entity
  * @ORM\Table(name="ds_case_translation")
