@@ -16,4 +16,3 @@ security:
     access_control:
         - { path: ^/acl/permissions, role: IS_AUTHENTICATED_FULLY }
         - { path: ^/cases, role: IS_AUTHENTICATED_FULLY }
-        - { path: ^/case-associations, role: IS_AUTHENTICATED_FULLY }
