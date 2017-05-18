@@ -24,7 +24,7 @@ use Symfony\Bridge\Doctrine\Validator\Constraints as ORMAssert;
  * @ApiResource(
  *      shortName="Case",
  *      attributes={
- *          "filters"={"ds_case.case.filter"},
+ *          "filters"={"ds_case.filter.case"},
  *          "normalization_context"={"groups"={"case_output"}},
  *          "denormalization_context"={"groups"={"case_input"}}
  *      }
