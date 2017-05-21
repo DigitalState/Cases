@@ -11,7 +11,7 @@ use Doctrine\ORM\Mapping as ORM;
  * Class CaseTranslation
  *
  * @ORM\Entity
- * @ORM\Table(name="ds_case_translation")
+ * @ORM\Table(name="ds_case_trans")
  */
 class CaseTranslation
 {
