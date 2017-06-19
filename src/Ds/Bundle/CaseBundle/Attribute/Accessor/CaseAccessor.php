@@ -1,6 +1,6 @@
 <?php
 
-namespace Ds\Bundle\CaseBundle\Accessor;
+namespace Ds\Bundle\CaseBundle\Attribute\Accessor;
 
 use Ds\Bundle\CaseBundle\Entity\CaseEntity;
 
