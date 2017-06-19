@@ -9,5 +9,7 @@ The Cases Microservice.
 ## Installation
 
 `docker-compose up -d`
+
 `docker-compose exec php php bin/console doctrine:migrations:migrate`
+
 `docker-compose exec php php bin/console doctrine:fixtures:load`
