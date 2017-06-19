@@ -4,9 +4,9 @@ Description...
 
 ## Table of Contents
 
-- [Synopsis](#Synopsis)
-- [Installation](#Installation)
-- [Documentation](#Documentation)
+- [Synopsis](#synopsis)
+- [Installation](#installation)
+- [Documentation](#documentation)
 
 ## Synopsis
 
