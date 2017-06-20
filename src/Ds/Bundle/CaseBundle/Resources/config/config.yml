@@ -1,15 +1,14 @@
 ds_security:
-    acl:
-        permissions:
-            case:               { entity: Ds\Bundle\CaseBundle\Entity\CaseEntity, attributes: [BROWSE, READ, EDIT, ADD, DELETE] }
-            case_field:         { field:  Ds\Bundle\CaseBundle\Entity\CaseEntity.*, attributes: [BROWSE, READ, EDIT] }
-            case_id:            { field:  Ds\Bundle\CaseBundle\Entity\CaseEntity.id, attributes: [BROWSE, READ, EDIT] }
-            case_uuid:          { field:  Ds\Bundle\CaseBundle\Entity\CaseEntity.uuid, attributes: [BROWSE, READ, EDIT] }
-            case_created_at:    { field:  Ds\Bundle\CaseBundle\Entity\CaseEntity.createdAt, attributes: [BROWSE, READ, EDIT] }
-            case_updated_at:    { field:  Ds\Bundle\CaseBundle\Entity\CaseEntity.updatedAt, attributes: [BROWSE, READ, EDIT] }
-            case_deleted_at:    { field:  Ds\Bundle\CaseBundle\Entity\CaseEntity.deletedAt, attributes: [BROWSE, READ, EDIT] }
-            case_identity:      { field:  Ds\Bundle\CaseBundle\Entity\CaseEntity.identity, attributes: [BROWSE, READ, EDIT] }
-            case_identity_uuid: { field:  Ds\Bundle\CaseBundle\Entity\CaseEntity.identityUuid, attributes: [BROWSE, READ, EDIT] }
-            case_owner:         { field:  Ds\Bundle\CaseBundle\Entity\CaseEntity.owner, attributes: [BROWSE, READ, EDIT] }
-            case_owner_uuid:    { field:  Ds\Bundle\CaseBundle\Entity\CaseEntity.ownerUuid, attributes: [BROWSE, READ, EDIT] }
-            case_title:         { field:  Ds\Bundle\CaseBundle\Entity\CaseEntity.title, attributes: [BROWSE, READ, EDIT] }
+    permissions:
+        case:               { title: Case, entity: Ds\Bundle\CaseBundle\Entity\CaseEntity, attributes: [BROWSE, READ, EDIT, ADD, DELETE] }
+        case_fields:        { title: All Fields, field: Ds\Bundle\CaseBundle\Entity\CaseEntity.*, attributes: [BROWSE, READ, EDIT] }
+        case_id:            { title: Id, field: Ds\Bundle\CaseBundle\Entity\CaseEntity.id, attributes: [BROWSE, READ, EDIT] }
+        case_uuid:          { title: Uuid, field: Ds\Bundle\CaseBundle\Entity\CaseEntity.uuid, attributes: [BROWSE, READ, EDIT] }
+        case_created_at:    { title: Created At, field: Ds\Bundle\CaseBundle\Entity\CaseEntity.createdAt, attributes: [BROWSE, READ, EDIT] }
+        case_updated_at:    { title: Updated At, field: Ds\Bundle\CaseBundle\Entity\CaseEntity.updatedAt, attributes: [BROWSE, READ, EDIT] }
+        case_deleted_at:    { title: Deleted At, field: Ds\Bundle\CaseBundle\Entity\CaseEntity.deletedAt, attributes: [BROWSE, READ, EDIT] }
+        case_identity:      { title: Identity, field: Ds\Bundle\CaseBundle\Entity\CaseEntity.identity, attributes: [BROWSE, READ, EDIT] }
+        case_identity_uuid: { title: Identity Uuid, field: Ds\Bundle\CaseBundle\Entity\CaseEntity.identityUuid, attributes: [BROWSE, READ, EDIT] }
+        case_owner:         { title: Owner, field: Ds\Bundle\CaseBundle\Entity\CaseEntity.owner, attributes: [BROWSE, READ, EDIT] }
+        case_owner_uuid:    { title: Owner Uuid, field: Ds\Bundle\CaseBundle\Entity\CaseEntity.ownerUuid, attributes: [BROWSE, READ, EDIT] }
+        case_title:         { title: Title, field: Ds\Bundle\CaseBundle\Entity\CaseEntity.title, attributes: [BROWSE, READ, EDIT] }
