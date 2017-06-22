@@ -5,15 +5,15 @@ ds_security:
     permissions:
         case:               { title: Case,          entity: '%_case%',              attributes: [BROWSE, READ, EDIT, ADD, DELETE] }
         case_fields:        { title: All Fields,    field:  '%_case%.*',            attributes: [BROWSE, READ, EDIT] }
-        case_id:            { title: Id,            field:  '%_case%.id',           attributes: [BROWSE, READ, EDIT] }
-        case_uuid:          { title: Uuid,          field:  '%_case%.uuid',         attributes: [BROWSE, READ, EDIT] }
+        case_id:            { title: ID,            field:  '%_case%.id',           attributes: [BROWSE, READ, EDIT] }
+        case_uuid:          { title: UUID,          field:  '%_case%.uuid',         attributes: [BROWSE, READ, EDIT] }
         case_created_at:    { title: Created At,    field:  '%_case%.createdAt',    attributes: [BROWSE, READ, EDIT] }
         case_updated_at:    { title: Updated At,    field:  '%_case%.updatedAt',    attributes: [BROWSE, READ, EDIT] }
         case_deleted_at:    { title: Deleted At,    field:  '%_case%.deletedAt',    attributes: [BROWSE, READ, EDIT] }
         case_owner:         { title: Owner,         field:  '%_case%.owner',        attributes: [BROWSE, READ, EDIT] }
-        case_owner_uuid:    { title: Owner Uuid,    field:  '%_case%.ownerUuid',    attributes: [BROWSE, READ, EDIT] }
+        case_owner_uuid:    { title: Owner UUID,    field:  '%_case%.ownerUuid',    attributes: [BROWSE, READ, EDIT] }
         case_identity:      { title: Identity,      field:  '%_case%.identity',     attributes: [BROWSE, READ, EDIT] }
-        case_identity_uuid: { title: Identity Uuid, field:  '%_case%.identityUuid', attributes: [BROWSE, READ, EDIT] }
+        case_identity_uuid: { title: Identity UUID, field:  '%_case%.identityUuid', attributes: [BROWSE, READ, EDIT] }
         case_title:         { title: Title,         field:  '%_case%.title',        attributes: [BROWSE, READ, EDIT] }
 
 ds_case:
