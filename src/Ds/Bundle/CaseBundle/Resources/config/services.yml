@@ -1,6 +1,9 @@
 services:
     ds_case.service.case:
         class: Ds\Bundle\CaseBundle\Service\CaseService
+        arguments:
+            - '@doctrine.orm.entity_manager'
+            - 'Ds\Bundle\CaseBundle\Entity\CaseEntity'
 
     ds_case.filter.case:
         parent: api_platform.doctrine.orm.search_filter

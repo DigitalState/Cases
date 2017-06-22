@@ -1,0 +1,22 @@
+permission_entries:
+    -
+        permission: 4bb55243-7ad4-414d-9470-e792b288a792         # morgan
+        business_unit_uuid: 7e105be4-578d-4a1f-bc04-fd85f3ddcc38 # Finance
+        key: case
+        attributes: [BROWSE, READ]
+    -
+        permission: 4bb55243-7ad4-414d-9470-e792b288a792         # morgan
+        business_unit_uuid: 7e105be4-578d-4a1f-bc04-fd85f3ddcc38 # Finance
+        key: case_uuid
+        attributes: [BROWSE, READ]
+    -
+        permission: 4bb55243-7ad4-414d-9470-e792b288a792         # morgan
+        business_unit_uuid: 7e105be4-578d-4a1f-bc04-fd85f3ddcc38 # Finance
+        key: case_title
+        attributes: [BROWSE, READ]
+
+prototype:
+    permission: ~
+    business_unit_uuid: ~
+    key: ~
+    attributes: []

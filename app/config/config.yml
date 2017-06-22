@@ -88,11 +88,7 @@ nelmio_cors:
 
 dunglas_action:
     directories:
-        - ../src/*/Bundle/*Bundle/Controller
         - ../src/*/Bundle/*Bundle/Action
-        - ../src/*/Bundle/*Bundle/Command
-        - ../src/*/Bundle/*Bundle/EventSubscriber
-        - ../src/*/Bundle/*Bundle/Service
 
 api_platform:
     title: Cases

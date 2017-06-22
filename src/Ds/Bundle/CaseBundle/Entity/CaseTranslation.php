@@ -28,7 +28,7 @@ class CaseTranslation
      */
     public static function getTranslatableEntityClass()
     {
-        return 'CaseEntity';
+        return 'Ds\Bundle\CaseBundle\Entity\CaseEntity';
     }
 
     /**

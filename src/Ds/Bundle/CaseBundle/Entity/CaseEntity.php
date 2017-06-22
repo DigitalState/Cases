@@ -56,7 +56,7 @@ class CaseEntity implements Identifiable, Uuidentifiable, Ownable, Translatable,
      */
     public static function getTranslationEntityClass()
     {
-        return 'CaseTranslation';
+        return '\Ds\Bundle\CaseBundle\Entity\CaseTranslation';
     }
 
     /**

@@ -1,0 +1,13 @@
+configs:
+    -
+        uuid: 2826439b-a757-4666-8955-05919e554f66
+        key: ds_case.case.custom_id.mask
+        value: 'CASE-{date:Y-m-d}-{inc:**********}'
+
+prototype:
+    uuid: ~
+    owner: BusinessUnit
+    owner_uuid: 25b88f35-eb37-4dae-9d89-668151e11a0d       # Administration
+    key: ~
+    value: ~
+    enabled: true

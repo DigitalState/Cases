@@ -15,3 +15,8 @@ ds_security:
         case_owner:         { title: Owner,         field:  '%_case%.owner',        attributes: [BROWSE, READ, EDIT] }
         case_owner_uuid:    { title: Owner Uuid,    field:  '%_case%.ownerUuid',    attributes: [BROWSE, READ, EDIT] }
         case_title:         { title: Title,         field:  '%_case%.title',        attributes: [BROWSE, READ, EDIT] }
+
+ds_case:
+    case:
+        custom_id:
+            mask: ~

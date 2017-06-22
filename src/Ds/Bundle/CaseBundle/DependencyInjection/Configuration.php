@@ -18,6 +18,20 @@ class Configuration implements ConfigurationInterface
         $treeBuilder = new TreeBuilder;
         $rootNode = $treeBuilder->root('ds_case');
 
+        $rootNode
+            ->children()
+                ->arrayNode('case')
+                    ->children()
+                        ->arrayNode('custom_id')
+                            ->children()
+                                ->scalarNode('mask')
+                                ->end()
+                            ->end()
+                        ->end()
+                    ->end()
+                ->end()
+            ->end();
+
         return $treeBuilder;
     }
 }
