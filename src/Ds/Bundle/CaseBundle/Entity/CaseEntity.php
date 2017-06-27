@@ -7,6 +7,7 @@ use Ds\Component\Model\Type\Uuidentifiable;
 use Ds\Component\Model\Type\Translatable;
 use Ds\Component\Model\Type\Ownable;
 use Ds\Component\Model\Type\Identitiable;
+use Ds\Component\Model\Type\Versionable;
 use Ds\Component\Model\Attribute\Accessor;
 use Knp\DoctrineBehaviors\Model as Behavior;
 
@@ -24,9 +25,13 @@ use Symfony\Bridge\Doctrine\Validator\Constraints as ORMAssert;
  * @ApiResource(
  *      shortName="Case",
  *      attributes={
- *          "filters"={"ds_case.filter.case"},
- *          "normalization_context"={"groups"={"case_output"}},
- *          "denormalization_context"={"groups"={"case_input"}}
+ *          "filters"={"ds.case.search", "ds.case.search_translation", "ds.case.date", "ds.case.order"},
+ *          "normalization_context"={
+ *              "groups"={"case_output"}
+ *          },
+ *          "denormalization_context"={
+ *              "groups"={"case_input"}
+ *          }
  *      }
  * )
  * @ORM\Entity(repositoryClass="Ds\Bundle\CaseBundle\Repository\CaseRepository")
@@ -34,7 +39,7 @@ use Symfony\Bridge\Doctrine\Validator\Constraints as ORMAssert;
  * @ORM\HasLifecycleCallbacks
  * @ORMAssert\UniqueEntity(fields="uuid")
  */
-class CaseEntity implements Identifiable, Uuidentifiable, Ownable, Translatable, Identitiable
+class CaseEntity implements Identifiable, Uuidentifiable, Ownable, Translatable, Identitiable, Versionable
 {
     use Behavior\Translatable\Translatable;
     use Behavior\Timestampable\Timestampable;
@@ -46,8 +51,9 @@ class CaseEntity implements Identifiable, Uuidentifiable, Ownable, Translatable,
     use Accessor\OwnerUuid;
     use Accessor\Identity;
     use Accessor\IdentityUuid;
-    use Accessor\Translation\Title;
-    use Accessor\Translation\Presentation;
+    use Accessor\Title;
+    use Accessor\Presentation;
+    use Accessor\Version;
 
     /**
      * Returns translation entity class name
@@ -105,6 +111,7 @@ class CaseEntity implements Identifiable, Uuidentifiable, Ownable, Translatable,
      * @Serializer\Groups({"case_output", "case_input"})
      * @ORM\Column(name="`owner`", type="string", length=255, nullable=true)
      * @Assert\NotBlank
+     * @Assert\Length(min=1, max=255)
      */
     protected $owner;
 
@@ -124,6 +131,7 @@ class CaseEntity implements Identifiable, Uuidentifiable, Ownable, Translatable,
      * @Serializer\Groups({"case_output", "case_input"})
      * @ORM\Column(name="identity", type="string", length=255, nullable=true)
      * @Assert\NotBlank
+     * @Assert\Length(min=1, max=255)
      */
     protected $identity;
 
@@ -143,9 +151,24 @@ class CaseEntity implements Identifiable, Uuidentifiable, Ownable, Translatable,
      * @Serializer\Groups({"case_output", "case_input"})
      * @Assert\Type("array")
      * @Assert\NotBlank
+     * @Assert\All({
+     *     @Assert\NotBlank,
+     *     @Assert\Length(min=1)
+     * })
      * @Translate
      */
     protected $title;
+
+    /**
+     * @var integer
+     * @ApiProperty
+     * @Serializer\Groups({"case_output", "case_input"})
+     * @ORM\Column(name="version", type="integer")
+     * @ORM\Version
+     * @Assert\NotBlank
+     * @Assert\Type("integer")
+     */
+    protected $version;
 
     /**
      * Constructor

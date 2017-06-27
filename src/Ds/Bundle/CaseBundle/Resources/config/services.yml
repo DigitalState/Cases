@@ -5,9 +5,49 @@ services:
             - '@doctrine.orm.entity_manager'
             - Ds\Bundle\CaseBundle\Entity\CaseEntity
 
-    ds_case.filter.case:
+    ds_case.filter.case.search:
         parent: api_platform.doctrine.orm.search_filter
         arguments:
-            - { uuid: exact }
+            -
+                id: exact
+                uuid: exact
+                owner: exact
+                ownerUuid: exact
+                identity: exact
+                identityUuid: exact
+
         tags:
-            - { name: api_platform.filter, id: ds_case.filter.case }
+            - { name: api_platform.filter, id: ds.case.search }
+
+    ds_case.filter.case.search_translation:
+        parent: api_platform.doctrine.orm.search_filter
+        arguments:
+            -
+                title: partial
+        tags:
+            - { name: api_platform.filter, id: ds.case.search_translation }
+
+    ds_case.filter.case.date:
+        parent: api_platform.doctrine.orm.date_filter
+        arguments:
+            -
+                createdAt: ~
+                updatedAt: ~
+                deletedAt: ~
+
+        tags:
+            - { name: api_platform.filter, id: ds.case.date }
+
+    ds_case.filter.case.order:
+        parent: api_platform.doctrine.orm.order_filter
+        arguments:
+            -
+                id: ~
+                createdAt: ~
+                updatedAt: ~
+                deletedAt: ~
+                owner: ~
+                identity: ~
+
+        tags:
+            - { name: api_platform.filter, id: ds.case.order }
