@@ -20,7 +20,7 @@ services:
             - { name: api_platform.filter, id: ds.case.search }
 
     ds_case.filter.case.search_translation:
-        parent: api_platform.doctrine.orm.search_filter
+        parent: ds_translation.doctrine.orm.filter.search
         arguments:
             -
                 title: partial
