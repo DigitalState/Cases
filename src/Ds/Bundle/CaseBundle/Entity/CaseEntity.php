@@ -51,8 +51,8 @@ class CaseEntity implements Identifiable, Uuidentifiable, Ownable, Translatable,
     use Accessor\OwnerUuid;
     use Accessor\Identity;
     use Accessor\IdentityUuid;
-    use Accessor\Title;
-    use Accessor\Presentation;
+    use Accessor\Translation\Title;
+    use Accessor\Translation\Presentation;
     use Accessor\Version;
 
     /**
