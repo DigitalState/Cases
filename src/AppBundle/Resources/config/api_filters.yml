@@ -1,0 +1,28 @@
+services:
+    app.filter.case.search:
+        parent: api_platform.doctrine.orm.search_filter
+        arguments:
+            - { id: exact, uuid: exact, owner: exact, ownerUuid: exact, identity: exact, identityUuid: exact }
+        tags:
+            - { name: api_platform.filter, id: app.case.search }
+
+    app.filter.case.search_translation:
+        parent: ds_translation.doctrine.orm.filter.search
+        arguments:
+            - { title: partial }
+        tags:
+            - { name: api_platform.filter, id: app.case.search_translation }
+
+    app.filter.case.date:
+        parent: api_platform.doctrine.orm.date_filter
+        arguments:
+            - { createdAt: ~, updatedAt: ~, deletedAt: ~ }
+        tags:
+            - { name: api_platform.filter, id: app.case.date }
+
+    app.filter.case.order:
+        parent: api_platform.doctrine.orm.order_filter
+        arguments:
+            - { id: ~, createdAt: ~, updatedAt: ~, deletedAt: ~, owner: ~, identity: ~ }
+        tags:
+            - { name: api_platform.filter, id: app.case.order }

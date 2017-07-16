@@ -1,0 +1,31 @@
+items:
+    -
+        uuid: bc16a956-e4f5-4bbd-b8d1-abbe31615ba9
+        owner_uuid: 8454c987-cbc5-4a24-ba1a-d420283caabd # Public
+        identity: Staff
+        identity_uuid: ~ # Any staff
+
+    -
+        uuid: 6cee2d9d-1402-4190-9f63-5b7ff4cd86dc
+        owner_uuid: 8454c987-cbc5-4a24-ba1a-d420283caabd # Public
+        identity: Staff
+        identity_uuid: 47a5a9cb-496f-4db7-8999-489ec404887f # Manager
+
+    -
+        uuid: d1a5a3c7-4489-430f-a588-8428aa037830
+        owner_uuid: 8454c987-cbc5-4a24-ba1a-d420283caabd # Public
+        identity: Staff
+        identity_uuid: 9d10157c-f2ce-48fb-a5ab-83faaae952a7 # Agent
+
+    -
+        uuid: 9373060a-e71f-401d-b93f-e29bde57d2fe
+        owner_uuid: 8454c987-cbc5-4a24-ba1a-d420283caabd # Public
+        identity: Staff
+        identity_uuid: 71f285ba-f994-444c-b9e5-fa813295a0b7 # Intern
+
+prototype:
+    uuid: ~
+    owner: BusinessUnit
+    owner_uuid: ~
+    identity: ~
+    identity_uuid: ~

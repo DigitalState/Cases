@@ -1,0 +1,16 @@
+items:
+    -
+        access: 74bb2366-e95a-4f90-8d4d-4e569cee9ec5 # Any individual
+        entity_uuid: 8454c987-cbc5-4a24-ba1a-d420283caabd # Public
+        key:
+            - case
+            - case_uuid
+            - case_title
+        attributes: [BROWSE, READ]
+
+prototype:
+    access: ~
+    entity: BusinessUnit
+    entity_uuid: ~
+    key: ~
+    attributes: []

@@ -1,0 +1,13 @@
+items:
+    -
+        uuid: d612bcd6-b91d-48da-bf7e-3b6af33dc263
+        owner_uuid: c11c546e-bd01-47cf-97da-e25388357b5a # Administration
+        identity: Anonymous
+        identity_uuid: ~ # Any anonymous
+
+prototype:
+    uuid: ~
+    owner: BusinessUnit
+    owner_uuid: ~
+    identity: ~
+    identity_uuid: ~

@@ -1,9 +1,0 @@
-cases: []
-
-prototype:
-    uuid: ~
-    owner: ~
-    owner_uuid: ~
-    identity: ~
-    identity_uuid: ~
-    title: []

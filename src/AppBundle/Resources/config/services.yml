@@ -1,0 +1,4 @@
+services:
+    app.service.case:
+        class: AppBundle\Service\CaseService
+        parent: ds_entity.service.entity

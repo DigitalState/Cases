@@ -1,0 +1,13 @@
+items:
+    -
+        uuid: 94bdcf7d-5ffa-4688-992c-abaf7da232b3
+        key: app.case.custom_id.mask
+        value: 'CASE-{date:Y-m-d}-{inc:**********}'
+
+prototype:
+    uuid: ~
+    owner: BusinessUnit
+    owner_uuid: c11c546e-bd01-47cf-97da-e25388357b5a # Administration
+    key: ~
+    value: ~
+    enabled: true
