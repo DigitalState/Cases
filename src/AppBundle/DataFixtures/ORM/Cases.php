@@ -23,6 +23,6 @@ class LoadCaseData extends CaseFixture implements OrderedFixtureInterface
      */
     protected function getResource()
     {
-        return __DIR__.'/../../Resources/data/{server}/cases.yml';
+        return __DIR__.'/../../Resources/data/{env}/cases.yml';
     }
 }
