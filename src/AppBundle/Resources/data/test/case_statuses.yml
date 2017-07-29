@@ -1,0 +1,11 @@
+items: []
+
+prototype:
+    case: ~
+    uuid: ~
+    owner: BusinessUnit
+    owner_uuid: ~
+    identity: ~
+    identity_uuid: ~
+    title: []
+    description: []

@@ -2,3 +2,7 @@ services:
     app.service.case:
         class: AppBundle\Service\CaseService
         parent: ds_entity.service.entity
+
+    app.service.case_status:
+        class: AppBundle\Service\CaseStatusService
+        parent: ds_entity.service.entity

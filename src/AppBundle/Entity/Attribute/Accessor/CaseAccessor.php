@@ -1,6 +1,6 @@
 <?php
 
-namespace AppBundle\Attribute\Accessor;
+namespace AppBundle\Entity\Attribute\Accessor;
 
 use AppBundle\Entity\CaseEntity;
 
@@ -10,7 +10,7 @@ use AppBundle\Entity\CaseEntity;
 trait CaseAccessor
 {
     /**
-     * Set case
+     * Set scenario
      *
      * @param \AppBundle\Entity\CaseEntity $case
      * @return object

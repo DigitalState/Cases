@@ -2,20 +2,20 @@
 
 namespace AppBundle\DataFixtures\ORM;
 
-use AppBundle\Fixture\ORM\CaseFixture;
+use AppBundle\Fixture\ORM\CaseStatusFixture;
 use Doctrine\Common\DataFixtures\OrderedFixtureInterface;
 
 /**
- * Class Cases
+ * Class CaseStatuses
  */
-class Cases extends CaseFixture implements OrderedFixtureInterface
+class CaseStatuses extends CaseStatusFixture implements OrderedFixtureInterface
 {
     /**
      * {@inheritdoc}
      */
     public function getOrder()
     {
-        return 10;
+        return 11;
     }
 
     /**
@@ -23,6 +23,6 @@ class Cases extends CaseFixture implements OrderedFixtureInterface
      */
     protected function getResource()
     {
-        return __DIR__.'/../../Resources/data/{env}/cases.yml';
+        return __DIR__.'/../../Resources/data/{env}/case_statuses.yml';
     }
 }

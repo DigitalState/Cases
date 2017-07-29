@@ -26,3 +26,31 @@ services:
             - { id: ~, createdAt: ~, updatedAt: ~, deletedAt: ~, owner: ~, identity: ~ }
         tags:
             - { name: api_platform.filter, id: app.case.order }
+
+    app.filter.case_status.search:
+        parent: api_platform.doctrine.orm.search_filter
+        arguments:
+            - { id: exact, uuid: exact, owner: exact, ownerUuid: exact, identity: exact, identityUuid: exact }
+        tags:
+            - { name: api_platform.filter, id: app.case_status.search }
+
+    app.filter.case_status.search_translation:
+        parent: ds_translation.doctrine.orm.filter.search
+        arguments:
+            - { title: partial, description: partial }
+        tags:
+            - { name: api_platform.filter, id: app.case_status.search_translation }
+
+    app.filter.case_status.date:
+        parent: api_platform.doctrine.orm.date_filter
+        arguments:
+            - { createdAt: ~, updatedAt: ~, deletedAt: ~ }
+        tags:
+            - { name: api_platform.filter, id: app.case_status.date }
+
+    app.filter.case_status.order:
+        parent: api_platform.doctrine.orm.order_filter
+        arguments:
+            - { id: ~, createdAt: ~, updatedAt: ~, deletedAt: ~, owner: ~, identity: ~ }
+        tags:
+            - { name: api_platform.filter, id: app.case_status.order }

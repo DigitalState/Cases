@@ -3,13 +3,14 @@
 namespace AppBundle\Fixture\ORM;
 
 use AppBundle\Entity\CaseEntity;
+use AppBundle\Entity\CaseStatus;
 use Doctrine\Common\Persistence\ObjectManager;
 use Ds\Component\Database\Fixture\ORM\ResourceFixture;
 
 /**
- * Class CaseFixture
+ * Class CaseStatusFixture
  */
-abstract class CaseFixture extends ResourceFixture
+abstract class CaseStatusFixture extends ResourceFixture
 {
     /**
      * {@inheritdoc}
@@ -19,15 +20,18 @@ abstract class CaseFixture extends ResourceFixture
         $items = $this->parse($this->getResource());
 
         foreach ($items as $item) {
-            $case = new CaseEntity;
-            $case
+            $status = new CaseStatus;
+            $case = $manager->getRepository(CaseEntity::class)->findOneBy(['uuid' => $item['case']]);
+            $status
+                ->setCase($case)
                 ->setUuid($item['uuid'])
                 ->setOwner($item['owner'])
                 ->setOwnerUuid($item['owner_uuid'])
                 ->setOwner($item['identity'])
                 ->setOwnerUuid($item['identity_uuid'])
-                ->setTitle($item['title']);
-            $manager->persist($case);
+                ->setTitle($item['title'])
+                ->setTitle($item['description']);
+            $manager->persist($status);
             $manager->flush();
         }
     }
