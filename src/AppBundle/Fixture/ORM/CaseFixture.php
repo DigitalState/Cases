@@ -16,18 +16,18 @@ abstract class CaseFixture extends ResourceFixture
      */
     public function load(ObjectManager $manager)
     {
-        $items = $this->parse($this->getResource());
+        $cases = $this->parse($this->getResource());
 
-        foreach ($items as $item) {
-            $case = new CaseEntity;
-            $case
-                ->setUuid($item['uuid'])
-                ->setOwner($item['owner'])
-                ->setOwnerUuid($item['owner_uuid'])
-                ->setOwner($item['identity'])
-                ->setOwnerUuid($item['identity_uuid'])
-                ->setTitle($item['title']);
-            $manager->persist($case);
+        foreach ($cases as $case) {
+            $entity = new CaseEntity;
+            $entity
+                ->setUuid($case['uuid'])
+                ->setOwner($case['owner'])
+                ->setOwnerUuid($case['owner_uuid'])
+                ->setOwner($case['identity'])
+                ->setOwnerUuid($case['identity_uuid'])
+                ->setTitle($case['title']);
+            $manager->persist($entity);
             $manager->flush();
         }
     }

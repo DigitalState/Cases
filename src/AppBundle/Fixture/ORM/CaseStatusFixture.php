@@ -17,21 +17,20 @@ abstract class CaseStatusFixture extends ResourceFixture
      */
     public function load(ObjectManager $manager)
     {
-        $items = $this->parse($this->getResource());
+        $statuses = $this->parse($this->getResource());
 
-        foreach ($items as $item) {
-            $status = new CaseStatus;
-            $case = $manager->getRepository(CaseEntity::class)->findOneBy(['uuid' => $item['case']]);
-            $status
-                ->setCase($case)
-                ->setUuid($item['uuid'])
-                ->setOwner($item['owner'])
-                ->setOwnerUuid($item['owner_uuid'])
-                ->setOwner($item['identity'])
-                ->setOwnerUuid($item['identity_uuid'])
-                ->setTitle($item['title'])
-                ->setTitle($item['description']);
-            $manager->persist($status);
+        foreach ($statuses as $status) {
+            $entity = new CaseStatus;
+            $entity
+                ->setCase($manager->getRepository(CaseEntity::class)->findOneBy(['uuid' => $status['case']]))
+                ->setUuid($status['uuid'])
+                ->setOwner($status['owner'])
+                ->setOwnerUuid($status['owner_uuid'])
+                ->setOwner($status['identity'])
+                ->setOwnerUuid($status['identity_uuid'])
+                ->setTitle($status['title'])
+                ->setTitle($status['description']);
+            $manager->persist($entity);
             $manager->flush();
         }
     }
