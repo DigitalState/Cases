@@ -4,6 +4,7 @@ namespace AppBundle\Entity;
 
 use AppBundle\Entity\Attribute\Accessor as CaseAccessor;
 use Ds\Component\Locale\Model\Type\Localizable;
+use Ds\Component\Model\Type\Deletable;
 use Ds\Component\Model\Type\Identifiable;
 use Ds\Component\Model\Type\Uuidentifiable;
 use Ds\Component\Model\Type\Ownable;
@@ -47,7 +48,7 @@ use Symfony\Component\Validator\Constraints as Assert;
  * @ORM\Table(name="app_case")
  * @ORMAssert\UniqueEntity(fields="uuid")
  */
-class CaseEntity implements Identifiable, Uuidentifiable, Ownable, Translatable, Localizable, Identitiable, Versionable
+class CaseEntity implements Identifiable, Uuidentifiable, Ownable, Translatable, Localizable, Identitiable, Deletable, Versionable
 {
     use Behavior\Translatable\Translatable;
     use Behavior\Timestampable\Timestampable;
@@ -61,6 +62,7 @@ class CaseEntity implements Identifiable, Uuidentifiable, Ownable, Translatable,
     use Accessor\IdentityUuid;
     use TranslationAccessor\Title;
     use CaseAccessor\Statuses;
+    use Accessor\Deleted;
     use Accessor\Version;
 
     /**
