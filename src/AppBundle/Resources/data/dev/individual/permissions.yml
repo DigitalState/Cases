@@ -6,6 +6,7 @@ items:
             - case
             - case_uuid
             - case_title
+            - case_data
         attributes: [BROWSE, READ]
 
 prototype:

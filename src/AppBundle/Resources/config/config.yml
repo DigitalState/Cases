@@ -12,6 +12,7 @@ ds_security:
         case_identity:              { title: app.permissions.case.identity,               property: AppBundle\Entity\CaseEntity.identity,       attributes: [BROWSE, READ, EDIT] }
         case_identity_uuid:         { title: app.permissions.case.identity_uuid,          property: AppBundle\Entity\CaseEntity.identityUuid,   attributes: [BROWSE, READ, EDIT] }
         case_title:                 { title: app.permissions.case.title,                  property: AppBundle\Entity\CaseEntity.title,          attributes: [BROWSE, READ, EDIT] }
+        case_data:                  { title: app.permissions.case.data,                   property: AppBundle\Entity\CaseEntity.data,           attributes: [BROWSE, READ, EDIT] }
         case_statuses:              { title: app.permissions.case.statuses,               property: AppBundle\Entity\CaseEntity.statuses,       attributes: [BROWSE, READ, EDIT] }
         case_version:               { title: app.permissions.case.version,                property: AppBundle\Entity\CaseEntity.version,        attributes: [BROWSE, READ, EDIT] }
         case_status:                { title: app.permissions.case_status,                 entity:   AppBundle\Entity\CaseStatus,                attributes: [BROWSE, READ, EDIT, ADD, DELETE] }
@@ -28,4 +29,5 @@ ds_security:
         case_status_case:           { title: app.permissions.case_status.case,            property: AppBundle\Entity\CaseStatus.case,           attributes: [BROWSE, READ, EDIT] }
         case_status_title:          { title: app.permissions.case_status.title,           property: AppBundle\Entity\CaseStatus.title,          attributes: [BROWSE, READ, EDIT] }
         case_status_description:    { title: app.permissions.case_status.description,     property: AppBundle\Entity\CaseStatus.description,    attributes: [BROWSE, READ, EDIT] }
+        case_status_data:           { title: app.permissions.case_status.data,            property: AppBundle\Entity\CaseStatus.data,           attributes: [BROWSE, READ, EDIT] }
         case_status_version:        { title: app.permissions.case_status.version,         property: AppBundle\Entity\CaseStatus.version,        attributes: [BROWSE, READ, EDIT] }

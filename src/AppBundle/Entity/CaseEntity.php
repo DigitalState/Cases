@@ -61,6 +61,7 @@ class CaseEntity implements Identifiable, Uuidentifiable, Ownable, Translatable,
     use Accessor\Identity;
     use Accessor\IdentityUuid;
     use TranslationAccessor\Title;
+    use TranslationAccessor\Data;
     use CaseAccessor\Statuses;
     use Accessor\Deleted;
     use Accessor\Version;
@@ -171,6 +172,21 @@ class CaseEntity implements Identifiable, Uuidentifiable, Ownable, Translatable,
     protected $title;
 
     /**
+     * @var array
+     * @ApiProperty
+     * @Serializer\Groups({"case_output", "case_input"})
+     * @Assert\Type("array")
+     * @Assert\NotBlank
+     * @Assert\All({
+     *     @Assert\Type("array"),
+     *     @Assert\NotBlank
+     * })
+     * @Locale
+     * @Translate
+     */
+    protected $data;
+
+    /**
      * @var \Doctrine\Common\Collections\ArrayCollection
      * @ApiProperty
      * @Serializer\Groups({"case_output", "case_input"})
@@ -195,5 +211,6 @@ class CaseEntity implements Identifiable, Uuidentifiable, Ownable, Translatable,
     public function __construct()
     {
         $this->title = [];
+        $this->data = [];
     }
 }

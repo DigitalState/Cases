@@ -61,6 +61,7 @@ class CaseStatus implements Identifiable, Uuidentifiable, Ownable, Translatable,
     use Accessor\IdentityUuid;
     use CaseAccessor\CaseAccessor;
     use TranslationAccessor\Title;
+    use TranslationAccessor\Data;
     use TranslationAccessor\Description;
     use Accessor\Deleted;
     use Accessor\Version;
@@ -185,6 +186,21 @@ class CaseStatus implements Identifiable, Uuidentifiable, Ownable, Translatable,
     protected $description;
 
     /**
+     * @var array
+     * @ApiProperty
+     * @Serializer\Groups({"case_status_output", "case_status_input"})
+     * @Assert\Type("array")
+     * @Assert\NotBlank
+     * @Assert\All({
+     *     @Assert\Type("array"),
+     *     @Assert\NotBlank
+     * })
+     * @Locale
+     * @Translate
+     */
+    protected $data;
+
+    /**
      * @var integer
      * @ApiProperty
      * @Serializer\Groups({"case_status_output", "case_status_input"})
@@ -202,5 +218,6 @@ class CaseStatus implements Identifiable, Uuidentifiable, Ownable, Translatable,
     {
         $this->title = [];
         $this->description = [];
+        $this->data = [];
     }
 }

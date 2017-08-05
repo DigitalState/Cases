@@ -18,6 +18,7 @@ class CaseTranslation
     use Behavior\Translatable\Translation;
 
     use Accessor\Title;
+    use Accessor\Data;
 
     /**
      * Returns the translatable entity class name.
@@ -34,4 +35,18 @@ class CaseTranslation
      * @ORM\Column(name="title", type="string", length=255, nullable=true)
      */
     protected $title;
+
+    /**
+     * @var string
+     * @ORM\Column(name="data", type="json_array")
+     */
+    protected $data;
+
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->data = [];
+    }
 }

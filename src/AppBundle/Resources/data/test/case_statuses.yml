@@ -9,3 +9,4 @@ prototype:
     identity_uuid: ~
     title: []
     description: []
+    data: []

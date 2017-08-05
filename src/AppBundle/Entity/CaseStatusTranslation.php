@@ -19,6 +19,7 @@ class CaseStatusTranslation
 
     use Accessor\Title;
     use Accessor\Description;
+    use Accessor\Data;
 
     /**
      * @var string
@@ -31,4 +32,18 @@ class CaseStatusTranslation
      * @ORM\Column(name="description", type="text", nullable=true)
      */
     protected $description;
+
+    /**
+     * @var string
+     * @ORM\Column(name="data", type="json_array")
+     */
+    protected $data;
+
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->data = [];
+    }
 }
