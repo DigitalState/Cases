@@ -4,6 +4,7 @@ ds_security:
         case_property:              { title: app.permissions.case.property,               property: AppBundle\Entity\CaseEntity.*,              attributes: [BROWSE, READ, EDIT] }
         case_id:                    { title: app.permissions.case.id,                     property: AppBundle\Entity\CaseEntity.id,             attributes: [BROWSE, READ, EDIT] }
         case_uuid:                  { title: app.permissions.case.uuid,                   property: AppBundle\Entity\CaseEntity.uuid,           attributes: [BROWSE, READ, EDIT] }
+        case_custom_id:             { title: app.permissions.case.custom_id,              property: AppBundle\Entity\CaseEntity.customId,       attributes: [BROWSE, READ, EDIT] }
         case_created_at:            { title: app.permissions.case.created_at,             property: AppBundle\Entity\CaseEntity.createdAt,      attributes: [BROWSE, READ, EDIT] }
         case_updated_at:            { title: app.permissions.case.updated_at,             property: AppBundle\Entity\CaseEntity.updatedAt,      attributes: [BROWSE, READ, EDIT] }
         case_deleted_at:            { title: app.permissions.case.deleted_at,             property: AppBundle\Entity\CaseEntity.deletedAt,      attributes: [BROWSE, READ, EDIT] }

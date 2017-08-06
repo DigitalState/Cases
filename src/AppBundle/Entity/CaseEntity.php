@@ -3,7 +3,9 @@
 namespace AppBundle\Entity;
 
 use AppBundle\Entity\Attribute\Accessor as CaseAccessor;
+use Doctrine\Common\Collections\ArrayCollection;
 use Ds\Component\Locale\Model\Type\Localizable;
+use Ds\Component\Model\Type\CustomIdentifiable;
 use Ds\Component\Model\Type\Deletable;
 use Ds\Component\Model\Type\Identifiable;
 use Ds\Component\Model\Type\Uuidentifiable;
@@ -47,8 +49,9 @@ use Symfony\Component\Validator\Constraints as Assert;
  * @ORM\Entity(repositoryClass="AppBundle\Repository\CaseRepository")
  * @ORM\Table(name="app_case")
  * @ORMAssert\UniqueEntity(fields="uuid")
+ * @ORMAssert\UniqueEntity(fields="customId")
  */
-class CaseEntity implements Identifiable, Uuidentifiable, Ownable, Translatable, Localizable, Identitiable, Deletable, Versionable
+class CaseEntity implements Identifiable, Uuidentifiable, CustomIdentifiable, Ownable, Translatable, Localizable, Identitiable, Deletable, Versionable
 {
     use Behavior\Translatable\Translatable;
     use Behavior\Timestampable\Timestampable;
@@ -56,6 +59,7 @@ class CaseEntity implements Identifiable, Uuidentifiable, Ownable, Translatable,
 
     use Accessor\Id;
     use Accessor\Uuid;
+    use Accessor\CustomId;
     use Accessor\Owner;
     use Accessor\OwnerUuid;
     use Accessor\Identity;
@@ -94,6 +98,14 @@ class CaseEntity implements Identifiable, Uuidentifiable, Ownable, Translatable,
      * @Assert\Uuid
      */
     protected $uuid;
+
+    /**
+     * @var string
+     * @ApiProperty(writable=false)
+     * @Serializer\Groups({"case_output"})
+     * @ORM\Column(name="custom_id", type="string", length=255, unique=true)
+     */
+    protected $customId;
 
     /**
      * @var \DateTime
@@ -212,5 +224,6 @@ class CaseEntity implements Identifiable, Uuidentifiable, Ownable, Translatable,
     {
         $this->title = [];
         $this->data = [];
+        $this->statuses = new ArrayCollection;
     }
 }

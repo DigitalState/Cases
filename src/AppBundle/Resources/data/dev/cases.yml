@@ -2,6 +2,7 @@ items: []
 
 prototype:
     uuid: ~
+    custom_id: ~
     owner: BusinessUnit
     owner_uuid: ~
     identity: ~

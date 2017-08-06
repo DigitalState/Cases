@@ -114,6 +114,7 @@ api_platform:
 ds_entity:
     behavior:
         uuidentifiable: true
+        custom_identifiable: true
 
 ds_security:
     acl: true
