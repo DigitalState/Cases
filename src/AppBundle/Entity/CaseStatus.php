@@ -193,7 +193,6 @@ class CaseStatus implements Identifiable, Uuidentifiable, Ownable, Translatable,
      * @Assert\NotBlank
      * @Assert\All({
      *     @Assert\Type("array"),
-     *     @Assert\NotBlank
      * })
      * @Locale
      * @Translate
