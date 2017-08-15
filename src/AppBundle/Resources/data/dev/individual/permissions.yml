@@ -5,8 +5,20 @@ items:
         key:
             - case
             - case_uuid
+            - case_custom_id
+            - case_created_at
+            - case_updated_at
             - case_title
             - case_data
+            - case_statuses
+            - case_status
+            - case_status_uuid
+            - case_status_created_at
+            - case_status_updated_at
+            - case_status_case
+            - case_status_title
+            - case_status_description
+            - case_status_data
         attributes: [BROWSE, READ]
 
 prototype:
