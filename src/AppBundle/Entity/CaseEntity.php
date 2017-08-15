@@ -190,8 +190,7 @@ class CaseEntity implements Identifiable, Uuidentifiable, CustomIdentifiable, Ow
      * @Assert\Type("array")
      * @Assert\NotBlank
      * @Assert\All({
-     *     @Assert\Type("array"),
-     *     @Assert\NotBlank
+     *     @Assert\Type("array")
      * })
      * @Locale
      * @Translate
