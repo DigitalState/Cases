@@ -2,7 +2,7 @@ services:
     app.filter.case.search:
         parent: api_platform.doctrine.orm.search_filter
         arguments:
-            - { id: exact, uuid: exact, owner: exact, ownerUuid: exact, identity: exact, identityUuid: exact }
+            - { id: exact, uuid: exact, customId: exact, owner: exact, ownerUuid: exact, identity: exact, identityUuid: exact }
         tags:
             - { name: api_platform.filter, id: app.case.search }
 
@@ -30,7 +30,7 @@ services:
     app.filter.case_status.search:
         parent: api_platform.doctrine.orm.search_filter
         arguments:
-            - { id: exact, uuid: exact, owner: exact, ownerUuid: exact, identity: exact, identityUuid: exact }
+            - { id: exact, uuid: exact, owner: exact, ownerUuid: exact, identity: exact, identityUuid: exact, case.uuid: exact, case.customId: exact }
         tags:
             - { name: api_platform.filter, id: app.case_status.search }
 
