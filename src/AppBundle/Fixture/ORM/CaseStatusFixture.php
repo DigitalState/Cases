@@ -26,8 +26,8 @@ abstract class CaseStatusFixture extends ResourceFixture
                 ->setUuid($status['uuid'])
                 ->setOwner($status['owner'])
                 ->setOwnerUuid($status['owner_uuid'])
-                ->setOwner($status['identity'])
-                ->setOwnerUuid($status['identity_uuid'])
+                ->setIdentity($status['identity'])
+                ->setIdentityUuid($status['identity_uuid'])
                 ->setTitle($status['title'])
                 ->setDescription($status['description'])
                 ->setData($status['data']);

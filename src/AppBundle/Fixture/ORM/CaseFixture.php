@@ -25,8 +25,8 @@ abstract class CaseFixture extends ResourceFixture
                 ->setCustomId($case['custom_id'])
                 ->setOwner($case['owner'])
                 ->setOwnerUuid($case['owner_uuid'])
-                ->setOwner($case['identity'])
-                ->setOwnerUuid($case['identity_uuid'])
+                ->setIdentity($case['identity'])
+                ->setIdentityUuid($case['identity_uuid'])
                 ->setTitle($case['title'])
                 ->setData($case['data']);
             $manager->persist($entity);
