@@ -149,12 +149,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/DigitalState/Core.git",
-                "reference": "6d54353a1010a5393f85ba76609e240144f25a3c"
+                "reference": "1a74359c437e9f37c3a35c26940146e469678b40"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/DigitalState/Core/zipball/6d54353a1010a5393f85ba76609e240144f25a3c",
-                "reference": "6d54353a1010a5393f85ba76609e240144f25a3c",
+                "url": "https://api.github.com/repos/DigitalState/Core/zipball/1a74359c437e9f37c3a35c26940146e469678b40",
+                "reference": "1a74359c437e9f37c3a35c26940146e469678b40",
                 "shasum": ""
             },
             "require": {
@@ -183,7 +183,7 @@
             ],
             "description": "The DigitalState Core",
             "homepage": "https://digitalstate.ca",
-            "time": "2017-08-15 00:29:48"
+            "time": "2017-08-17 02:30:59"
         },
         {
             "name": "doctrine/annotations",
