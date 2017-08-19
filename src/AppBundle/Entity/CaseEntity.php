@@ -199,7 +199,7 @@ class CaseEntity implements Identifiable, Uuidentifiable, CustomIdentifiable, Ow
 
     /**
      * @var \Doctrine\Common\Collections\ArrayCollection
-     * @ApiProperty
+     * @ApiProperty(writable=false)
      * @Serializer\Groups({"case_output", "case_input"})
      * @ORM\OneToMany(targetEntity="CaseStatus", mappedBy="case")
      */
