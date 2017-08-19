@@ -1,7 +1,7 @@
 items:
     -
         access: bc16a956-e4f5-4bbd-b8d1-abbe31615ba9 # Any staff
-        entity_uuid: 8454c987-cbc5-4a24-ba1a-d420283caabd # Public
+        entity_uuid: 8454c987-cbc5-4a24-ba1a-d420283caabd # Public Works
         key:
             - case
             - case_property
@@ -9,19 +9,19 @@ items:
 
     -
         access: 6cee2d9d-1402-4190-9f63-5b7ff4cd86dc # Manager
-        entity_uuid: 8454c987-cbc5-4a24-ba1a-d420283caabd # Public
+        entity_uuid: 8454c987-cbc5-4a24-ba1a-d420283caabd # Public Works
         key: case
         attributes: [EDIT, ADD, DELETE]
 
     -
         access: 6cee2d9d-1402-4190-9f63-5b7ff4cd86dc # Manager
-        entity_uuid: 8454c987-cbc5-4a24-ba1a-d420283caabd # Public
+        entity_uuid: 8454c987-cbc5-4a24-ba1a-d420283caabd # Public Works
         key: case_property
         attributes: [EDIT]
 
     -
         access: d1a5a3c7-4489-430f-a588-8428aa037830 # Agent
-        entity_uuid: 8454c987-cbc5-4a24-ba1a-d420283caabd # Public
+        entity_uuid: 8454c987-cbc5-4a24-ba1a-d420283caabd # Public Works
         key:
             - case
             - case_property
