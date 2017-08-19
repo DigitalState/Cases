@@ -15,7 +15,7 @@ Feature: Add cases
     """
     {
       "owner": "BusinessUnit",
-      "ownerUuid": "af14fb6b-2e1a-49ad-9000-ab77cecb3090",
+      "ownerUuid": "14da4a8c-aee1-43b3-bbac-e3e81a853e0e",
       "identity": "Individual",
       "identityUuid": "605289e0-9371-42d4-b9fe-5308c348a6a4",
       "title": {
@@ -46,7 +46,7 @@ Feature: Add cases
     And the JSON node "owner" should exist
     And the JSON node "owner" should be equal to the string "BusinessUnit"
     And the JSON node "ownerUuid" should exist
-    And the JSON node "ownerUuid" should be equal to the string "af14fb6b-2e1a-49ad-9000-ab77cecb3090"
+    And the JSON node "ownerUuid" should be equal to the string "14da4a8c-aee1-43b3-bbac-e3e81a853e0e"
     And the JSON node "title" should exist
 #    And the JSON node "title" should be equal to "todo"
     And the JSON node "data" should exist
