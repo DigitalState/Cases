@@ -9,6 +9,16 @@ items:
             en: Pothole - 123 Street - Urgent
             fr: Nid-de-poule - 123 rue - urgent
 
+    -
+        uuid: bab73a48-659b-4543-91c0-6cd606e50ccf
+        custom_id: GOV-bab73a48
+        owner_uuid: d5de44e0-d727-4f69-a8b3-c3afbf75eda3 # Administration
+        identity: Individual
+        identity_uuid: 605289e0-9371-42d4-b9fe-5308c348a6a4 # Morgan
+        title:
+            en: Pothole - Quality Review
+            fr: Nid-de-poule - Examen de la qualité
+
 prototype:
     uuid: ~
     custom_id: ~
