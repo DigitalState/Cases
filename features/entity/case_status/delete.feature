@@ -1,4 +1,4 @@
-@entity @case_status @delete
+@app @entity @case_status @delete
 Feature: Delete case statuses
   In order to delete case statuses
   As an admin identity

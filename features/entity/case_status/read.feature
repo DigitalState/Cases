@@ -1,4 +1,4 @@
-@entity @case_status @read
+@app @entity @case_status @read
 Feature: Read case statuses
   In order to read case statuses
   As an admin identity

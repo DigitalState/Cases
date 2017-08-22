@@ -1,4 +1,4 @@
-@entity @case_status @add
+@app @entity @case_status @add
 Feature: Add case statuses
   In order to add case statuses
   As an admin identity

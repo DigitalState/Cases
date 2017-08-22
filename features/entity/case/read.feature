@@ -1,4 +1,4 @@
-@entity @case @read
+@app @entity @case @read
 Feature: Read cases
   In order to read cases
   As an admin identity

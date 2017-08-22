@@ -1,4 +1,4 @@
-@entity @case @browse
+@app @entity @case @browse
 Feature: Browse cases
   In order to browse cases
   As an admin identity

@@ -1,4 +1,4 @@
-@entity @case @delete
+@app @entity @case @delete
 Feature: Delete cases
   In order to delete cases
   As an admin identity

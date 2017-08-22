@@ -1,4 +1,4 @@
-@entity @case @edit
+@app @entity @case @edit
 Feature: Edit cases
   In order to edit cases
   As an admin identity

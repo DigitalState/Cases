@@ -1,4 +1,4 @@
-@entity @case_status @edit
+@app @entity @case_status @edit
 Feature: Edit case statuses
   In order to edit case statuses
   As an admin identity

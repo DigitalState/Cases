@@ -1,4 +1,4 @@
-@entity @case @add
+@app @entity @case @add
 Feature: Add cases
   In order to add cases
   As an admin identity
