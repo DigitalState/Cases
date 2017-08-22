@@ -5,18 +5,23 @@ items:
         key:
             - case
             - case_property
+            - case_status
+            - case_status_property
         attributes: [BROWSE, READ]
 
     -
         access: 6cee2d9d-1402-4190-9f63-5b7ff4cd86dc # Manager
         entity_uuid: 8454c987-cbc5-4a24-ba1a-d420283caabd # Public Works
-        key: case
+        key:
+            - case
+            - case_status
         attributes: [EDIT, ADD, DELETE]
 
     -
         access: 6cee2d9d-1402-4190-9f63-5b7ff4cd86dc # Manager
         entity_uuid: 8454c987-cbc5-4a24-ba1a-d420283caabd # Public Works
-        key: case_property
+        key:
+            - case_property
         attributes: [EDIT]
 
     -
@@ -25,6 +30,8 @@ items:
         key:
             - case
             - case_property
+            - case_status
+            - case_status_property
         attributes: [EDIT]
 
 prototype:
