@@ -1,11 +1,11 @@
 @app @entity @case @read
 Feature: Read cases
   In order to read cases
-  As an admin identity
+  As a system identity
   I should be able to send api requests related to cases
 
   Background:
-    Given I am authenticated as an "admin" identity
+    Given I am authenticated as a "system" identity
 
   @createSchema @loadFixtures @dropSchema
   Scenario: Read a category

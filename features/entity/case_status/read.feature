@@ -1,11 +1,11 @@
 @app @entity @case_status @read
 Feature: Read case statuses
   In order to read case statuses
-  As an admin identity
+  As a system identity
   I should be able to send api requests related to case statuses
 
   Background:
-    Given I am authenticated as an "admin" identity
+    Given I am authenticated as a "system" identity
 
   @createSchema @loadFixtures @dropSchema
   Scenario: Read a category

@@ -1,11 +1,11 @@
 @app @entity @case @delete
 Feature: Delete cases
   In order to delete cases
-  As an admin identity
+  As a system identity
   I should be able to send api requests related to cases
 
   Background:
-    Given I am authenticated as an "admin" identity
+    Given I am authenticated as a "system" identity
 
   @createSchema @loadFixtures @dropSchema
   Scenario: Delete a category

@@ -1,11 +1,11 @@
 @app @entity @case_status @edit
 Feature: Edit case statuses
   In order to edit case statuses
-  As an admin identity
+  As a system identity
   I should be able to send api requests related to case statuses
 
   Background:
-    Given I am authenticated as an "admin" identity
+    Given I am authenticated as a "system" identity
 
   @createSchema @loadFixtures
   Scenario: Edit a case status

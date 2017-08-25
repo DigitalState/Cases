@@ -1,11 +1,11 @@
 @app @entity @case @add
 Feature: Add cases
   In order to add cases
-  As an admin identity
+  As a system identity
   I should be able to send api requests related to cases
 
   Background:
-    Given I am authenticated as an "admin" identity
+    Given I am authenticated as a "system" identity
 
   @createSchema @loadFixtures @dropSchema
   Scenario: Add a case
