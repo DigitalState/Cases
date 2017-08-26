@@ -28,7 +28,8 @@ abstract class CaseFixture extends ResourceFixture
                 ->setIdentity($case['identity'])
                 ->setIdentityUuid($case['identity_uuid'])
                 ->setTitle($case['title'])
-                ->setData($case['data']);
+                ->setData($case['data'])
+                ->setState($case['state']);
             $manager->persist($entity);
             $manager->flush();
         }

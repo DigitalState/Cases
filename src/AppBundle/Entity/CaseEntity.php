@@ -66,9 +66,16 @@ class CaseEntity implements Identifiable, Uuidentifiable, CustomIdentifiable, Ow
     use Accessor\IdentityUuid;
     use TranslationAccessor\Title;
     use TranslationAccessor\Data;
+    use Accessor\State;
     use CaseAccessor\Statuses;
     use Accessor\Deleted;
     use Accessor\Version;
+
+    /**
+     * @const string
+     */
+    const STATE_OPENED = 'opened';
+    const STATE_CLOSED = 'closed';
 
     /**
      * Returns translation entity class name
@@ -198,6 +205,16 @@ class CaseEntity implements Identifiable, Uuidentifiable, CustomIdentifiable, Ow
     protected $data;
 
     /**
+     * @var string
+     * @ApiProperty
+     * @Serializer\Groups({"case_output", "case_input"})
+     * @ORM\Column(name="state", type="string", length=255, nullable=true)
+     * @Assert\NotBlank
+     * @Assert\Length(min=1, max=255)
+     */
+    protected $state;
+
+    /**
      * @var \Doctrine\Common\Collections\ArrayCollection
      * @ApiProperty(writable=false)
      * @Serializer\Groups({"case_output", "case_input"})
@@ -223,6 +240,7 @@ class CaseEntity implements Identifiable, Uuidentifiable, CustomIdentifiable, Ow
     {
         $this->title = [];
         $this->data = [];
+        $this->state = static::STATE_OPENED;
         $this->statuses = new ArrayCollection;
     }
 }

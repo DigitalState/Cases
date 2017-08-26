@@ -1,3 +1,24 @@
+framework:
+    workflows:
+        case_state:
+            type: state_machine
+            marking_store:
+                type: single_state
+                arguments:
+                    - state
+            supports:
+                - AppBundle\Entity\CaseEntity
+            places:
+                - opened
+                - closed
+            transitions:
+                close:
+                    from: opened
+                    to: closed
+                reopen:
+                    from: closed
+                    to: opened
+
 ds_security:
     permissions:
         case:                       { title: app.permissions.case,                        entity:   AppBundle\Entity\CaseEntity,                attributes: [BROWSE, READ, EDIT, ADD, DELETE] }
@@ -14,6 +35,7 @@ ds_security:
         case_identity_uuid:         { title: app.permissions.case.identity_uuid,          property: AppBundle\Entity\CaseEntity.identityUuid,   attributes: [BROWSE, READ, EDIT] }
         case_title:                 { title: app.permissions.case.title,                  property: AppBundle\Entity\CaseEntity.title,          attributes: [BROWSE, READ, EDIT] }
         case_data:                  { title: app.permissions.case.data,                   property: AppBundle\Entity\CaseEntity.data,           attributes: [BROWSE, READ, EDIT] }
+        case_state:                 { title: app.permissions.case.state,                  property: AppBundle\Entity\CaseEntity.state,          attributes: [BROWSE, READ, EDIT] }
         case_statuses:              { title: app.permissions.case.statuses,               property: AppBundle\Entity\CaseEntity.statuses,       attributes: [BROWSE, READ, EDIT] }
         case_version:               { title: app.permissions.case.version,                property: AppBundle\Entity\CaseEntity.version,        attributes: [BROWSE, READ, EDIT] }
         case_status:                { title: app.permissions.case_status,                 entity:   AppBundle\Entity\CaseStatus,                attributes: [BROWSE, READ, EDIT, ADD, DELETE] }

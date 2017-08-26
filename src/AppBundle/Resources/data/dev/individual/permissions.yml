@@ -10,6 +10,7 @@ items:
             - case_updated_at
             - case_title
             - case_data
+            - case_state
             - case_statuses
             - case_status
             - case_status_uuid
