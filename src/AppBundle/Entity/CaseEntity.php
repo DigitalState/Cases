@@ -74,7 +74,7 @@ class CaseEntity implements Identifiable, Uuidentifiable, CustomIdentifiable, Ow
     /**
      * @const string
      */
-    const STATE_OPENED = 'opened';
+    const STATE_OPEN = 'open';
     const STATE_CLOSED = 'closed';
 
     /**
@@ -240,7 +240,7 @@ class CaseEntity implements Identifiable, Uuidentifiable, CustomIdentifiable, Ow
     {
         $this->title = [];
         $this->data = [];
-        $this->state = static::STATE_OPENED;
+        $this->state = static::STATE_OPEN;
         $this->statuses = new ArrayCollection;
     }
 }

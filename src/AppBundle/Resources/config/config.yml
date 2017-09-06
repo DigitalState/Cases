@@ -9,15 +9,15 @@ framework:
             supports:
                 - AppBundle\Entity\CaseEntity
             places:
-                - opened
+                - open
                 - closed
             transitions:
                 close:
-                    from: opened
+                    from: open
                     to: closed
                 reopen:
                     from: closed
-                    to: opened
+                    to: open
 
 ds_security:
     permissions:
