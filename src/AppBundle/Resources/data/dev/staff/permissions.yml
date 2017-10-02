@@ -40,6 +40,7 @@ items:
         entity_uuid: 8454c987-cbc5-4a24-ba1a-d420283caabd # Public Works
         key:
             - case_property
+            - case_status_property
         attributes: [EDIT]
 
     -
