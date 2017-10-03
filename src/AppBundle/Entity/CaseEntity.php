@@ -67,6 +67,7 @@ class CaseEntity implements Identifiable, Uuidentifiable, CustomIdentifiable, Ow
     use TranslationAccessor\Title;
     use TranslationAccessor\Data;
     use Accessor\State;
+    use Accessor\Priority;
     use CaseAccessor\Statuses;
     use Accessor\Deleted;
     use Accessor\Version;
@@ -215,6 +216,16 @@ class CaseEntity implements Identifiable, Uuidentifiable, CustomIdentifiable, Ow
     protected $state;
 
     /**
+     * @var integer
+     * @ApiProperty
+     * @Serializer\Groups({"case_output", "case_input"})
+     * @ORM\Column(name="priority", type="integer", options={"default":0})
+     * @Assert\NotBlank
+     * @Assert\Type("integer")
+     */
+    protected $priority;
+
+    /**
      * @var \Doctrine\Common\Collections\ArrayCollection
      * @ApiProperty(writable=false)
      * @Serializer\Groups({"case_output", "case_input"})
@@ -242,5 +253,6 @@ class CaseEntity implements Identifiable, Uuidentifiable, CustomIdentifiable, Ow
         $this->data = [];
         $this->state = static::STATE_OPEN;
         $this->statuses = new ArrayCollection;
+        $this->priority = 0;
     }
 }

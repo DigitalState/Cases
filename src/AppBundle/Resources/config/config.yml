@@ -36,6 +36,7 @@ ds_security:
         case_title:                 { title: app.permissions.case.title,                  property: AppBundle\Entity\CaseEntity.title,          attributes: [BROWSE, READ, EDIT] }
         case_data:                  { title: app.permissions.case.data,                   property: AppBundle\Entity\CaseEntity.data,           attributes: [BROWSE, READ, EDIT] }
         case_state:                 { title: app.permissions.case.state,                  property: AppBundle\Entity\CaseEntity.state,          attributes: [BROWSE, READ, EDIT] }
+        case_priority:              { title: app.permissions.case.priority,               property: AppBundle\Entity\CaseEntity.priority,       attributes: [BROWSE, READ, EDIT] }
         case_statuses:              { title: app.permissions.case.statuses,               property: AppBundle\Entity\CaseEntity.statuses,       attributes: [BROWSE, READ, EDIT] }
         case_version:               { title: app.permissions.case.version,                property: AppBundle\Entity\CaseEntity.version,        attributes: [BROWSE, READ, EDIT] }
         case_status:                { title: app.permissions.case_status,                 entity:   AppBundle\Entity\CaseStatus,                attributes: [BROWSE, READ, EDIT, ADD, DELETE] }

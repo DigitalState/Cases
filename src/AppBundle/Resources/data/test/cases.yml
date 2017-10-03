@@ -31,3 +31,4 @@ prototype:
     title: []
     data: []
     state: ~
+    priority: 0
