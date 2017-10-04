@@ -29,8 +29,10 @@ class AppKernel extends Kernel
             new Knp\DoctrineBehaviors\Bundle\DoctrineBehaviorsBundle(),
             new Lexik\Bundle\JWTAuthenticationBundle\LexikJWTAuthenticationBundle(),
             new Ds\Component\Api\Bridge\Symfony\Bundle\DsApiBundle(),
+            new Ds\Component\Camunda\Bridge\Symfony\Bundle\DsCamundaBundle(),
             new Ds\Component\Config\Bridge\Symfony\Bundle\DsConfigBundle(),
             new Ds\Component\Entity\Bridge\Symfony\Bundle\DsEntityBundle(),
+            new Ds\Component\Formio\Bridge\Symfony\Bundle\DsFormioBundle(),
             new Ds\Component\Health\Bridge\Symfony\Bundle\DsHealthBundle(),
             new Ds\Component\Locale\Bridge\Symfony\Bundle\DsLocaleBundle(),
             new Ds\Component\Log\Bridge\Symfony\Bundle\DsLogBundle(),
@@ -38,8 +40,6 @@ class AppKernel extends Kernel
             new Ds\Component\Session\Bridge\Symfony\Bundle\DsSessionBundle(),
             new Ds\Component\Statistic\Bridge\Symfony\Bundle\DsStatisticBundle(),
             new Ds\Component\Translation\Bridge\Symfony\Bundle\DsTranslationBundle(),
-            new Ds\Component\Camunda\Bridge\Symfony\Bundle\DsCamundaBundle(),
-            new Ds\Component\Formio\Bridge\Symfony\Bundle\DsFormioBundle(),
             new AppBundle\AppBundle(),
         ];
 
