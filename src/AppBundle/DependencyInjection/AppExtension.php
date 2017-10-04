@@ -41,6 +41,7 @@ class AppExtension extends Extension implements PrependExtensionInterface
         $loader = new Loader\YamlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
         $loader->load('api_filters.yml');
         $loader->load('services.yml');
+        $loader->load('stats.yml');
 
         // @todo Move this config -> parameters logic to a common trait in the config component bridge
         $container->setParameter('ds_config.configs.app.case.custom_id.mask', $config['case']['custom_id']['mask']);

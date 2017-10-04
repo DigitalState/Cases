@@ -1,0 +1,14 @@
+services:
+    app.stat.case_entity.state.open:
+        class: AppBundle\Stat\CaseEntity\State\OpenStat
+        arguments:
+            - '@app.service.case'
+        tags:
+            - { name: ds_statistic.stat, alias: case.state.open }
+
+    app.stat.case_entity.state.closed:
+        class: AppBundle\Stat\CaseEntity\State\ClosedStat
+        arguments:
+            - '@app.service.case'
+        tags:
+            - { name: ds_statistic.stat, alias: case.state.closed }
