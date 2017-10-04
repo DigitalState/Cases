@@ -1,6 +1,6 @@
 <?php
 
-namespace AppBundle\Stat\CaseEntity\State;
+namespace AppBundle\Stat\CaseEntity\Count\State;
 
 use AppBundle\Entity\CaseEntity;
 use AppBundle\Service\CaseService;

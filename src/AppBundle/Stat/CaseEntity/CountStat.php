@@ -1,6 +1,6 @@
 <?php
 
-namespace AppBundle\Stat\CaseEntity\State;
+namespace AppBundle\Stat\CaseEntity;
 
 use AppBundle\Entity\CaseEntity;
 use AppBundle\Service\CaseService;
@@ -9,9 +9,9 @@ use Ds\Component\Statistic\Model\Datum;
 use Ds\Component\Statistic\Stat\Stat;
 
 /**
- * Class ClosedStat
+ * Class CountStat
  */
-class ClosedStat implements Stat
+class CountStat implements Stat
 {
     use Attribute\Alias;
 
@@ -38,9 +38,7 @@ class ClosedStat implements Stat
         $datum = new Datum;
         $datum
             ->setAlias($this->alias)
-            ->setValue($this->caseService->getRepository()->getCount([
-                'state' => CaseEntity::STATE_CLOSED
-            ]));
+            ->setValue($this->caseService->getRepository()->getCount([]));
 
         return $datum;
     }
