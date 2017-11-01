@@ -27,47 +27,47 @@ items:
     -
         uuid: 6205d0aa-823c-4e62-b481-d36d8ffdfcb6
         key: ds_api.api.authentication.host
-        value: 127.0.0.1
+        value: http://127.0.0.1
 
     -
         uuid: 50aef706-460d-4d26-84ed-7c4b30f2de28
         key: ds_api.api.identities.host
-        value: 127.0.0.1
+        value: http://127.0.0.1
 
     -
         uuid: e0284ff2-3164-45b2-8062-e49877c69b8e
         key: ds_api.api.cases.host
-        value: 127.0.0.1
+        value: http://127.0.0.1
 
     -
         uuid: fac4ec2c-405a-4569-ad19-d7d210686897
         key: ds_api.api.services.host
-        value: 127.0.0.1
+        value: http://127.0.0.1
 
     -
         uuid: 814f482b-1bdf-4482-99d1-385d3402cac5
         key: ds_api.api.records.host
-        value: 127.0.0.1
+        value: http://127.0.0.1
 
     -
         uuid: 1d270dbe-af18-4a40-9585-91eeba1a9c23
         key: ds_api.api.assets.host
-        value: 127.0.0.1
+        value: http://127.0.0.1
 
     -
         uuid: 4a827dd0-b9b4-42df-9357-cf5dcbdacbd4
         key: ds_api.api.cms.host
-        value: 127.0.0.1
+        value: http://127.0.0.1
 
     -
         uuid: 68b3955d-ac68-494f-b0e4-6519d5c23ce9
         key: ds_api.api.camunda.host
-        value: 127.0.0.1
+        value: http://127.0.0.1/engine-rest
 
     -
         uuid: ecf2fd84-9435-4a77-949a-5d3c11463380
         key: ds_api.api.formio.host
-        value: 127.0.0.1
+        value: http://127.0.0.1
 
 prototype:
     uuid: ~
