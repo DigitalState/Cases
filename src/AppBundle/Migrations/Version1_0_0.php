@@ -43,15 +43,15 @@ class Version1_0_0 extends AbstractMigration
                 (3, \'89237ec1-3b51-4d20-8c8f-60f59c5c6bb7\', \'BusinessUnit\', \'11bec012-a73f-45c1-8d2e-53502fa58c23\', \'ds_api.user.roles\', \'ROLE_SYSTEM\', 1, 1, now(), now()),
                 (4, \'97ba10aa-f321-4749-85e8-9cb11e5f58ec\', \'BusinessUnit\', \'11bec012-a73f-45c1-8d2e-53502fa58c23\', \'ds_api.user.identity\', \'System\', 1, 1, now(), now()),
                 (5, \'b09587fa-a271-48f2-9d44-8b79d52258e6\', \'BusinessUnit\', \'11bec012-a73f-45c1-8d2e-53502fa58c23\', \'ds_api.user.identity_uuid\', \'df5fd904-aa47-452f-9c4a-d6b52fe5ace4\', 1, 1, now(), now()),
-                (6, \'4bd944f5-fc9c-4435-862a-620e33c9d993\', \'BusinessUnit\', \'11bec012-a73f-45c1-8d2e-53502fa58c23\', \'ds_api.api.authentication.host\', \'http://127.0.0.1\', 1, 1, now(), now()),
-                (7, \'b187cccc-6311-4718-bacf-3c958d2a51d0\', \'BusinessUnit\', \'11bec012-a73f-45c1-8d2e-53502fa58c23\', \'ds_api.api.identities.host\', \'http://127.0.0.1\', 1, 1, now(), now()),
-                (8, \'a1e5894b-9af7-4462-ab79-03d6eb5329d4\', \'BusinessUnit\', \'11bec012-a73f-45c1-8d2e-53502fa58c23\', \'ds_api.api.cases.host\', \'http://127.0.0.1\', 1, 1, now(), now()),
-                (9, \'94d244d8-c877-410a-8e11-3b1d27e3b229\', \'BusinessUnit\', \'11bec012-a73f-45c1-8d2e-53502fa58c23\', \'ds_api.api.services.host\', \'http://127.0.0.1\', 1, 1, now(), now()),
-                (10, \'11acf7e4-0b67-461d-8d33-47be24400dc5\', \'BusinessUnit\', \'11bec012-a73f-45c1-8d2e-53502fa58c23\', \'ds_api.api.records.host\', \'http://127.0.0.1\', 1, 1, now(), now()),
-                (11, \'a3fca818-0143-46ab-b7a1-c39d00159b5b\', \'BusinessUnit\', \'11bec012-a73f-45c1-8d2e-53502fa58c23\', \'ds_api.api.assets.host\', \'http://127.0.0.1\', 1, 1, now(), now()),
-                (12, \'956d65ce-99f9-49f3-ad96-3a2dc8c3cf07\', \'BusinessUnit\', \'11bec012-a73f-45c1-8d2e-53502fa58c23\', \'ds_api.api.cms.host\', \'http://127.0.0.1\', 1, 1, now(), now()),
-                (13, \'f01af000-0379-4d36-9f3f-4fb18fe00180\', \'BusinessUnit\', \'11bec012-a73f-45c1-8d2e-53502fa58c23\', \'ds_api.api.camunda.host\', \'http://127.0.0.1/engine-rest\', 1, 1, now(), now()),
-                (14, \'8622a8d3-e8aa-416e-ab71-b322f7533254\', \'BusinessUnit\', \'11bec012-a73f-45c1-8d2e-53502fa58c23\', \'ds_api.api.formio.host\', \'http://127.0.0.1\', 1, 1, now(), now());
+                (6, \'4bd944f5-fc9c-4435-862a-620e33c9d993\', \'BusinessUnit\', \'11bec012-a73f-45c1-8d2e-53502fa58c23\', \'ds_api.api.authentication.host\', \'http://api.authentication.ds\', 1, 1, now(), now()),
+                (7, \'b187cccc-6311-4718-bacf-3c958d2a51d0\', \'BusinessUnit\', \'11bec012-a73f-45c1-8d2e-53502fa58c23\', \'ds_api.api.identities.host\', \'http://api.identities.ds\', 1, 1, now(), now()),
+                (8, \'a1e5894b-9af7-4462-ab79-03d6eb5329d4\', \'BusinessUnit\', \'11bec012-a73f-45c1-8d2e-53502fa58c23\', \'ds_api.api.cases.host\', \'http://api.cases.ds\', 1, 1, now(), now()),
+                (9, \'94d244d8-c877-410a-8e11-3b1d27e3b229\', \'BusinessUnit\', \'11bec012-a73f-45c1-8d2e-53502fa58c23\', \'ds_api.api.services.host\', \'http://api.services.ds\', 1, 1, now(), now()),
+                (10, \'11acf7e4-0b67-461d-8d33-47be24400dc5\', \'BusinessUnit\', \'11bec012-a73f-45c1-8d2e-53502fa58c23\', \'ds_api.api.records.host\', \'http://api.records.ds\', 1, 1, now(), now()),
+                (11, \'a3fca818-0143-46ab-b7a1-c39d00159b5b\', \'BusinessUnit\', \'11bec012-a73f-45c1-8d2e-53502fa58c23\', \'ds_api.api.assets.host\', \'http://api.assets.ds\', 1, 1, now(), now()),
+                (12, \'956d65ce-99f9-49f3-ad96-3a2dc8c3cf07\', \'BusinessUnit\', \'11bec012-a73f-45c1-8d2e-53502fa58c23\', \'ds_api.api.cms.host\', \'http://api.cms.ds\', 1, 1, now(), now()),
+                (13, \'f01af000-0379-4d36-9f3f-4fb18fe00180\', \'BusinessUnit\', \'11bec012-a73f-45c1-8d2e-53502fa58c23\', \'ds_api.api.camunda.host\', \'http://api.camunda.ds/engine-rest\', 1, 1, now(), now()),
+                (14, \'8622a8d3-e8aa-416e-ab71-b322f7533254\', \'BusinessUnit\', \'11bec012-a73f-45c1-8d2e-53502fa58c23\', \'ds_api.api.formio.host\', \'http://api.formio.ds\', 1, 1, now(), now());
         ');
 
         $this->addSql('
