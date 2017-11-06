@@ -36,7 +36,7 @@ services:
             cases_php:
                 condition: service_started
         environment:
-            VIRTUAL_HOST: api.cases.ds
+            - VIRTUAL_HOST
         volumes_from:
             - cases_php
         volumes:
