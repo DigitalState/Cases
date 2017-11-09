@@ -38,7 +38,7 @@ The following are screenshots from the Postman, Portal and Admin UIs for Cases m
 
 ---
 
-![Portal Case List with a completed case](./docs/resources/Portal-Case-List-Completed.png)
+![Portal Case List with a completed case](./docs/resources/Portal-Cases-List-Completed.png)
 
 ---
 
