@@ -1,4 +1,26 @@
-items: []
+items:
+    -
+        access: 6e99324a-be4b-46d4-bc50-8ebac7bc3feb # Any organization
+        entity_uuid: 8454c987-cbc5-4a24-ba1a-d420283caabd # Public Works
+        key:
+            - case
+            - case_uuid
+            - case_custom_id
+            - case_created_at
+            - case_updated_at
+            - case_title
+            - case_data
+            - case_state
+            - case_statuses
+            - case_status
+            - case_status_uuid
+            - case_status_created_at
+            - case_status_updated_at
+            - case_status_case
+            - case_status_title
+            - case_status_description
+            - case_status_data
+        attributes: [BROWSE, READ]
 
 prototype:
     access: ~
