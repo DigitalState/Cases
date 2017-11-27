@@ -23,6 +23,6 @@ class Cases extends CaseFixture implements OrderedFixtureInterface
      */
     protected function getResource()
     {
-        return __DIR__.'/../../Resources/data/{env}/cases.yml';
+        return '/srv/api-platform/src/AppBundle/Resources/data/{env}/cases.yml';
     }
 }
