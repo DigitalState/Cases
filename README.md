@@ -1,6 +1,6 @@
 # Cases
 
-The Cases microservice provides a light weight and expendable case/ticketing system.
+The Cases microservice provides a light weight and expandable case/ticketing system.
 
 The purpose of Cases is to provide a "thing" to group work as well as create cases/tickets that align/link with internal case/ticket management systems that may not have web interfaces or you may wish to manage the experience differently.
 
