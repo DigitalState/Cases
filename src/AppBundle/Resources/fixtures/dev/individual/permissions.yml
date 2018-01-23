@@ -1,0 +1,30 @@
+items:
+    -
+        access: 801337b2-53ff-450b-93fc-7ec9bb4eca73 # Any Individual
+        entity_uuid: a9d68bf7-5000-49fe-8b00-33dde235b327 # Backoffice
+        key:
+            - case
+            - case_uuid
+            - case_custom_id
+            - case_created_at
+            - case_title
+            - case_data
+            - case_state
+            - case_statuses
+            - case_version
+            - case_status
+            - case_status_uuid
+            - case_status_created_at
+            - case_status_case
+            - case_status_title
+            - case_status_description
+            - case_status_data
+            - case_status_version
+        attributes: [BROWSE, READ]
+
+prototype:
+    access: ~
+    entity: BusinessUnit
+    entity_uuid: ~
+    key: ~
+    attributes: []

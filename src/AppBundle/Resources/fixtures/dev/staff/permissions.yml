@@ -1,25 +1,7 @@
 items:
     -
-        access: d8619551-3cb6-4c2d-88ac-76b3349700dd # Admin
-        entity_uuid: ~ # Any business unit
-        key: entity
-        attributes: [BROWSE, READ, EDIT, ADD, DELETE]
-
-    -
-        access: d8619551-3cb6-4c2d-88ac-76b3349700dd # Admin
-        entity_uuid: ~ # Any business unit
-        key: property
-        attributes: [BROWSE, READ, EDIT]
-
-    -
-        access: d8619551-3cb6-4c2d-88ac-76b3349700dd # Admin
-        entity_uuid: ~ # Any business unit
-        key: custom
-        attributes: [BROWSE, READ, EDIT, ADD, DELETE, EXECUTE]
-
-    -
-        access: bc16a956-e4f5-4bbd-b8d1-abbe31615ba9 # Any staff
-        entity_uuid: 8454c987-cbc5-4a24-ba1a-d420283caabd # Public Works
+        access: bc16a956-e4f5-4bbd-b8d1-abbe31615ba9 # Any Staff
+        entity_uuid: a9d68bf7-5000-49fe-8b00-33dde235b327 # Backoffice
         key:
             - case
             - case_property
@@ -28,8 +10,26 @@ items:
         attributes: [BROWSE, READ]
 
     -
+        access: d8619551-3cb6-4c2d-88ac-76b3349700dd # Admin
+        entity_uuid: ~ # Any BusinessUnit
+        key: entity
+        attributes: [BROWSE, READ, EDIT, ADD, DELETE]
+
+    -
+        access: d8619551-3cb6-4c2d-88ac-76b3349700dd # Admin
+        entity_uuid: ~ # Any BusinessUnit
+        key: property
+        attributes: [BROWSE, READ, EDIT]
+
+    -
+        access: d8619551-3cb6-4c2d-88ac-76b3349700dd # Admin
+        entity_uuid: ~ # Any BusinessUnit
+        key: custom
+        attributes: [BROWSE, READ, EDIT, ADD, DELETE, EXECUTE]
+
+    -
         access: 6cee2d9d-1402-4190-9f63-5b7ff4cd86dc # Manager
-        entity_uuid: 8454c987-cbc5-4a24-ba1a-d420283caabd # Public Works
+        entity_uuid: a9d68bf7-5000-49fe-8b00-33dde235b327 # Backoffice
         key:
             - case
             - case_status
@@ -37,7 +37,7 @@ items:
 
     -
         access: 6cee2d9d-1402-4190-9f63-5b7ff4cd86dc # Manager
-        entity_uuid: 8454c987-cbc5-4a24-ba1a-d420283caabd # Public Works
+        entity_uuid: a9d68bf7-5000-49fe-8b00-33dde235b327 # Backoffice
         key:
             - case_property
             - case_status_property
@@ -45,7 +45,7 @@ items:
 
     -
         access: d1a5a3c7-4489-430f-a588-8428aa037830 # Agent
-        entity_uuid: 8454c987-cbc5-4a24-ba1a-d420283caabd # Public Works
+        entity_uuid: a9d68bf7-5000-49fe-8b00-33dde235b327 # Backoffice
         key:
             - case
             - case_property

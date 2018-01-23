@@ -2,7 +2,7 @@ items:
     -
         uuid: 82184661-3aa4-4c68-a130-e07dc2e0d974
         custom_id: GOV-82184661
-        owner_uuid: 8454c987-cbc5-4a24-ba1a-d420283caabd # Public Works
+        owner_uuid: a9d68bf7-5000-49fe-8b00-33dde235b327 # Backoffice
         identity: Individual
         identity_uuid: d0daa7e4-07d1-47e6-93f2-0629adaa3b49 # Morgan
         title:
@@ -13,7 +13,7 @@ items:
     -
         uuid: 788e4c03-b97b-4f5c-8024-cd128121ca11
         custom_id: GOV-788e4c03
-        owner_uuid: c11c546e-bd01-47cf-97da-e25388357b5a # Administration
+        owner_uuid: a9d68bf7-5000-49fe-8b00-33dde235b327 # Backoffice
         identity: Individual
         identity_uuid: d0daa7e4-07d1-47e6-93f2-0629adaa3b49 # Morgan
         title:

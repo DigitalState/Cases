@@ -1,0 +1,11 @@
+items:
+    -
+        uuid: 4c919ffc-bce9-4c6a-b265-2c479e3f3ab7
+        identity_uuid: ~ # Any Anonymous
+
+prototype:
+    uuid: ~
+    owner: BusinessUnit
+    owner_uuid: c11c546e-bd01-47cf-97da-e25388357b5a # Administration
+    identity: Anonymous
+    identity_uuid: ~
