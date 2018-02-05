@@ -102,6 +102,6 @@ prototype:
     owner_uuid: ~
     identity: ~
     identity_uuid: ~
-    title: []
-    description: []
-    data: []
+    title: {}
+    description: {}
+    data: {}
