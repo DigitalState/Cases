@@ -5,7 +5,7 @@ Feature: Read cases
   I should be able to send api requests related to cases
 
   Background:
-    Given I am authenticated as a "system" identity
+    Given I am authenticated as the "system" identity
 
   @createSchema @loadFixtures @dropSchema
   Scenario: Read a category
@@ -27,14 +27,12 @@ Feature: Read cases
     And the JSON node "owner" should exist
     And the JSON node "owner" should be equal to the string "BusinessUnit"
     And the JSON node "ownerUuid" should exist
-    And the JSON node "ownerUuid" should be equal to the string "14da4a8c-aee1-43b3-bbac-e3e81a853e0e"
+    And the JSON node "ownerUuid" should be equal to the string "83bf8f26-7181-4bed-92f3-3ce5e4c286d7"
     And the JSON node "identity" should exist
     And the JSON node "identity" should be equal to the string "Individual"
     And the JSON node "identityUuid" should exist
-    And the JSON node "identityUuid" should be equal to the string "605289e0-9371-42d4-b9fe-5308c348a6a4"
+    And the JSON node "identityUuid" should be equal to the string "9ce3bdb9-47e1-43c9-81ee-0dcc2106ba42"
     And the JSON node "title" should exist
-#    And the JSON node "title" should be equal to "todo"
+    And the JSON node "title.en" should be equal to "Pothole - 123 Street - Urgent"
+    And the JSON node "title.fr" should be equal to "Nid-de-poule - 123 rue - urgent"
     And the JSON node "data" should exist
-#    And the JSON node "data" should be equal to "todo"
-    And the JSON node "version" should exist
-    And the JSON node "version" should be equal to the number 1

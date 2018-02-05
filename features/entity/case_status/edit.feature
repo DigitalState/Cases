@@ -5,7 +5,7 @@ Feature: Edit case statuses
   I should be able to send api requests related to case statuses
 
   Background:
-    Given I am authenticated as a "system" identity
+    Given I am authenticated as the "system" identity
 
   @createSchema @loadFixtures
   Scenario: Edit a case status
@@ -14,7 +14,7 @@ Feature: Edit case statuses
     And I send a "PUT" request to "/case-statuses/300a5225-641e-4cda-b8de-b8515e568cda" with body:
     """
     {
-      "ownerUuid": "56b4b860-d85c-4e1d-b9d4-513168f0c35e",
+      "identityUuid": "683153c6-9d82-43f3-a9f3-6f49890a0500",
       "title": {
         "en": "Request submitted - edit",
         "fr": "Demande soumise - edit"
@@ -36,10 +36,24 @@ Feature: Edit case statuses
     Then the response status code should be 200
     And the header "Content-Type" should be equal to "application/json; charset=utf-8"
     And the response should be in JSON
-    And the JSON node "ownerUuid" should be equal to the string "56b4b860-d85c-4e1d-b9d4-513168f0c35e"
-#    And the JSON node "title" should be equal to "todo"
-#    And the JSON node "description" should be equal to "todo"
-#    And the JSON node "data" should be equal to "todo"
+    And the JSON node "identityUuid" should be equal to "683153c6-9d82-43f3-a9f3-6f49890a0500"
+    And the JSON node "title" should exist
+    And the JSON node "title.en" should exist
+    And the JSON node "title.en" should be equal to "Request submitted - edit"
+    And the JSON node "title.fr" should exist
+    And the JSON node "title.fr" should be equal to "Demande soumise - edit"
+    And the JSON node "description" should exist
+    And the JSON node "description.en" should exist
+    And the JSON node "description.en" should be equal to "Description - edit"
+    And the JSON node "description.fr" should exist
+    And the JSON node "description.fr" should be equal to "Description - edit"
+    And the JSON node "data" should exist
+    And the JSON node "data.en" should exist
+    And the JSON node "data.en.test" should exist
+    And the JSON node "data.en.test" should be equal to "Test - edit"
+    And the JSON node "data.fr" should exist
+    And the JSON node "data.fr.test" should exist
+    And the JSON node "data.fr.test" should be equal to "Test - edit"
 
   Scenario: Confirm the edited case status
     When I add "Accept" header equal to "application/json"
@@ -47,10 +61,24 @@ Feature: Edit case statuses
     Then the response status code should be 200
     And the header "Content-Type" should be equal to "application/json; charset=utf-8"
     And the response should be in JSON
-    And the JSON node "ownerUuid" should be equal to the string "56b4b860-d85c-4e1d-b9d4-513168f0c35e"
-#    And the JSON node "title" should be equal to "todo"
-#    And the JSON node "description" should be equal to "todo"
-#    And the JSON node "data" should be equal to "todo"
+    And the JSON node "identityUuid" should be equal to "683153c6-9d82-43f3-a9f3-6f49890a0500"
+    And the JSON node "title" should exist
+    And the JSON node "title.en" should exist
+    And the JSON node "title.en" should be equal to "Request submitted - edit"
+    And the JSON node "title.fr" should exist
+    And the JSON node "title.fr" should be equal to "Demande soumise - edit"
+    And the JSON node "description" should exist
+    And the JSON node "description.en" should exist
+    And the JSON node "description.en" should be equal to "Description - edit"
+    And the JSON node "description.fr" should exist
+    And the JSON node "description.fr" should be equal to "Description - edit"
+    And the JSON node "data" should exist
+    And the JSON node "data.en" should exist
+    And the JSON node "data.en.test" should exist
+    And the JSON node "data.en.test" should be equal to "Test - edit"
+    And the JSON node "data.fr" should exist
+    And the JSON node "data.fr.test" should exist
+    And the JSON node "data.fr.test" should be equal to "Test - edit"
 
   Scenario: Edit a case status's read-only properties
     When I add "Accept" header equal to "application/json"
@@ -93,7 +121,7 @@ Feature: Edit case statuses
     And I send a "PUT" request to "/case-statuses/300a5225-641e-4cda-b8de-b8515e568cda" with body:
     """
     {
-      "identityUuid": "37a58567-a48c-4aa9-a955-81459da95fe2",
+      "identityUuid": "d83ec028-0805-454f-b1bc-d0f658d1c41f",
       "version": 1
     }
     """

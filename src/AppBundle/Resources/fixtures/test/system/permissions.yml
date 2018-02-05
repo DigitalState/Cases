@@ -1,19 +1,19 @@
 items:
     -
-        access: 26fc3264-ec77-4bb2-bd00-3088fc42bb43 # System
-        entity_uuid: ~ # Any business unit
+        access: 60660966-a337-4764-9ed3-5e28a635006b # System
+        entity_uuid: ~ # Any BusinessUnit
         key: entity
         attributes: [BROWSE, READ, EDIT, ADD, DELETE]
 
     -
-        access: 26fc3264-ec77-4bb2-bd00-3088fc42bb43 # System
-        entity_uuid: ~ # Any business unit
+        access: 60660966-a337-4764-9ed3-5e28a635006b # System
+        entity_uuid: ~ # Any BusinessUnit
         key: property
         attributes: [BROWSE, READ, EDIT]
 
     -
-        access: 26fc3264-ec77-4bb2-bd00-3088fc42bb43 # System
-        entity_uuid: ~ # Any business unit
+        access: 60660966-a337-4764-9ed3-5e28a635006b # System
+        entity_uuid: ~ # Any BusinessUnit
         key: custom
         attributes: [BROWSE, READ, EDIT, ADD, DELETE, EXECUTE]
 

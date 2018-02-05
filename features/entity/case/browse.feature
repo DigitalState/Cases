@@ -5,7 +5,7 @@ Feature: Browse cases
   I should be able to send api requests related to cases
 
   Background:
-    Given I am authenticated as a "system" identity
+    Given I am authenticated as the "system" identity
 
   @createSchema @loadFixtures
   Scenario: Browse all cases
@@ -14,8 +14,8 @@ Feature: Browse cases
     Then the response status code should be 200
     And the header "Content-Type" should be equal to "application/json; charset=utf-8"
     And the response should be in JSON
-#    And the response JSON should be a collection
-#    And the response collection should count 1 items
+    And the response should be a collection
+    And the response collection should count 2 items
 
   Scenario: Browse paginated cases
     When I add "Accept" header equal to "application/json"
@@ -23,8 +23,8 @@ Feature: Browse cases
     Then the response status code should be 200
     And the header "Content-Type" should be equal to "application/json; charset=utf-8"
     And the response should be in JSON
-#    And the response JSON should be a collection
-#    And the response collection should count 1 items
+    And the response should be a collection
+    And the response collection should count 1 items
 
   Scenario: Browse cases with a specific id
     When I add "Accept" header equal to "application/json"
@@ -32,8 +32,8 @@ Feature: Browse cases
     Then the response status code should be 200
     And the header "Content-Type" should be equal to "application/json; charset=utf-8"
     And the response should be in JSON
-#    And the response JSON should be a collection
-#    And the response collection should count 1 items
+    And the response should be a collection
+    And the response collection should count 1 items
 
   Scenario: Browse cases with specific ids
     When I add "Accept" header equal to "application/json"
@@ -41,8 +41,8 @@ Feature: Browse cases
     Then the response status code should be 200
     And the header "Content-Type" should be equal to "application/json; charset=utf-8"
     And the response should be in JSON
-#    And the response JSON should be a collection
-#    And the response collection should count 1 items
+    And the response should be a collection
+    And the response collection should count 1 items
 
   Scenario: Browse cases with a specific uuid
     When I add "Accept" header equal to "application/json"
@@ -50,8 +50,8 @@ Feature: Browse cases
     Then the response status code should be 200
     And the header "Content-Type" should be equal to "application/json; charset=utf-8"
     And the response should be in JSON
-#    And the response JSON should be a collection
-#    And the response collection should count 1 items
+    And the response should be a collection
+    And the response collection should count 1 items
 
   Scenario: Browse cases with specific uuids
     When I add "Accept" header equal to "application/json"
@@ -59,8 +59,8 @@ Feature: Browse cases
     Then the response status code should be 200
     And the header "Content-Type" should be equal to "application/json; charset=utf-8"
     And the response should be in JSON
-#    And the response JSON should be a collection
-#    And the response collection should count 1 items
+    And the response should be a collection
+    And the response collection should count 1 items
 
   Scenario: Browse cases with a specific owner
     When I add "Accept" header equal to "application/json"
@@ -68,8 +68,8 @@ Feature: Browse cases
     Then the response status code should be 200
     And the header "Content-Type" should be equal to "application/json; charset=utf-8"
     And the response should be in JSON
-#    And the response JSON should be a collection
-#    And the response collection should count 1 items
+    And the response should be a collection
+    And the response collection should count 1 items
 
   Scenario: Browse cases with specific owners
     When I add "Accept" header equal to "application/json"
@@ -77,26 +77,26 @@ Feature: Browse cases
     Then the response status code should be 200
     And the header "Content-Type" should be equal to "application/json; charset=utf-8"
     And the response should be in JSON
-#    And the response JSON should be a collection
-#    And the response collection should count 1 items
+    And the response should be a collection
+    And the response collection should count 1 items
 
   Scenario: Browse cases with a specific owner uuid
     When I add "Accept" header equal to "application/json"
-    And I send a "GET" request to "/cases?ownerUuid=14da4a8c-aee1-43b3-bbac-e3e81a853e0e"
+    And I send a "GET" request to "/cases?ownerUuid=83bf8f26-7181-4bed-92f3-3ce5e4c286d7"
     Then the response status code should be 200
     And the header "Content-Type" should be equal to "application/json; charset=utf-8"
     And the response should be in JSON
-#    And the response JSON should be a collection
-#    And the response collection should count 1 items
+    And the response should be a collection
+    And the response collection should count 1 items
 
   Scenario: Browse cases with specific owner uuids
     When I add "Accept" header equal to "application/json"
-    And I send a "GET" request to "/cases?ownerUuid[0]=14da4a8c-aee1-43b3-bbac-e3e81a853e0e"
+    And I send a "GET" request to "/cases?ownerUuid[0]=83bf8f26-7181-4bed-92f3-3ce5e4c286d7"
     Then the response status code should be 200
     And the header "Content-Type" should be equal to "application/json; charset=utf-8"
     And the response should be in JSON
-#    And the response JSON should be a collection
-#    And the response collection should count 1 items
+    And the response should be a collection
+    And the response collection should count 1 items
 
   Scenario: Browse cases with a specific before created date
     When I add "Accept" header equal to "application/json"
@@ -104,8 +104,8 @@ Feature: Browse cases
     Then the response status code should be 200
     And the header "Content-Type" should be equal to "application/json; charset=utf-8"
     And the response should be in JSON
-#    And the response JSON should be a collection
-#    And the response collection should count 1 items
+    And the response should be a collection
+    And the response collection should count 1 items
 
   Scenario: Browse cases with a specific after created date
     When I add "Accept" header equal to "application/json"
@@ -113,8 +113,8 @@ Feature: Browse cases
     Then the response status code should be 200
     And the header "Content-Type" should be equal to "application/json; charset=utf-8"
     And the response should be in JSON
-#    And the response JSON should be a collection
-#    And the response collection should count 1 items
+    And the response should be a collection
+    And the response collection should count 1 items
 
   Scenario: Browse cases with a specific before updated date
     When I add "Accept" header equal to "application/json"
@@ -122,8 +122,8 @@ Feature: Browse cases
     Then the response status code should be 200
     And the header "Content-Type" should be equal to "application/json; charset=utf-8"
     And the response should be in JSON
-#    And the response JSON should be a collection
-#    And the response collection should count 1 items
+    And the response should be a collection
+    And the response collection should count 1 items
 
   Scenario: Browse cases with a specific after updated date
     When I add "Accept" header equal to "application/json"
@@ -131,8 +131,8 @@ Feature: Browse cases
     Then the response status code should be 200
     And the header "Content-Type" should be equal to "application/json; charset=utf-8"
     And the response should be in JSON
-#    And the response JSON should be a collection
-#    And the response collection should count 1 items
+    And the response should be a collection
+    And the response collection should count 1 items
 
   Scenario: Browse cases with a specific before deleted date
     When I add "Accept" header equal to "application/json"
@@ -140,8 +140,8 @@ Feature: Browse cases
     Then the response status code should be 200
     And the header "Content-Type" should be equal to "application/json; charset=utf-8"
     And the response should be in JSON
-#    And the response JSON should be a collection
-#    And the response collection should count 1 items
+    And the response should be a collection
+    And the response collection should count 1 items
 
   Scenario: Browse cases with a specific after deleted date
     When I add "Accept" header equal to "application/json"
@@ -149,8 +149,8 @@ Feature: Browse cases
     Then the response status code should be 200
     And the header "Content-Type" should be equal to "application/json; charset=utf-8"
     And the response should be in JSON
-#    And the response JSON should be a collection
-#    And the response collection should count 1 items
+    And the response should be a collection
+    And the response collection should count 1 items
 
   Scenario: Browse cases that has keywords for title
     When I add "Accept" header equal to "application/json"
@@ -158,8 +158,8 @@ Feature: Browse cases
     Then the response status code should be 200
     And the header "Content-Type" should be equal to "application/json; charset=utf-8"
     And the response should be in JSON
-#    And the response JSON should be a collection
-#    And the response collection should count 1 items
+    And the response should be a collection
+    And the response collection should count 1 items
 
   Scenario: Browse cases that has case-insensitive keywords for title
     When I add "Accept" header equal to "application/json"
@@ -167,8 +167,8 @@ Feature: Browse cases
     Then the response status code should be 200
     And the header "Content-Type" should be equal to "application/json; charset=utf-8"
     And the response should be in JSON
-#    And the response JSON should be a collection
-#    And the response collection should count 1 items
+    And the response should be a collection
+    And the response collection should count 1 items
 
   Scenario: Browse cases ordered by id asc
     When I add "Accept" header equal to "application/json"
@@ -176,8 +176,8 @@ Feature: Browse cases
     Then the response status code should be 200
     And the header "Content-Type" should be equal to "application/json; charset=utf-8"
     And the response should be in JSON
-#    And the response JSON should be a collection
-#    And the response collection should count 2 items
+    And the response should be a collection
+    And the response collection should count 2 items
 
   Scenario: Browse cases ordered by id desc
     When I add "Accept" header equal to "application/json"
@@ -185,8 +185,8 @@ Feature: Browse cases
     Then the response status code should be 200
     And the header "Content-Type" should be equal to "application/json; charset=utf-8"
     And the response should be in JSON
-#    And the response JSON should be a collection
-#    And the response collection should count 2 items
+    And the response should be a collection
+    And the response collection should count 2 items
 
   Scenario: Browse cases ordered by created date asc
     When I add "Accept" header equal to "application/json"
@@ -194,8 +194,8 @@ Feature: Browse cases
     Then the response status code should be 200
     And the header "Content-Type" should be equal to "application/json; charset=utf-8"
     And the response should be in JSON
-#    And the response JSON should be a collection
-#    And the response collection should count 2 items
+    And the response should be a collection
+    And the response collection should count 2 items
 
   Scenario: Browse cases ordered by created date desc
     When I add "Accept" header equal to "application/json"
@@ -203,8 +203,8 @@ Feature: Browse cases
     Then the response status code should be 200
     And the header "Content-Type" should be equal to "application/json; charset=utf-8"
     And the response should be in JSON
-#    And the response JSON should be a collection
-#    And the response collection should count 2 items
+    And the response should be a collection
+    And the response collection should count 2 items
 
   Scenario: Browse cases ordered by updated date asc
     When I add "Accept" header equal to "application/json"
@@ -212,8 +212,8 @@ Feature: Browse cases
     Then the response status code should be 200
     And the header "Content-Type" should be equal to "application/json; charset=utf-8"
     And the response should be in JSON
-#    And the response JSON should be a collection
-#    And the response collection should count 2 items
+    And the response should be a collection
+    And the response collection should count 2 items
 
   Scenario: Browse cases ordered by updated date desc
     When I add "Accept" header equal to "application/json"
@@ -221,8 +221,8 @@ Feature: Browse cases
     Then the response status code should be 200
     And the header "Content-Type" should be equal to "application/json; charset=utf-8"
     And the response should be in JSON
-#    And the response JSON should be a collection
-#    And the response collection should count 2 items
+    And the response should be a collection
+    And the response collection should count 2 items
 
   Scenario: Browse cases ordered by deleted date asc
     When I add "Accept" header equal to "application/json"
@@ -230,8 +230,8 @@ Feature: Browse cases
     Then the response status code should be 200
     And the header "Content-Type" should be equal to "application/json; charset=utf-8"
     And the response should be in JSON
-#    And the response JSON should be a collection
-#    And the response collection should count 2 items
+    And the response should be a collection
+    And the response collection should count 2 items
 
   Scenario: Browse cases ordered by deleted date desc
     When I add "Accept" header equal to "application/json"
@@ -239,8 +239,8 @@ Feature: Browse cases
     Then the response status code should be 200
     And the header "Content-Type" should be equal to "application/json; charset=utf-8"
     And the response should be in JSON
-#    And the response JSON should be a collection
-#    And the response collection should count 2 items
+    And the response should be a collection
+    And the response collection should count 2 items
 
   Scenario: Browse cases ordered by owner asc
     When I add "Accept" header equal to "application/json"
@@ -248,8 +248,8 @@ Feature: Browse cases
     Then the response status code should be 200
     And the header "Content-Type" should be equal to "application/json; charset=utf-8"
     And the response should be in JSON
-#    And the response JSON should be a collection
-#    And the response collection should count 2 items
+    And the response should be a collection
+    And the response collection should count 2 items
 
   @dropSchema
   Scenario: Browse cases ordered by owner desc
@@ -258,8 +258,8 @@ Feature: Browse cases
     Then the response status code should be 200
     And the header "Content-Type" should be equal to "application/json; charset=utf-8"
     And the response should be in JSON
-#    And the response JSON should be a collection
-#    And the response collection should count 2 items
+    And the response should be a collection
+    And the response collection should count 2 items
 
 #  Scenario: Browse cases ordered by title asc
 #    When I add "Accept" header equal to "application/json"
@@ -267,7 +267,7 @@ Feature: Browse cases
 #    Then the response status code should be 200
 #    And the header "Content-Type" should be equal to "application/json; charset=utf-8"
 #    And the response should be in JSON
-#    And the response JSON should be a collection
+#    And the response should be a collection
 #    And the response collection should count 2 items
 
 #  Scenario: Browse cases ordered by title desc
@@ -276,5 +276,5 @@ Feature: Browse cases
 #    Then the response status code should be 200
 #    And the header "Content-Type" should be equal to "application/json; charset=utf-8"
 #    And the response should be in JSON
-#    And the response JSON should be a collection
+#    And the response should be a collection
 #    And the response collection should count 2 items

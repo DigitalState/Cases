@@ -5,7 +5,7 @@ Feature: Edit cases
   I should be able to send api requests related to cases
 
   Background:
-    Given I am authenticated as a "system" identity
+    Given I am authenticated as the "system" identity
 
   @createSchema @loadFixtures
   Scenario: Edit a case
@@ -14,7 +14,6 @@ Feature: Edit cases
     And I send a "PUT" request to "/cases/c61f05ce-468f-4b21-ad38-512ea549e210" with body:
     """
     {
-      "ownerUuid": "a735bf83-6d9c-4b29-af2b-c372231ed74f",
       "title": {
         "en": "Pothole - 123 Street - Urgent - edit",
         "fr": "Nid-de-poule - 123 rue - urgent - edit"
@@ -26,15 +25,27 @@ Feature: Edit cases
         "fr": {
           "test": "Test - edit"
         }
-      }
+      },
+      "state": "closed"
     }
     """
     Then the response status code should be 200
     And the header "Content-Type" should be equal to "application/json; charset=utf-8"
     And the response should be in JSON
-    And the JSON node "ownerUuid" should be equal to the string "a735bf83-6d9c-4b29-af2b-c372231ed74f"
-#    And the JSON node "title" should be equal to "todo"
-#    And the JSON node "data" should be equal to "todo"
+    And the JSON node "ownerUuid" should be equal to the string "83bf8f26-7181-4bed-92f3-3ce5e4c286d7"
+    And the JSON node "title" should exist
+    And the JSON node "title.en" should exist
+    And the JSON node "title.en" should be equal to "Pothole - 123 Street - Urgent - edit"
+    And the JSON node "title.fr" should exist
+    And the JSON node "title.fr" should be equal to "Nid-de-poule - 123 rue - urgent - edit"
+    And the JSON node "data" should exist
+    And the JSON node "data.en" should exist
+    And the JSON node "data.en.test" should exist
+    And the JSON node "data.en.test" should be equal to "Test - edit"
+    And the JSON node "data.fr" should exist
+    And the JSON node "data.fr.test" should exist
+    And the JSON node "data.fr.test" should be equal to "Test - edit"
+    And the JSON node "state" should be equal to "closed"
 
   Scenario: Confirm the edited case
     When I add "Accept" header equal to "application/json"
@@ -42,9 +53,20 @@ Feature: Edit cases
     Then the response status code should be 200
     And the header "Content-Type" should be equal to "application/json; charset=utf-8"
     And the response should be in JSON
-    And the JSON node "ownerUuid" should be equal to the string "a735bf83-6d9c-4b29-af2b-c372231ed74f"
-#    And the JSON node "title" should be equal to "todo"
-#    And the JSON node "data" should be equal to "todo"
+    And the JSON node "ownerUuid" should be equal to the string "83bf8f26-7181-4bed-92f3-3ce5e4c286d7"
+    And the JSON node "title" should exist
+    And the JSON node "title.en" should exist
+    And the JSON node "title.en" should be equal to "Pothole - 123 Street - Urgent - edit"
+    And the JSON node "title.fr" should exist
+    And the JSON node "title.fr" should be equal to "Nid-de-poule - 123 rue - urgent - edit"
+    And the JSON node "data" should exist
+    And the JSON node "data.en" should exist
+    And the JSON node "data.en.test" should exist
+    And the JSON node "data.en.test" should be equal to "Test - edit"
+    And the JSON node "data.fr" should exist
+    And the JSON node "data.fr.test" should exist
+    And the JSON node "data.fr.test" should be equal to "Test - edit"
+    And the JSON node "state" should be equal to "closed"
 
   Scenario: Edit a case's read-only properties
     When I add "Accept" header equal to "application/json"
