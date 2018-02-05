@@ -73,7 +73,7 @@ Feature: Add case statuses
     And the JSON node "version" should be equal to the number 1
 
   @dropSchema
-  Scenario: Read the added user
+  Scenario: Read the added case
     When I add "Accept" header equal to "application/json"
     And I send a "GET" request to "/case-statuses?id=7"
     Then the response status code should be 200
