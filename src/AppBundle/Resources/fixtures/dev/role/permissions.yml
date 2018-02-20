@@ -1,0 +1,131 @@
+items:
+    -
+        access: c793a51b-7771-4d1c-b242-2db610f72702 # Administrator
+        scope: owner
+        entity: BusinessUnit
+        entity_uuid: ~ # Any BusinessUnit
+        key: entity
+        attributes: [BROWSE, READ, EDIT, ADD, DELETE]
+
+    -
+        access: c793a51b-7771-4d1c-b242-2db610f72702 # Administrator
+        scope: owner
+        entity: BusinessUnit
+        entity_uuid: ~ # Any BusinessUnit
+        key: property
+        attributes: [BROWSE, READ, EDIT]
+
+    -
+        access: c793a51b-7771-4d1c-b242-2db610f72702 # Administrator
+        scope: generic
+        key: generic
+        attributes: [BROWSE, READ, EDIT, ADD, DELETE, EXECUTE]
+
+    -
+        access: 1ab37071-c780-4f0e-9bbf-5b4a90c09909 # Manager
+        scope: owner
+        entity: BusinessUnit
+        entity_uuid: a9d68bf7-5000-49fe-8b00-33dde235b327 # Backoffice
+        key:
+            - case
+            - case_status
+        attributes: [EDIT, ADD, DELETE]
+
+    -
+        access: 1ab37071-c780-4f0e-9bbf-5b4a90c09909 # Manager
+        scope: owner
+        entity: BusinessUnit
+        entity_uuid: a9d68bf7-5000-49fe-8b00-33dde235b327 # Backoffice
+        key:
+            - case_property
+            - case_status_property
+        attributes: [EDIT]
+
+    -
+        access: 7ab562d6-c039-47e8-977f-34c275c40bc4 # Staff
+        scope: owner
+        entity: BusinessUnit
+        entity_uuid: a9d68bf7-5000-49fe-8b00-33dde235b327 # Backoffice
+        key:
+            - case
+            - case_property
+            - case_status
+            - case_status_property
+        attributes: [BROWSE, READ]
+
+    -
+        access: af15fe3c-88f4-4181-b263-21b1c69cf1c4 # Individual
+        scope: session
+        key:
+            - case
+            - case_uuid
+            - case_custom_id
+            - case_created_at
+            - case_title
+            - case_data
+            - case_state
+            - case_statuses
+            - case_version
+            - case_status
+            - case_status_uuid
+            - case_status_created_at
+            - case_status_case
+            - case_status_title
+            - case_status_description
+            - case_status_data
+            - case_status_version
+        attributes: [BROWSE, READ]
+
+    -
+        access: 69b28646-9d53-43ab-9a83-d737307af8fc # Organization
+        scope: session
+        key:
+            - case
+            - case_uuid
+            - case_custom_id
+            - case_created_at
+            - case_title
+            - case_data
+            - case_state
+            - case_statuses
+            - case_version
+            - case_status
+            - case_status_uuid
+            - case_status_created_at
+            - case_status_case
+            - case_status_title
+            - case_status_description
+            - case_status_data
+            - case_status_version
+        attributes: [BROWSE, READ]
+
+    -
+        access: 58a4e351-8d5e-4554-b213-9a9666bad271 # Anonymous
+        scope: session
+        key:
+            - case
+            - case_uuid
+            - case_custom_id
+            - case_created_at
+            - case_title
+            - case_data
+            - case_state
+            - case_statuses
+            - case_version
+            - case_status
+            - case_status_uuid
+            - case_status_created_at
+            - case_status_case
+            - case_status_title
+            - case_status_description
+            - case_status_data
+            - case_status_version
+        attributes: [BROWSE, READ]
+
+prototype:
+    access: ~
+    scope: ~
+    entity: ~
+    entity_uuid: ~
+    key: ~
+    attributes: []
