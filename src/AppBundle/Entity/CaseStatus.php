@@ -11,6 +11,7 @@ use Ds\Component\Model\Type\Ownable;
 use Ds\Component\Model\Type\Identitiable;
 use Ds\Component\Model\Type\Versionable;
 use Ds\Component\Model\Attribute\Accessor;
+use Ds\Component\Security\Model\Type\Secured;
 use Ds\Component\Translation\Model\Attribute\Accessor as TranslationAccessor;
 use Ds\Component\Translation\Model\Type\Translatable;
 use Knp\DoctrineBehaviors\Model as Behavior;
@@ -47,7 +48,7 @@ use Symfony\Component\Validator\Constraints as Assert;
  * @ORM\Table(name="app_case_status")
  * @ORMAssert\UniqueEntity(fields="uuid")
  */
-class CaseStatus implements Identifiable, Uuidentifiable, Ownable, Translatable, Localizable, Identitiable, Deletable, Versionable
+class CaseStatus implements Identifiable, Uuidentifiable, Ownable, Translatable, Localizable, Identitiable, Deletable, Versionable, Secured
 {
     use Behavior\Translatable\Translatable;
     use Behavior\Timestampable\Timestampable;
