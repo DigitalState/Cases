@@ -1,4 +1,8 @@
 parameters:
+    app: cases
+
+    discovery_host: api.discovery.ds
+
     database_host: cases_db
     database_port: 5432
     database_name: cases

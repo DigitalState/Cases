@@ -1,8 +1,8 @@
 <?php
 
-namespace AppBundle\Fixtures\ORM;
+namespace AppBundle\Fixtures;
 
-use AppBundle\Fixture\ORM\CaseStatusFixture;
+use AppBundle\Fixture\CaseStatusFixture;
 use Doctrine\Common\DataFixtures\OrderedFixtureInterface;
 
 /**
