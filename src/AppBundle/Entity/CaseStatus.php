@@ -46,6 +46,7 @@ use Symfony\Component\Validator\Constraints as Assert;
  * )
  * @ORM\Entity(repositoryClass="AppBundle\Repository\CaseStatusRepository")
  * @ORM\Table(name="app_case_status")
+ * @ORM\Cache(usage="NONSTRICT_READ_WRITE")
  * @ORMAssert\UniqueEntity(fields="uuid")
  */
 class CaseStatus implements Identifiable, Uuidentifiable, Ownable, Translatable, Localizable, Identitiable, Deletable, Versionable, Secured
@@ -152,6 +153,7 @@ class CaseStatus implements Identifiable, Uuidentifiable, Ownable, Translatable,
      * @Serializer\Groups({"case_status_output", "case_status_input"})
      * @ORM\ManyToOne(targetEntity="CaseEntity", inversedBy="statuses")
      * @ORM\JoinColumn(name="case_id", referencedColumnName="id")
+     * @ORM\Cache(usage="NONSTRICT_READ_WRITE")
      * @Assert\Valid
      */
     protected $case;
