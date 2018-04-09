@@ -57,7 +57,7 @@ The following are screenshots from the Postman, Portal and Admin UIs for Cases m
 
 ![Admin Case Status View](./docs/resources/Admin-Cases-Case-Status.png)
 
-
+[![Build Status](https://travis-ci.org/DigitalState/Cases.svg?branch=develop)](https://travis-ci.org/DigitalState/Cases)
 
 ## Table of Contents
 
