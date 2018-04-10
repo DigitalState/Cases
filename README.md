@@ -58,6 +58,7 @@ The following are screenshots from the Postman, Portal and Admin UIs for Cases m
 ![Admin Case Status View](./docs/resources/Admin-Cases-Case-Status.png)
 
 [![Build Status](https://travis-ci.org/DigitalState/Cases.svg?branch=develop)](https://travis-ci.org/DigitalState/Cases)
+[![Coverage Status](https://coveralls.io/repos/github/DigitalState/Cases/badge.svg?branch=develop)](https://coveralls.io/github/DigitalState/Cases?branch=develop)
 
 ## Table of Contents
 
