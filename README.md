@@ -59,6 +59,7 @@ The following are screenshots from the Postman, Portal and Admin UIs for Cases m
 
 [![Build Status](https://travis-ci.org/DigitalState/Cases.svg?branch=develop)](https://travis-ci.org/DigitalState/Cases)
 [![Coverage Status](https://coveralls.io/repos/github/DigitalState/Cases/badge.svg?branch=develop)](https://coveralls.io/github/DigitalState/Cases?branch=develop)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/DigitalState/Cases/badges/quality-score.png?b=develop)](https://scrutinizer-ci.com/g/DigitalState/Cases/?branch=develop)
 
 ## Table of Contents
 
