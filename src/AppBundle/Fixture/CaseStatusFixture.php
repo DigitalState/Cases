@@ -22,24 +22,17 @@ abstract class CaseStatusFixture extends ResourceFixture
         foreach ($statuses as $status) {
             $entity = new CaseStatus;
             $entity
-                ->setCase($manager->getRepository(CaseEntity::class)->findOneBy(['uuid' => $status['case']]))
-                ->setUuid($status['uuid'])
-                ->setOwner($status['owner'])
-                ->setOwnerUuid($status['owner_uuid'])
-                ->setIdentity($status['identity'])
-                ->setIdentityUuid($status['identity_uuid'])
-                ->setTitle($status['title'])
-                ->setDescription($status['description'])
-                ->setData($status['data']);
+                ->setCase($manager->getRepository(CaseEntity::class)->findOneBy(['uuid' => $status->case]))
+                ->setUuid($status->uuid)
+                ->setOwner($status->owner)
+                ->setOwnerUuid($status->owner_uuid)
+                ->setIdentity($status->identity)
+                ->setIdentityUuid($status->identity_uuid)
+                ->setTitle((array) $status->title)
+                ->setDescription((array) $status->description)
+                ->setData((array) $status->data);
             $manager->persist($entity);
             $manager->flush();
         }
     }
-
-    /**
-     * Get resource
-     *
-     * @return string
-     */
-    abstract protected function getResource();
 }

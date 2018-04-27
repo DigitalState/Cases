@@ -1,38 +1,32 @@
-items:
-    -
-        access: 500ebafc-5a37-4885-974d-e0340a9b1bba # System
-        key: entity
-        attributes: [BROWSE, READ, EDIT, ADD, DELETE]
+fixtures:
+  - access: 500ebafc-5a37-4885-974d-e0340a9b1bba # System
+    key: entity
+    attributes: [BROWSE, READ, EDIT, ADD, DELETE]
 
-    -
-        access: 500ebafc-5a37-4885-974d-e0340a9b1bba # System
-        key: property
-        attributes: [BROWSE, READ, EDIT]
+  - access: 500ebafc-5a37-4885-974d-e0340a9b1bba # System
+    key: property
+    attributes: [BROWSE, READ, EDIT]
 
-    -
-        access: 500ebafc-5a37-4885-974d-e0340a9b1bba # System
-        key: generic
-        attributes: [BROWSE, READ, EDIT, ADD, DELETE, EXECUTE]
+  - access: 500ebafc-5a37-4885-974d-e0340a9b1bba # System
+    key: generic
+    attributes: [BROWSE, READ, EDIT, ADD, DELETE, EXECUTE]
 
-    -
-        access: 693190f4-13ae-4610-b464-560fa8c05288 # Bpm
-        key: entity
-        attributes: [BROWSE, READ, EDIT, ADD, DELETE]
+  - access: 693190f4-13ae-4610-b464-560fa8c05288 # Bpm
+    key: entity
+    attributes: [BROWSE, READ, EDIT, ADD, DELETE]
 
-    -
-        access: 693190f4-13ae-4610-b464-560fa8c05288 # Bpm
-        key: property
-        attributes: [BROWSE, READ, EDIT]
+  - access: 693190f4-13ae-4610-b464-560fa8c05288 # Bpm
+    key: property
+    attributes: [BROWSE, READ, EDIT]
 
-    -
-        access: 693190f4-13ae-4610-b464-560fa8c05288 # Bpm
-        key: generic
-        attributes: [BROWSE, READ, EDIT, ADD, DELETE, EXECUTE]
+  - access: 693190f4-13ae-4610-b464-560fa8c05288 # Bpm
+    key: generic
+    attributes: [BROWSE, READ, EDIT, ADD, DELETE, EXECUTE]
 
 prototype:
-    access: ~
-    scope: generic
-    entity: ~
-    entity_uuid: ~
-    key: ~
-    attributes: []
+  access: ~
+  scope: generic
+  entity: ~
+  entity_uuid: ~
+  key: ~
+  attributes: []

@@ -16,30 +16,23 @@ abstract class CaseFixture extends ResourceFixture
      */
     public function load(ObjectManager $manager)
     {
-        $cases = $this->parse($this->getResource());
+        $objects = $this->parse($this->getResource());
 
-        foreach ($cases as $case) {
-            $entity = new CaseEntity;
-            $entity
-                ->setUuid($case['uuid'])
-                ->setCustomId($case['custom_id'])
-                ->setOwner($case['owner'])
-                ->setOwnerUuid($case['owner_uuid'])
-                ->setIdentity($case['identity'])
-                ->setIdentityUuid($case['identity_uuid'])
-                ->setTitle($case['title'])
-                ->setData($case['data'])
-                ->setState($case['state'])
-                ->setPriority($case['priority']);
-            $manager->persist($entity);
+        foreach ($objects as $object) {
+            $case = new CaseEntity;
+            $case
+                ->setUuid($object->uuid)
+                ->setCustomId($object->custom_id)
+                ->setOwner($object->owner)
+                ->setOwnerUuid($object->owner_uuid)
+                ->setIdentity($object->identity)
+                ->setIdentityUuid($object->identity_uuid)
+                ->setTitle((array) $object->title)
+                ->setData((array) $object->data)
+                ->setState($object->state)
+                ->setPriority($object->priority);
+            $manager->persist($case);
             $manager->flush();
         }
     }
-
-    /**
-     * Get resource
-     *
-     * @return string
-     */
-    abstract protected function getResource();
 }

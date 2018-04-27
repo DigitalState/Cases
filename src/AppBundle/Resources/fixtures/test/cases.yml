@@ -1,34 +1,36 @@
-items:
-    -
-        uuid: c61f05ce-468f-4b21-ad38-512ea549e210
-        custom_id: GOV-c61f05ce
-        owner_uuid: 83bf8f26-7181-4bed-92f3-3ce5e4c286d7 # Backoffice
-        identity: Individual
-        identity_uuid: 9ce3bdb9-47e1-43c9-81ee-0dcc2106ba42 # Morgan
-        title:
-            en: Pothole - 123 Street - Urgent
-            fr: Nid-de-poule - 123 rue - urgent
-        state: open
+fixtures:
+  - uuid: c61f05ce-468f-4b21-ad38-512ea549e210
+    custom_id: GOV-c61f05ce
+    owner_uuid: 83bf8f26-7181-4bed-92f3-3ce5e4c286d7 # Backoffice
+    identity: Individual
+    identity_uuid: 9ce3bdb9-47e1-43c9-81ee-0dcc2106ba42 # Morgan
+    title:
+      en: Pothole - 123 Street - Urgent
+      fr: Nid-de-poule - 123 rue - urgent
+    state: open
 
-    -
-        uuid: bab73a48-659b-4543-91c0-6cd606e50ccf
-        custom_id: GOV-bab73a48
-        owner_uuid: e3048503-19e2-4f68-9346-0398bb196748 # Administration
-        identity: Individual
-        identity_uuid: 9ce3bdb9-47e1-43c9-81ee-0dcc2106ba42 # Morgan
-        title:
-            en: Pothole - Quality Review
-            fr: Nid-de-poule - Examen de la qualité
-        state: open
+  - uuid: bab73a48-659b-4543-91c0-6cd606e50ccf
+    custom_id: GOV-bab73a48
+    owner_uuid: e3048503-19e2-4f68-9346-0398bb196748 # Administration
+    identity: Individual
+    identity_uuid: 9ce3bdb9-47e1-43c9-81ee-0dcc2106ba42 # Morgan
+    title:
+      en: Pothole - Quality Review
+      fr: Nid-de-poule - Examen de la qualité
+    state: open
 
 prototype:
-    uuid: ~
-    custom_id: ~
-    owner: BusinessUnit
-    owner_uuid: ~
-    identity: ~
-    identity_uuid: ~
-    title: []
-    data: []
-    state: ~
-    priority: 0
+  uuid: ~
+  custom_id: ~
+  owner: BusinessUnit
+  owner_uuid: ~
+  identity: ~
+  identity_uuid: ~
+  title:
+    en: ~
+    fr: ~
+  data:
+    en: {}
+    fr: {}
+  state: ~
+  priority: 0
