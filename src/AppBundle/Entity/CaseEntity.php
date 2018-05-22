@@ -121,7 +121,7 @@ class CaseEntity implements Identifiable, Uuidentifiable, CustomIdentifiable, Ow
      * @var string
      * @ApiProperty(writable=false)
      * @Serializer\Groups({"case_output"})
-     * @ORM\Column(name="custom_id", type="string", length=255, unique=true)
+     * @ORM\Column(name="custom_id", type="string", length=255)
      */
     protected $customId;
 
