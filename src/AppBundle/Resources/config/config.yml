@@ -39,6 +39,7 @@ ds_security:
         case_priority:             { attributes: [BROWSE, READ, EDIT],              property: AppBundle\Entity\CaseEntity.priority,        title: app.permissions.case.priority             }
         case_statuses:             { attributes: [BROWSE, READ, EDIT],              property: AppBundle\Entity\CaseEntity.statuses,        title: app.permissions.case.statuses             }
         case_version:              { attributes: [BROWSE, READ, EDIT],              property: AppBundle\Entity\CaseEntity.version,         title: app.permissions.case.version              }
+        case_tenant:               { attributes: [BROWSE, READ, EDIT],              property: AppBundle\Entity\CaseEntity.tenant,          title: app.permissions.case.tenant               }
         case_status:               { attributes: [BROWSE, READ, EDIT, ADD, DELETE], entity:   AppBundle\Entity\CaseStatus,                 title: app.permissions.case_status               }
         case_status_property:      { attributes: [BROWSE, READ, EDIT],              property: AppBundle\Entity\CaseStatus.*,               title: app.permissions.case_status.property      }
         case_status_id:            { attributes: [BROWSE, READ, EDIT],              property: AppBundle\Entity\CaseStatus.id,              title: app.permissions.case_status.id            }
@@ -55,3 +56,4 @@ ds_security:
         case_status_description:   { attributes: [BROWSE, READ, EDIT],              property: AppBundle\Entity\CaseStatus.description,     title: app.permissions.case_status.description   }
         case_status_data:          { attributes: [BROWSE, READ, EDIT],              property: AppBundle\Entity\CaseStatus.data,            title: app.permissions.case_status.data          }
         case_status_version:       { attributes: [BROWSE, READ, EDIT],              property: AppBundle\Entity\CaseStatus.version,         title: app.permissions.case_status.version       }
+        case_status_tenant:        { attributes: [BROWSE, READ, EDIT],              property: AppBundle\Entity\CaseStatus.tenant,          title: app.permissions.case_status.tenant        }

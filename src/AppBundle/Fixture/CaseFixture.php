@@ -30,7 +30,8 @@ abstract class CaseFixture extends ResourceFixture
                 ->setTitle((array) $object->title)
                 ->setData((array) $object->data)
                 ->setState($object->state)
-                ->setPriority($object->priority);
+                ->setPriority($object->priority)
+                ->setTenant($object->tenant);
             $manager->persist($case);
             $manager->flush();
         }

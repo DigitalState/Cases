@@ -1,11 +1,11 @@
-@app @entity @case_status @delete
+@app @api @entity @case_status @delete
 Feature: Delete case statuses
   In order to delete case statuses
   As a system identity
   I should be able to send api requests related to case statuses
 
   Background:
-    Given I am authenticated as the "system" identity
+    Given I am authenticated as the "System" identity from the tenant "b6ac25fe-3cd6-4100-a054-6bba2fc9ef18"
 
   @createSchema @loadFixtures
   Scenario: Delete a case status

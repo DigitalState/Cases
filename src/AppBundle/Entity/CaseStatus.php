@@ -12,6 +12,8 @@ use Ds\Component\Model\Type\Identitiable;
 use Ds\Component\Model\Type\Versionable;
 use Ds\Component\Model\Attribute\Accessor;
 use Ds\Component\Security\Model\Type\Secured;
+use Ds\Component\Tenant\Model\Attribute\Accessor as TenantAccessor;
+use Ds\Component\Tenant\Model\Type\Tenantable;
 use Ds\Component\Translation\Model\Attribute\Accessor as TranslationAccessor;
 use Ds\Component\Translation\Model\Type\Translatable;
 use Knp\DoctrineBehaviors\Model as Behavior;
@@ -49,7 +51,7 @@ use Symfony\Component\Validator\Constraints as Assert;
  * @ORM\Cache(usage="NONSTRICT_READ_WRITE")
  * @ORMAssert\UniqueEntity(fields="uuid")
  */
-class CaseStatus implements Identifiable, Uuidentifiable, Ownable, Translatable, Localizable, Identitiable, Deletable, Versionable, Secured
+class CaseStatus implements Identifiable, Uuidentifiable, Ownable, Translatable, Localizable, Identitiable, Deletable, Versionable, Tenantable, Secured
 {
     use Behavior\Translatable\Translatable;
     use Behavior\Timestampable\Timestampable;
@@ -67,6 +69,7 @@ class CaseStatus implements Identifiable, Uuidentifiable, Ownable, Translatable,
     use TranslationAccessor\Description;
     use Accessor\Deleted;
     use Accessor\Version;
+    use TenantAccessor\Tenant;
 
     /**
      * @var integer
@@ -212,6 +215,15 @@ class CaseStatus implements Identifiable, Uuidentifiable, Ownable, Translatable,
      * @Assert\Type("integer")
      */
     protected $version;
+
+    /**
+     * @var string
+     * @ApiProperty(writable=false)
+     * @Serializer\Groups({"case_status_output"})
+     * @ORM\Column(name="tenant", type="guid")
+     * @Assert\Uuid
+     */
+    protected $tenant;
 
     /**
      * Constructor

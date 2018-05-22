@@ -8,16 +8,40 @@ fixtures:
       en: Pothole - 123 Street - Urgent
       fr: Nid-de-poule - 123 rue - urgent
     state: open
+    tenant: b6ac25fe-3cd6-4100-a054-6bba2fc9ef18 # Tenant 1
 
   - uuid: bab73a48-659b-4543-91c0-6cd606e50ccf
     custom_id: GOV-bab73a48
     owner_uuid: e3048503-19e2-4f68-9346-0398bb196748 # Administration
-    identity: Individual
-    identity_uuid: 9ce3bdb9-47e1-43c9-81ee-0dcc2106ba42 # Morgan
+    identity: Staff
+    identity_uuid: 2f50ebae-d6db-481f-92ae-34ed49fd94e2
     title:
       en: Pothole - Quality Review
       fr: Nid-de-poule - Examen de la qualité
     state: open
+    tenant: b6ac25fe-3cd6-4100-a054-6bba2fc9ef18 # Tenant 1
+
+  - uuid: d866ac13-4488-47e8-80fd-dbe79822dd5e
+    custom_id: GOV-d866ac13
+    owner_uuid: 6e9c30e2-ce82-4d32-a60a-b0c6b0a1474e # Backoffice
+    identity: Individual
+    identity_uuid: b0db785f-b7c1-427a-9b0a-82cf3b60153a
+    title:
+      en: Pothole - 123 Street - Urgent
+      fr: Nid-de-poule - 123 rue - urgent
+    state: open
+    tenant: 92000deb-b847-4838-915c-b95d2b28e960 # Tenant 2
+
+  - uuid: f3a611cc-8663-4156-b213-5aebd0706fa8
+    custom_id: GOV-f3a611cc
+    owner_uuid: 72ecd949-6960-4d9d-8baa-3dc15c2cbd63 # Administration
+    identity: Staff
+    identity_uuid: 6a2b7077-facb-42c7-81ce-bdb6fb92dab1
+    title:
+      en: Pothole - Quality Review
+      fr: Nid-de-poule - Examen de la qualité
+    state: open
+    tenant: 92000deb-b847-4838-915c-b95d2b28e960 # Tenant 2
 
 prototype:
   uuid: ~
@@ -26,11 +50,8 @@ prototype:
   owner_uuid: ~
   identity: ~
   identity_uuid: ~
-  title:
-    en: ~
-    fr: ~
-  data:
-    en: {}
-    fr: {}
+  title: {}
+  data: {}
   state: ~
   priority: 0
+  tenant: ~

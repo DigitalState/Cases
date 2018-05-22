@@ -1,11 +1,11 @@
-@app @entity @case_status @edit
+@app @api @entity @case_status @edit
 Feature: Edit case statuses
   In order to edit case statuses
   As a system identity
   I should be able to send api requests related to case statuses
 
   Background:
-    Given I am authenticated as the "system" identity
+    Given I am authenticated as the "System" identity from the tenant "b6ac25fe-3cd6-4100-a054-6bba2fc9ef18"
 
   @createSchema @loadFixtures
   Scenario: Edit a case status
@@ -54,6 +54,8 @@ Feature: Edit case statuses
     And the JSON node "data.fr" should exist
     And the JSON node "data.fr.test" should exist
     And the JSON node "data.fr.test" should be equal to "Test - edit"
+    And the JSON node "tenant" should exist
+    And the JSON node "tenant" should be equal to "b6ac25fe-3cd6-4100-a054-6bba2fc9ef18"
 
   Scenario: Confirm the edited case status
     When I add "Accept" header equal to "application/json"
@@ -79,6 +81,8 @@ Feature: Edit case statuses
     And the JSON node "data.fr" should exist
     And the JSON node "data.fr.test" should exist
     And the JSON node "data.fr.test" should be equal to "Test - edit"
+    And the JSON node "tenant" should exist
+    And the JSON node "tenant" should be equal to "b6ac25fe-3cd6-4100-a054-6bba2fc9ef18"
 
   Scenario: Edit a case status's read-only properties
     When I add "Accept" header equal to "application/json"
@@ -90,7 +94,8 @@ Feature: Edit case statuses
       "uuid": "ce0bc895-8d99-4133-9223-a5d24cadf273",
       "createdAt":"2000-01-01T12:00:00+00:00",
       "updatedAt":"2000-01-01T12:00:00+00:00",
-      "deletedAt":"2000-01-01T12:00:00+00:00"
+      "deletedAt":"2000-01-01T12:00:00+00:00",
+      "tenant": "3f773232-65ca-4eaf-abdd-513a8eb2ef71"
     }
     """
     Then the response status code should be 200
@@ -101,6 +106,7 @@ Feature: Edit case statuses
     And the JSON node "createdAt" should not contain "2000-01-01T12:00:00+00:00"
     And the JSON node "updatedAt" should not contain "2000-01-01T12:00:00+00:00"
     And the JSON node "deletedAt" should not contain "2000-01-01T12:00:00+00:00"
+    And the JSON node "tenant" should be equal to "b6ac25fe-3cd6-4100-a054-6bba2fc9ef18"
 
   Scenario: Confirm the unedited case status
     When I add "Accept" header equal to "application/json"
@@ -113,6 +119,7 @@ Feature: Edit case statuses
     And the JSON node "createdAt" should not contain "2000-01-01T12:00:00+00:00"
     And the JSON node "updatedAt" should not contain "2000-01-01T12:00:00+00:00"
     And the JSON node "deletedAt" should not contain "2000-01-01T12:00:00+00:00"
+    And the JSON node "tenant" should be equal to "b6ac25fe-3cd6-4100-a054-6bba2fc9ef18"
 
   @dropSchema
   Scenario: Edit a case status with an invalid optimistic lock

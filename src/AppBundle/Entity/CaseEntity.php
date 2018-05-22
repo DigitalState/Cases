@@ -14,6 +14,8 @@ use Ds\Component\Model\Type\Identitiable;
 use Ds\Component\Model\Type\Versionable;
 use Ds\Component\Model\Attribute\Accessor;
 use Ds\Component\Security\Model\Type\Secured;
+use Ds\Component\Tenant\Model\Attribute\Accessor as TenantAccessor;
+use Ds\Component\Tenant\Model\Type\Tenantable;
 use Ds\Component\Translation\Model\Attribute\Accessor as TranslationAccessor;
 use Ds\Component\Translation\Model\Type\Translatable;
 use Knp\DoctrineBehaviors\Model as Behavior;
@@ -48,12 +50,17 @@ use Symfony\Component\Validator\Constraints as Assert;
  *     }
  * )
  * @ORM\Entity(repositoryClass="AppBundle\Repository\CaseRepository")
- * @ORM\Table(name="app_case")
+ * @ORM\Table(
+ *     name="app_case",
+ *     uniqueConstraints={
+ *         @ORM\UniqueConstraint(columns={"custom_id", "tenant"})
+ *     }
+ * )
  * @ORM\Cache(usage="NONSTRICT_READ_WRITE")
  * @ORMAssert\UniqueEntity(fields="uuid")
- * @ORMAssert\UniqueEntity(fields="customId")
+ * @ORMAssert\UniqueEntity(fields={"customId", "tenant"})
  */
-class CaseEntity implements Identifiable, Uuidentifiable, CustomIdentifiable, Ownable, Translatable, Localizable, Identitiable, Deletable, Versionable, Secured
+class CaseEntity implements Identifiable, Uuidentifiable, CustomIdentifiable, Ownable, Translatable, Localizable, Identitiable, Deletable, Versionable, Tenantable, Secured
 {
     use Behavior\Translatable\Translatable;
     use Behavior\Timestampable\Timestampable;
@@ -73,6 +80,7 @@ class CaseEntity implements Identifiable, Uuidentifiable, CustomIdentifiable, Ow
     use CaseAccessor\Statuses;
     use Accessor\Deleted;
     use Accessor\Version;
+    use TenantAccessor\Tenant;
 
     /**
      * @const string
@@ -246,6 +254,15 @@ class CaseEntity implements Identifiable, Uuidentifiable, CustomIdentifiable, Ow
      * @Assert\Type("integer")
      */
     protected $version;
+
+    /**
+     * @var string
+     * @ApiProperty(writable=false)
+     * @Serializer\Groups({"case_output"})
+     * @ORM\Column(name="tenant", type="guid")
+     * @Assert\Uuid
+     */
+    protected $tenant;
 
     /**
      * Constructor

@@ -30,7 +30,8 @@ abstract class CaseStatusFixture extends ResourceFixture
                 ->setIdentityUuid($status->identity_uuid)
                 ->setTitle((array) $status->title)
                 ->setDescription((array) $status->description)
-                ->setData((array) $status->data);
+                ->setData((array) $status->data)
+                ->setTenant($status->tenant);
             $manager->persist($entity);
             $manager->flush();
         }

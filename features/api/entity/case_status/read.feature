@@ -1,11 +1,11 @@
-@app @entity @case_status @read
+@app @api @entity @case_status @read
 Feature: Read case statuses
   In order to read case statuses
   As a system identity
   I should be able to send api requests related to case statuses
 
   Background:
-    Given I am authenticated as the "system" identity
+    Given I am authenticated as the "System" identity from the tenant "b6ac25fe-3cd6-4100-a054-6bba2fc9ef18"
 
   @createSchema @loadFixtures @dropSchema
   Scenario: Read a category
@@ -45,3 +45,5 @@ Feature: Read case statuses
     And the JSON node "data.fr" should exist
     And the JSON node "version" should exist
     And the JSON node "version" should be equal to the number 1
+    And the JSON node "tenant" should exist
+    And the JSON node "tenant" should be equal to "b6ac25fe-3cd6-4100-a054-6bba2fc9ef18"

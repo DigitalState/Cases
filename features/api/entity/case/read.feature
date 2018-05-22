@@ -1,14 +1,14 @@
-@app @entity @case @read
+@app @api @entity @case @read
 Feature: Read cases
   In order to read cases
   As a system identity
   I should be able to send api requests related to cases
 
   Background:
-    Given I am authenticated as the "system" identity
+    Given I am authenticated as the "System" identity from the tenant "b6ac25fe-3cd6-4100-a054-6bba2fc9ef18"
 
   @createSchema @loadFixtures @dropSchema
-  Scenario: Read a category
+  Scenario: Read a case
     When I add "Accept" header equal to "application/json"
     And I send a "GET" request to "/cases/c61f05ce-468f-4b21-ad38-512ea549e210"
     Then the response status code should be 200
@@ -36,3 +36,7 @@ Feature: Read cases
     And the JSON node "title.en" should be equal to "Pothole - 123 Street - Urgent"
     And the JSON node "title.fr" should be equal to "Nid-de-poule - 123 rue - urgent"
     And the JSON node "data" should exist
+    And the JSON node "version" should exist
+    And the JSON node "version" should be equal to the number 1
+    And the JSON node "tenant" should exist
+    And the JSON node "tenant" should be equal to "b6ac25fe-3cd6-4100-a054-6bba2fc9ef18"

@@ -10,6 +10,7 @@ fixtures:
     description:
       en: Description ...
       fr: Description ...
+    tenant: b6ac25fe-3cd6-4100-a054-6bba2fc9ef18 # Tenant 1
 
   - case: c61f05ce-468f-4b21-ad38-512ea549e210 # Pothole - 123 Street - Urgent
     uuid: c5cd4d27-f9fe-4a14-bdc1-b8e156abc1b3
@@ -22,6 +23,7 @@ fixtures:
     description:
       en: Description ...
       fr: Description ...
+    tenant: b6ac25fe-3cd6-4100-a054-6bba2fc9ef18 # Tenant 1
 
   - case: c61f05ce-468f-4b21-ad38-512ea549e210 # Pothole - 123 Street - Urgent
     uuid: b11ff81c-1af5-45ad-b9bf-54b023fc8642
@@ -34,6 +36,7 @@ fixtures:
     description:
       en: Description ...
       fr: Description ...
+    tenant: b6ac25fe-3cd6-4100-a054-6bba2fc9ef18 # Tenant 1
 
   - case: c61f05ce-468f-4b21-ad38-512ea549e210 # Pothole - 123 Street - Urgent
     uuid: 03b9389b-3482-4eb3-a6f2-2b09a3b03380
@@ -46,6 +49,7 @@ fixtures:
     description:
       en: Description ...
       fr: Description ...
+    tenant: b6ac25fe-3cd6-4100-a054-6bba2fc9ef18 # Tenant 1
 
   - case: c61f05ce-468f-4b21-ad38-512ea549e210 # Pothole - 123 Street - Urgent
     uuid: e1daed6e-b8a0-4b73-bd64-73a3723208de
@@ -58,6 +62,7 @@ fixtures:
     description:
       en: Description ...
       fr: Description ...
+    tenant: b6ac25fe-3cd6-4100-a054-6bba2fc9ef18 # Tenant 1
 
   - case: c61f05ce-468f-4b21-ad38-512ea549e210 # Pothole - 123 Street - Urgent
     uuid: 4c3fbeb2-2851-4ef7-8448-f2d2d4abed39
@@ -70,6 +75,85 @@ fixtures:
     description:
       en: Description ...
       fr: Description ...
+    tenant: b6ac25fe-3cd6-4100-a054-6bba2fc9ef18 # Tenant 1
+
+  - case: d866ac13-4488-47e8-80fd-dbe79822dd5e # Pothole - 123 Street - Urgent
+    uuid: 88e41de6-c5a3-43c9-921d-d5d821ff04c4
+    owner_uuid: 6e9c30e2-ce82-4d32-a60a-b0c6b0a1474e # Backoffice
+    identity: Individual
+    identity_uuid: b0db785f-b7c1-427a-9b0a-82cf3b60153a
+    title:
+      en: Request submitted
+      fr: Demande soumise
+    description:
+      en: Description ...
+      fr: Description ...
+    tenant: 92000deb-b847-4838-915c-b95d2b28e960 # Tenant 2
+
+  - case: d866ac13-4488-47e8-80fd-dbe79822dd5e # Pothole - 123 Street - Urgent
+    uuid: 8805c82f-de60-4f06-8c9e-cafe45f0215f
+    owner_uuid: 6e9c30e2-ce82-4d32-a60a-b0c6b0a1474e # Backoffice
+    identity: Individual
+    identity_uuid: b0db785f-b7c1-427a-9b0a-82cf3b60153a
+    title:
+      en: Request accepted
+      fr: Demande acceptée
+    description:
+      en: Description ...
+      fr: Description ...
+    tenant: 92000deb-b847-4838-915c-b95d2b28e960 # Tenant 2
+
+  - case: d866ac13-4488-47e8-80fd-dbe79822dd5e # Pothole - 123 Street - Urgent
+    uuid: 47fc2df9-34ea-484b-b792-d5fdc58e95b2
+    owner_uuid: 6e9c30e2-ce82-4d32-a60a-b0c6b0a1474e # Backoffice
+    identity: Individual
+    identity_uuid: b0db785f-b7c1-427a-9b0a-82cf3b60153a
+    title:
+      en: Request under review
+      fr: Demande à l'étude
+    description:
+      en: Description ...
+      fr: Description ...
+    tenant: 92000deb-b847-4838-915c-b95d2b28e960 # Tenant 2
+
+  - case: d866ac13-4488-47e8-80fd-dbe79822dd5e # Pothole - 123 Street - Urgent
+    uuid: ddabd33c-c78c-4a44-b376-92200578b796
+    owner_uuid: 6e9c30e2-ce82-4d32-a60a-b0c6b0a1474e # Backoffice
+    identity: Individual
+    identity_uuid: b0db785f-b7c1-427a-9b0a-82cf3b60153a
+    title:
+      en: Request approved
+      fr: Demande approuvée
+    description:
+      en: Description ...
+      fr: Description ...
+    tenant: 92000deb-b847-4838-915c-b95d2b28e960 # Tenant 2
+
+  - case: d866ac13-4488-47e8-80fd-dbe79822dd5e # Pothole - 123 Street - Urgent
+    uuid: 014625f3-e0ee-438e-8744-318fdeb6b98a
+    owner_uuid: 6e9c30e2-ce82-4d32-a60a-b0c6b0a1474e # Backoffice
+    identity: Individual
+    identity_uuid: b0db785f-b7c1-427a-9b0a-82cf3b60153a
+    title:
+      en: Request resolved
+      fr: Demande résolue
+    description:
+      en: Description ...
+      fr: Description ...
+    tenant: 92000deb-b847-4838-915c-b95d2b28e960 # Tenant 2
+
+  - case: d866ac13-4488-47e8-80fd-dbe79822dd5e # Pothole - 123 Street - Urgent
+    uuid: e29e5829-daf8-40a2-bc1a-c155456878df
+    owner_uuid: 6e9c30e2-ce82-4d32-a60a-b0c6b0a1474e # Backoffice
+    identity: Individual
+    identity_uuid: b0db785f-b7c1-427a-9b0a-82cf3b60153a
+    title:
+      en: Request closed
+      fr: Demande fermée
+    description:
+      en: Description ...
+      fr: Description ...
+    tenant: 92000deb-b847-4838-915c-b95d2b28e960 # Tenant 2
 
 prototype:
   case: ~
@@ -78,12 +162,7 @@ prototype:
   owner_uuid: ~
   identity: ~
   identity_uuid: ~
-  title:
-    en: {}
-    fr: {}
-  description:
-    en: {}
-    fr: {}
-  data:
-    en: {}
-    fr: {}
+  title: {}
+  description: {}
+  data: {}
+  tenant: ~

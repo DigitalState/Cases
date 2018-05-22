@@ -1,11 +1,11 @@
-@app @entity @case @edit
+@app @api @entity @case @edit
 Feature: Edit cases
   In order to edit cases
   As a system identity
   I should be able to send api requests related to cases
 
   Background:
-    Given I am authenticated as the "system" identity
+    Given I am authenticated as the "System" identity from the tenant "b6ac25fe-3cd6-4100-a054-6bba2fc9ef18"
 
   @createSchema @loadFixtures
   Scenario: Edit a case
@@ -46,6 +46,8 @@ Feature: Edit cases
     And the JSON node "data.fr.test" should exist
     And the JSON node "data.fr.test" should be equal to "Test - edit"
     And the JSON node "state" should be equal to "closed"
+    And the JSON node "tenant" should exist
+    And the JSON node "tenant" should be equal to "b6ac25fe-3cd6-4100-a054-6bba2fc9ef18"
 
   Scenario: Confirm the edited case
     When I add "Accept" header equal to "application/json"
@@ -67,6 +69,8 @@ Feature: Edit cases
     And the JSON node "data.fr.test" should exist
     And the JSON node "data.fr.test" should be equal to "Test - edit"
     And the JSON node "state" should be equal to "closed"
+    And the JSON node "tenant" should exist
+    And the JSON node "tenant" should be equal to "b6ac25fe-3cd6-4100-a054-6bba2fc9ef18"
 
   Scenario: Edit a case's read-only properties
     When I add "Accept" header equal to "application/json"
@@ -78,7 +82,8 @@ Feature: Edit cases
       "uuid": "023ef9b1-64e5-48cb-b367-6a4d09ad3161",
       "createdAt":"2000-01-01T12:00:00+00:00",
       "updatedAt":"2000-01-01T12:00:00+00:00",
-      "deletedAt":"2000-01-01T12:00:00+00:00"
+      "deletedAt":"2000-01-01T12:00:00+00:00",
+      "tenant": "40048804-8d66-4d48-b553-3833a5a06749"
     }
     """
     Then the response status code should be 200
@@ -89,6 +94,7 @@ Feature: Edit cases
     And the JSON node "createdAt" should not contain "2000-01-01T12:00:00+00:00"
     And the JSON node "updatedAt" should not contain "2000-01-01T12:00:00+00:00"
     And the JSON node "deletedAt" should not contain "2000-01-01T12:00:00+00:00"
+    And the JSON node "tenant" should be equal to "b6ac25fe-3cd6-4100-a054-6bba2fc9ef18"
 
   Scenario: Confirm the unedited case
     When I add "Accept" header equal to "application/json"
@@ -101,6 +107,7 @@ Feature: Edit cases
     And the JSON node "createdAt" should not contain "2000-01-01T12:00:00+00:00"
     And the JSON node "updatedAt" should not contain "2000-01-01T12:00:00+00:00"
     And the JSON node "deletedAt" should not contain "2000-01-01T12:00:00+00:00"
+    And the JSON node "tenant" should be equal to "b6ac25fe-3cd6-4100-a054-6bba2fc9ef18"
 
   @dropSchema
   Scenario: Edit a case with an invalid optimistic lock
