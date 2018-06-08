@@ -1,4 +1,25 @@
-fixtures: []
+fixtures:
+  - access: 58a4e351-8d5e-4554-b213-9a9666bad271 # Anonymous
+    scope: session
+    key:
+      - case
+      - case_uuid
+      - case_custom_id
+      - case_created_at
+      - case_title
+      - case_data
+      - case_state
+      - case_statuses
+      - case_version
+      - case_status
+      - case_status_uuid
+      - case_status_created_at
+      - case_status_case
+      - case_status_title
+      - case_status_description
+      - case_status_data
+      - case_status_version
+    attributes: [BROWSE, READ]
 
 prototype:
   access: ~

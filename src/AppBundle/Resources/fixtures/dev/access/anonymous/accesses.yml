@@ -1,4 +1,5 @@
-fixtures: []
+fixtures:
+  - uuid: 58a4e351-8d5e-4554-b213-9a9666bad271
 
 prototype:
   uuid: ~
