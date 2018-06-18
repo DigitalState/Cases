@@ -1,59 +1,59 @@
 framework:
-    workflows:
-        case_state:
-            type: state_machine
-            marking_store:
-                type: single_state
-                arguments:
-                    - state
-            supports:
-                - AppBundle\Entity\CaseEntity
-            places:
-                - open
-                - closed
-            transitions:
-                close:
-                    from: open
-                    to: closed
-                reopen:
-                    from: closed
-                    to: open
+  workflows:
+    case_state:
+      type: state_machine
+      marking_store:
+        type: single_state
+        arguments:
+          - state
+      supports:
+        - AppBundle\Entity\CaseEntity
+      places:
+        - open
+        - closed
+      transitions:
+        close:
+          from: open
+          to: closed
+        reopen:
+          from: closed
+          to: open
 
 ds_security:
-    permissions:
-        case:                      { attributes: [BROWSE, READ, EDIT, ADD, DELETE], entity:   AppBundle\Entity\CaseEntity,                 title: app.permissions.case                      }
-        case_property:             { attributes: [BROWSE, READ, EDIT],              property: AppBundle\Entity\CaseEntity.*,               title: app.permissions.case.property             }
-        case_id:                   { attributes: [BROWSE, READ, EDIT],              property: AppBundle\Entity\CaseEntity.id,              title: app.permissions.case.id                   }
-        case_uuid:                 { attributes: [BROWSE, READ, EDIT],              property: AppBundle\Entity\CaseEntity.uuid,            title: app.permissions.case.uuid                 }
-        case_custom_id:            { attributes: [BROWSE, READ, EDIT],              property: AppBundle\Entity\CaseEntity.customId,        title: app.permissions.case.custom_id            }
-        case_created_at:           { attributes: [BROWSE, READ, EDIT],              property: AppBundle\Entity\CaseEntity.createdAt,       title: app.permissions.case.created_at           }
-        case_updated_at:           { attributes: [BROWSE, READ, EDIT],              property: AppBundle\Entity\CaseEntity.updatedAt,       title: app.permissions.case.updated_at           }
-        case_deleted_at:           { attributes: [BROWSE, READ, EDIT],              property: AppBundle\Entity\CaseEntity.deletedAt,       title: app.permissions.case.deleted_at           }
-        case_owner:                { attributes: [BROWSE, READ, EDIT],              property: AppBundle\Entity\CaseEntity.owner,           title: app.permissions.case.owner                }
-        case_owner_uuid:           { attributes: [BROWSE, READ, EDIT],              property: AppBundle\Entity\CaseEntity.ownerUuid,       title: app.permissions.case.owner_uuid           }
-        case_identity:             { attributes: [BROWSE, READ, EDIT],              property: AppBundle\Entity\CaseEntity.identity,        title: app.permissions.case.identity             }
-        case_identity_uuid:        { attributes: [BROWSE, READ, EDIT],              property: AppBundle\Entity\CaseEntity.identityUuid,    title: app.permissions.case.identity_uuid        }
-        case_title:                { attributes: [BROWSE, READ, EDIT],              property: AppBundle\Entity\CaseEntity.title,           title: app.permissions.case.title                }
-        case_data:                 { attributes: [BROWSE, READ, EDIT],              property: AppBundle\Entity\CaseEntity.data,            title: app.permissions.case.data                 }
-        case_state:                { attributes: [BROWSE, READ, EDIT],              property: AppBundle\Entity\CaseEntity.state,           title: app.permissions.case.state                }
-        case_priority:             { attributes: [BROWSE, READ, EDIT],              property: AppBundle\Entity\CaseEntity.priority,        title: app.permissions.case.priority             }
-        case_statuses:             { attributes: [BROWSE, READ, EDIT],              property: AppBundle\Entity\CaseEntity.statuses,        title: app.permissions.case.statuses             }
-        case_version:              { attributes: [BROWSE, READ, EDIT],              property: AppBundle\Entity\CaseEntity.version,         title: app.permissions.case.version              }
-        case_tenant:               { attributes: [BROWSE, READ, EDIT],              property: AppBundle\Entity\CaseEntity.tenant,          title: app.permissions.case.tenant               }
-        case_status:               { attributes: [BROWSE, READ, EDIT, ADD, DELETE], entity:   AppBundle\Entity\CaseStatus,                 title: app.permissions.case_status               }
-        case_status_property:      { attributes: [BROWSE, READ, EDIT],              property: AppBundle\Entity\CaseStatus.*,               title: app.permissions.case_status.property      }
-        case_status_id:            { attributes: [BROWSE, READ, EDIT],              property: AppBundle\Entity\CaseStatus.id,              title: app.permissions.case_status.id            }
-        case_status_uuid:          { attributes: [BROWSE, READ, EDIT],              property: AppBundle\Entity\CaseStatus.uuid,            title: app.permissions.case_status.uuid          }
-        case_status_created_at:    { attributes: [BROWSE, READ, EDIT],              property: AppBundle\Entity\CaseStatus.createdAt,       title: app.permissions.case_status.created_at    }
-        case_status_updated_at:    { attributes: [BROWSE, READ, EDIT],              property: AppBundle\Entity\CaseStatus.updatedAt,       title: app.permissions.case_status.updated_at    }
-        case_status_deleted_at:    { attributes: [BROWSE, READ, EDIT],              property: AppBundle\Entity\CaseStatus.deletedAt,       title: app.permissions.case_status.deleted_at    }
-        case_status_owner:         { attributes: [BROWSE, READ, EDIT],              property: AppBundle\Entity\CaseStatus.owner,           title: app.permissions.case_status.owner         }
-        case_status_owner_uuid:    { attributes: [BROWSE, READ, EDIT],              property: AppBundle\Entity\CaseStatus.ownerUuid,       title: app.permissions.case_status.owner_uuid    }
-        case_status_identity:      { attributes: [BROWSE, READ, EDIT],              property: AppBundle\Entity\CaseStatus.identity,        title: app.permissions.case_status.identity      }
-        case_status_identity_uuid: { attributes: [BROWSE, READ, EDIT],              property: AppBundle\Entity\CaseStatus.identityUuid,    title: app.permissions.case_status.identity_uuid }
-        case_status_case:          { attributes: [BROWSE, READ, EDIT],              property: AppBundle\Entity\CaseStatus.case,            title: app.permissions.case_status.case          }
-        case_status_title:         { attributes: [BROWSE, READ, EDIT],              property: AppBundle\Entity\CaseStatus.title,           title: app.permissions.case_status.title         }
-        case_status_description:   { attributes: [BROWSE, READ, EDIT],              property: AppBundle\Entity\CaseStatus.description,     title: app.permissions.case_status.description   }
-        case_status_data:          { attributes: [BROWSE, READ, EDIT],              property: AppBundle\Entity\CaseStatus.data,            title: app.permissions.case_status.data          }
-        case_status_version:       { attributes: [BROWSE, READ, EDIT],              property: AppBundle\Entity\CaseStatus.version,         title: app.permissions.case_status.version       }
-        case_status_tenant:        { attributes: [BROWSE, READ, EDIT],              property: AppBundle\Entity\CaseStatus.tenant,          title: app.permissions.case_status.tenant        }
+  permissions:
+    case:                      { attributes: [BROWSE, READ, EDIT, ADD, DELETE], entity:   AppBundle\Entity\CaseEntity,                 title: app.permissions.case                      }
+    case_property:             { attributes: [BROWSE, READ, EDIT],              property: AppBundle\Entity\CaseEntity.*,               title: app.permissions.case.property             }
+    case_id:                   { attributes: [BROWSE, READ, EDIT],              property: AppBundle\Entity\CaseEntity.id,              title: app.permissions.case.id                   }
+    case_uuid:                 { attributes: [BROWSE, READ, EDIT],              property: AppBundle\Entity\CaseEntity.uuid,            title: app.permissions.case.uuid                 }
+    case_custom_id:            { attributes: [BROWSE, READ, EDIT],              property: AppBundle\Entity\CaseEntity.customId,        title: app.permissions.case.custom_id            }
+    case_created_at:           { attributes: [BROWSE, READ, EDIT],              property: AppBundle\Entity\CaseEntity.createdAt,       title: app.permissions.case.created_at           }
+    case_updated_at:           { attributes: [BROWSE, READ, EDIT],              property: AppBundle\Entity\CaseEntity.updatedAt,       title: app.permissions.case.updated_at           }
+    case_deleted_at:           { attributes: [BROWSE, READ, EDIT],              property: AppBundle\Entity\CaseEntity.deletedAt,       title: app.permissions.case.deleted_at           }
+    case_owner:                { attributes: [BROWSE, READ, EDIT],              property: AppBundle\Entity\CaseEntity.owner,           title: app.permissions.case.owner                }
+    case_owner_uuid:           { attributes: [BROWSE, READ, EDIT],              property: AppBundle\Entity\CaseEntity.ownerUuid,       title: app.permissions.case.owner_uuid           }
+    case_identity:             { attributes: [BROWSE, READ, EDIT],              property: AppBundle\Entity\CaseEntity.identity,        title: app.permissions.case.identity             }
+    case_identity_uuid:        { attributes: [BROWSE, READ, EDIT],              property: AppBundle\Entity\CaseEntity.identityUuid,    title: app.permissions.case.identity_uuid        }
+    case_title:                { attributes: [BROWSE, READ, EDIT],              property: AppBundle\Entity\CaseEntity.title,           title: app.permissions.case.title                }
+    case_data:                 { attributes: [BROWSE, READ, EDIT],              property: AppBundle\Entity\CaseEntity.data,            title: app.permissions.case.data                 }
+    case_state:                { attributes: [BROWSE, READ, EDIT],              property: AppBundle\Entity\CaseEntity.state,           title: app.permissions.case.state                }
+    case_priority:             { attributes: [BROWSE, READ, EDIT],              property: AppBundle\Entity\CaseEntity.priority,        title: app.permissions.case.priority             }
+    case_statuses:             { attributes: [BROWSE, READ, EDIT],              property: AppBundle\Entity\CaseEntity.statuses,        title: app.permissions.case.statuses             }
+    case_version:              { attributes: [BROWSE, READ, EDIT],              property: AppBundle\Entity\CaseEntity.version,         title: app.permissions.case.version              }
+    case_tenant:               { attributes: [BROWSE, READ, EDIT],              property: AppBundle\Entity\CaseEntity.tenant,          title: app.permissions.case.tenant               }
+    case_status:               { attributes: [BROWSE, READ, EDIT, ADD, DELETE], entity:   AppBundle\Entity\CaseStatus,                 title: app.permissions.case_status               }
+    case_status_property:      { attributes: [BROWSE, READ, EDIT],              property: AppBundle\Entity\CaseStatus.*,               title: app.permissions.case_status.property      }
+    case_status_id:            { attributes: [BROWSE, READ, EDIT],              property: AppBundle\Entity\CaseStatus.id,              title: app.permissions.case_status.id            }
+    case_status_uuid:          { attributes: [BROWSE, READ, EDIT],              property: AppBundle\Entity\CaseStatus.uuid,            title: app.permissions.case_status.uuid          }
+    case_status_created_at:    { attributes: [BROWSE, READ, EDIT],              property: AppBundle\Entity\CaseStatus.createdAt,       title: app.permissions.case_status.created_at    }
+    case_status_updated_at:    { attributes: [BROWSE, READ, EDIT],              property: AppBundle\Entity\CaseStatus.updatedAt,       title: app.permissions.case_status.updated_at    }
+    case_status_deleted_at:    { attributes: [BROWSE, READ, EDIT],              property: AppBundle\Entity\CaseStatus.deletedAt,       title: app.permissions.case_status.deleted_at    }
+    case_status_owner:         { attributes: [BROWSE, READ, EDIT],              property: AppBundle\Entity\CaseStatus.owner,           title: app.permissions.case_status.owner         }
+    case_status_owner_uuid:    { attributes: [BROWSE, READ, EDIT],              property: AppBundle\Entity\CaseStatus.ownerUuid,       title: app.permissions.case_status.owner_uuid    }
+    case_status_identity:      { attributes: [BROWSE, READ, EDIT],              property: AppBundle\Entity\CaseStatus.identity,        title: app.permissions.case_status.identity      }
+    case_status_identity_uuid: { attributes: [BROWSE, READ, EDIT],              property: AppBundle\Entity\CaseStatus.identityUuid,    title: app.permissions.case_status.identity_uuid }
+    case_status_case:          { attributes: [BROWSE, READ, EDIT],              property: AppBundle\Entity\CaseStatus.case,            title: app.permissions.case_status.case          }
+    case_status_title:         { attributes: [BROWSE, READ, EDIT],              property: AppBundle\Entity\CaseStatus.title,           title: app.permissions.case_status.title         }
+    case_status_description:   { attributes: [BROWSE, READ, EDIT],              property: AppBundle\Entity\CaseStatus.description,     title: app.permissions.case_status.description   }
+    case_status_data:          { attributes: [BROWSE, READ, EDIT],              property: AppBundle\Entity\CaseStatus.data,            title: app.permissions.case_status.data          }
+    case_status_version:       { attributes: [BROWSE, READ, EDIT],              property: AppBundle\Entity\CaseStatus.version,         title: app.permissions.case_status.version       }
+    case_status_tenant:        { attributes: [BROWSE, READ, EDIT],              property: AppBundle\Entity\CaseStatus.tenant,          title: app.permissions.case_status.tenant        }

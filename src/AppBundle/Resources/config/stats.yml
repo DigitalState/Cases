@@ -1,21 +1,21 @@
 services:
-    app.stat.case_entity.count:
-        class: AppBundle\Stat\CaseEntity\CountStat
-        arguments:
-            - '@app.service.case'
-        tags:
-            - { name: ds_statistic.stat, alias: case.count }
+  app.stat.case_entity.count:
+    class: AppBundle\Stat\CaseEntity\CountStat
+    arguments:
+      - '@app.service.case'
+    tags:
+      - { name: ds_statistic.stat, alias: case.count }
 
-    app.stat.case_entity.count.state.open:
-        class: AppBundle\Stat\CaseEntity\Count\State\OpenStat
-        arguments:
-            - '@app.service.case'
-        tags:
-            - { name: ds_statistic.stat, alias: case.count.state.open }
+  app.stat.case_entity.count.state.open:
+    class: AppBundle\Stat\CaseEntity\Count\State\OpenStat
+    arguments:
+      - '@app.service.case'
+    tags:
+      - { name: ds_statistic.stat, alias: case.count.state.open }
 
-    app.stat.case_entity.count.state.closed:
-        class: AppBundle\Stat\CaseEntity\Count\State\ClosedStat
-        arguments:
-            - '@app.service.case'
-        tags:
-            - { name: ds_statistic.stat, alias: case.count.state.closed }
+  app.stat.case_entity.count.state.closed:
+    class: AppBundle\Stat\CaseEntity\Count\State\ClosedStat
+    arguments:
+      - '@app.service.case'
+    tags:
+      - { name: ds_statistic.stat, alias: case.count.state.closed }
