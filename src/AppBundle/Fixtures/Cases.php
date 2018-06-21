@@ -15,7 +15,7 @@ class Cases extends CaseFixture implements OrderedFixtureInterface
      */
     public function getOrder()
     {
-        return 10;
+        return 20;
     }
 
     /**
