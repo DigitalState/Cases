@@ -1,4 +1,4 @@
-@app @api @entity @case @read
+@api @case @read
 Feature: Read cases
   In order to read cases
   As a system identity

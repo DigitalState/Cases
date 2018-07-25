@@ -1,4 +1,4 @@
-@app @api @entity @case @browse
+@api @case @browse
 Feature: Browse cases
   In order to browse cases
   As a system identity

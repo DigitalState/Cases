@@ -1,4 +1,4 @@
-@app @api @entity @case_status @add
+@api @case_status @add
 Feature: Add case statuses
   In order to add case statuses
   As a system identity

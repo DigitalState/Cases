@@ -1,4 +1,4 @@
-@app @api @entity @case @delete
+@api @case @delete
 Feature: Delete cases
   In order to delete cases
   As a system identity

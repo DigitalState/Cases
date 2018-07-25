@@ -1,4 +1,4 @@
-@app @api @entity @case_status @delete
+@api @case_status @delete
 Feature: Delete case statuses
   In order to delete case statuses
   As a system identity

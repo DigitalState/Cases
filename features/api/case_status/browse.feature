@@ -1,4 +1,4 @@
-@app @api @entity @case_status @browse
+@api @case_status @browse
 Feature: Browse case statuses
   In order to browse case statuses
   As a system identity
