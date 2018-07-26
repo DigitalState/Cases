@@ -25,6 +25,7 @@ fixtures:
     key:
       - case
       - case_status
+      - metadata
     attributes: [EDIT, ADD, DELETE]
 
   - access: 1ab37071-c780-4f0e-9bbf-5b4a90c09909 # Manager
@@ -34,6 +35,7 @@ fixtures:
     key:
       - case_property
       - case_status_property
+      - metadata_property
     attributes: [EDIT]
 
   - access: 7ab562d6-c039-47e8-977f-34c275c40bc4 # Staff
@@ -45,6 +47,8 @@ fixtures:
       - case_property
       - case_status
       - case_status_property
+      - metadata
+      - metadata_property
     attributes: [BROWSE, READ]
 
   - access: af15fe3c-88f4-4181-b263-21b1c69cf1c4 # Individual
