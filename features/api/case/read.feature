@@ -7,7 +7,7 @@ Feature: Read cases
   Background:
     Given I am authenticated as the "System" identity from the tenant "b6ac25fe-3cd6-4100-a054-6bba2fc9ef18"
 
-  @createSchema @loadFixtures @dropSchema
+  @upMigrations @loadFixtures @downMigrations
   Scenario: Read a case
     When I add "Accept" header equal to "application/json"
     And I send a "GET" request to "/cases/c61f05ce-468f-4b21-ad38-512ea549e210"

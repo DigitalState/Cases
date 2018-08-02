@@ -7,7 +7,7 @@ Feature: Read case statuses
   Background:
     Given I am authenticated as the "System" identity from the tenant "b6ac25fe-3cd6-4100-a054-6bba2fc9ef18"
 
-  @createSchema @loadFixtures @dropSchema
+  @upMigrations @loadFixtures @downMigrations
   Scenario: Read a category
     When I add "Accept" header equal to "application/json"
     And I send a "GET" request to "/case-statuses/300a5225-641e-4cda-b8de-b8515e568cda"
