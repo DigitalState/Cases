@@ -17,6 +17,16 @@ abstract class CaseStatusFixture extends ResourceFixture
      */
     public function load(ObjectManager $manager)
     {
+        $connection = $manager->getConnection();
+        $platform = $connection->getDatabasePlatform()->getName();
+
+        switch ($platform) {
+            case 'postgresql':
+                $connection->exec('ALTER SEQUENCE app_case_status_id_seq RESTART WITH 1');
+                $connection->exec('ALTER SEQUENCE app_case_status_trans_id_seq RESTART WITH 1');
+                break;
+        }
+
         $statuses = $this->parse($this->getResource());
 
         foreach ($statuses as $status) {
