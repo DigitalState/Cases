@@ -5,6 +5,7 @@ The Cases microservice provides a light weight and expandable case/ticketing sys
 [![Build Status](https://travis-ci.org/DigitalState/Cases.svg?branch=develop)](https://travis-ci.org/DigitalState/Cases)
 [![Coverage Status](https://coveralls.io/repos/github/DigitalState/Cases/badge.svg?branch=develop)](https://coveralls.io/github/DigitalState/Cases?branch=develop)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/DigitalState/Cases/badges/quality-score.png?b=develop)](https://scrutinizer-ci.com/g/DigitalState/Cases/?branch=develop)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 ## Table of Contents
 
