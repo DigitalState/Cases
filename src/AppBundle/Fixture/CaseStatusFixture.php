@@ -27,22 +27,23 @@ abstract class CaseStatusFixture extends ResourceFixture
                 break;
         }
 
-        $statuses = $this->parse($this->getResource());
+        $objects = $this->parse($this->getResource());
 
-        foreach ($statuses as $status) {
-            $entity = new CaseStatus;
-            $entity
-                ->setCase($manager->getRepository(CaseEntity::class)->findOneBy(['uuid' => $status->case]))
-                ->setUuid($status->uuid)
-                ->setOwner($status->owner)
-                ->setOwnerUuid($status->owner_uuid)
-                ->setIdentity($status->identity)
-                ->setIdentityUuid($status->identity_uuid)
-                ->setTitle((array) $status->title)
-                ->setDescription((array) $status->description)
-                ->setData((array) $status->data)
-                ->setTenant($status->tenant);
-            $manager->persist($entity);
+        foreach ($objects as $object) {
+            $case = $manager->getRepository(CaseEntity::class)->findOneBy(['uuid' => $object->case]);
+            $status = new CaseStatus;
+            $status
+                ->setCase($case)
+                ->setUuid($object->uuid)
+                ->setOwner($object->owner)
+                ->setOwnerUuid($object->owner_uuid)
+                ->setIdentity($object->identity)
+                ->setIdentityUuid($object->identity_uuid)
+                ->setTitle((array) $object->title)
+                ->setDescription((array) $object->description)
+                ->setData((array) $object->data)
+                ->setTenant($object->tenant);
+            $manager->persist($status);
             $manager->flush();
         }
     }
