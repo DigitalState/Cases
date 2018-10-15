@@ -16,9 +16,7 @@ The Cases microservice provides a light weight and expandable case/ticketing sys
 
 ## Documentation
 
-Documentation...
-
-Further documentation can be found in the [Documentation Repository](https://github.com/DigitalState/Documentation)
+Further documentation can be found in the [Documentation Repository](https://github.com/DigitalState/Documentation).
 
 ## References
 
