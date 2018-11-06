@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.14.1 (2018-11-06)
+
+- Bug [Composer] Fix dependencies to be compatible with backward-breaking composer update
+
 ## 0.14.0 (2018-10-29)
 
 - Feature [Core] Upgrade digitalstate/core dependency to 0.14.0
