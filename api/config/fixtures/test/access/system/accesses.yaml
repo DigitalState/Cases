@@ -1,0 +1,18 @@
+objects:
+  - uuid: 4b41a446-f438-4f30-8049-6c41cb4e54fa
+    owner_uuid: aa18b644-a503-49fa-8f53-10f4c1f8e3a1 # System
+    assignee_uuid: aa18b644-a503-49fa-8f53-10f4c1f8e3a1 # System
+    tenant: b6ac25fe-3cd6-4100-a054-6bba2fc9ef18 # Tenant 1
+
+  - uuid: b7105d2b-b3a0-47f9-9f65-db1d6b31cb5e
+    owner_uuid: 571c4b5f-532e-48ac-aa6a-8099d57d9088 # System
+    assignee_uuid: 571c4b5f-532e-48ac-aa6a-8099d57d9088 # System
+    tenant: 92000deb-b847-4838-915c-b95d2b28e960 # Tenant 2
+
+prototype:
+  uuid: ~
+  owner: System
+  owner_uuid: ~
+  assignee: System
+  assignee_uuid: ~
+  tenant: ~
