@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Fixtures;
+namespace App\Fixture;
 
 use Doctrine\Common\DataFixtures\FixtureInterface;
 use Doctrine\Common\DataFixtures\OrderedFixtureInterface;
@@ -8,9 +8,9 @@ use Ds\Component\Acl\Fixture\Permission;
 use Symfony\Component\DependencyInjection\ContainerAwareInterface;
 
 /**
- * Class Permissions
+ * Class PermissionFixture
  */
-final class Permissions implements FixtureInterface, OrderedFixtureInterface, ContainerAwareInterface
+final class PermissionFixture implements FixtureInterface, OrderedFixtureInterface, ContainerAwareInterface
 {
     use Permission;
 
@@ -19,7 +19,7 @@ final class Permissions implements FixtureInterface, OrderedFixtureInterface, Co
      */
     public function __construct()
     {
-        $this->path = '/srv/api/config/fixtures/{fixtures}/access/*/permissions.yaml';
+        $this->path = '/srv/api/config/fixtures/{fixtures}/access/*/permission.yaml';
     }
 
     /**

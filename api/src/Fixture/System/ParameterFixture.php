@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Fixtures\System;
+namespace App\Fixture\System;
 
 use Doctrine\Common\DataFixtures\FixtureInterface;
 use Doctrine\Common\DataFixtures\OrderedFixtureInterface;
@@ -8,9 +8,9 @@ use Ds\Component\Parameter\Fixture\Parameter;
 use Symfony\Component\DependencyInjection\ContainerAwareInterface;
 
 /**
- * Class Parameters
+ * Class ParameterFixture
  */
-final class Parameters implements FixtureInterface, OrderedFixtureInterface, ContainerAwareInterface
+final class ParameterFixture implements FixtureInterface, OrderedFixtureInterface, ContainerAwareInterface
 {
     use Parameter;
 
@@ -19,7 +19,7 @@ final class Parameters implements FixtureInterface, OrderedFixtureInterface, Con
      */
     public function __construct()
     {
-        $this->path = '/srv/api/config/fixtures/{fixtures}/system/parameters.yaml';
+        $this->path = '/srv/api/config/fixtures/{fixtures}/system/parameter.yaml';
     }
 
     /**

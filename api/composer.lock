@@ -333,12 +333,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/DigitalState/Core.git",
-                "reference": "170ade226710ab10c6ed23fe3c124338f5bad76d"
+                "reference": "4494cebb47cd47206c998481248f1682fa3d045c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/DigitalState/Core/zipball/170ade226710ab10c6ed23fe3c124338f5bad76d",
-                "reference": "170ade226710ab10c6ed23fe3c124338f5bad76d",
+                "url": "https://api.github.com/repos/DigitalState/Core/zipball/4494cebb47cd47206c998481248f1682fa3d045c",
+                "reference": "4494cebb47cd47206c998481248f1682fa3d045c",
                 "shasum": ""
             },
             "require": {

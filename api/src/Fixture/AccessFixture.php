@@ -1,25 +1,25 @@
 <?php
 
-namespace App\Fixtures;
+namespace App\Fixture;
 
 use Doctrine\Common\DataFixtures\FixtureInterface;
 use Doctrine\Common\DataFixtures\OrderedFixtureInterface;
-use Ds\Component\Metadata\Fixture\Metadata;
+use Ds\Component\Acl\Fixture\Access;
 use Symfony\Component\DependencyInjection\ContainerAwareInterface;
 
 /**
- * Class Metadatas
+ * Class AccessFixture
  */
-final class Metadatas implements FixtureInterface, OrderedFixtureInterface, ContainerAwareInterface
+final class AccessFixture implements FixtureInterface, OrderedFixtureInterface, ContainerAwareInterface
 {
-    use Metadata;
+    use Access;
 
     /**
      * Constructor
      */
     public function __construct()
     {
-        $this->path = '/srv/api/config/fixtures/{fixtures}/metadatas.yaml';
+        $this->path = '/srv/api/config/fixtures/{fixtures}/access/*/access.yaml';
     }
 
     /**

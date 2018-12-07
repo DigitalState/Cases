@@ -1,0 +1,84 @@
+objects:
+  - case: 82184661-3aa4-4c68-a130-e07dc2e0d974 # Pothole - 123 Street - Urgent
+    uuid: 21b3b72a-bd1b-4d87-9b28-7768aaea8ae6
+    owner_uuid: a9d68bf7-5000-49fe-8b00-33dde235b327 # Backoffice
+    identity: Individual
+    identity_uuid: d0daa7e4-07d1-47e6-93f2-0629adaa3b49 # Morgan
+    title:
+      en: Request submitted
+      fr: Demande soumise
+    description:
+      en: Description ...
+      fr: Description ...
+
+  - case: 82184661-3aa4-4c68-a130-e07dc2e0d974 # Pothole - 123 Street - Urgent
+    uuid: 1739b92f-9ce9-4f7d-92ff-6314171794b4
+    owner_uuid: a9d68bf7-5000-49fe-8b00-33dde235b327 # Backoffice
+    identity: Individual
+    identity_uuid: d0daa7e4-07d1-47e6-93f2-0629adaa3b49 # Morgan
+    title:
+      en: Request accepted
+      fr: Demande acceptée
+    description:
+      en: Description ...
+      fr: Description ...
+
+  - case: 82184661-3aa4-4c68-a130-e07dc2e0d974 # Pothole - 123 Street - Urgent
+    uuid: 5a438bff-afa9-489d-953f-4524ca0905cb
+    owner_uuid: a9d68bf7-5000-49fe-8b00-33dde235b327 # Backoffice
+    identity: Individual
+    identity_uuid: d0daa7e4-07d1-47e6-93f2-0629adaa3b49 # Morgan
+    title:
+      en: Request under review
+      fr: Demande à l'étude
+    description:
+      en: Description ...
+      fr: Description ...
+
+  - case: 82184661-3aa4-4c68-a130-e07dc2e0d974 # Pothole - 123 Street - Urgent
+    uuid: 0a42016c-c625-4025-becf-b7dc98db44f8
+    owner_uuid: a9d68bf7-5000-49fe-8b00-33dde235b327 # Backoffice
+    identity: Individual
+    identity_uuid: d0daa7e4-07d1-47e6-93f2-0629adaa3b49 # Morgan
+    title:
+      en: Request approved
+      fr: Demande approuvée
+    description:
+      en: Description ...
+      fr: Description ...
+
+  - case: 82184661-3aa4-4c68-a130-e07dc2e0d974 # Pothole - 123 Street - Urgent
+    uuid: 02a74181-c59d-459a-acaf-64c7a597f6b7
+    owner_uuid: a9d68bf7-5000-49fe-8b00-33dde235b327 # Backoffice
+    identity: Individual
+    identity_uuid: d0daa7e4-07d1-47e6-93f2-0629adaa3b49 # Morgan
+    title:
+      en: Request resolved
+      fr: Demande résolue
+    description:
+      en: Description ...
+      fr: Description ...
+
+  - case: 82184661-3aa4-4c68-a130-e07dc2e0d974 # Pothole - 123 Street - Urgent
+    uuid: 40f6af60-b55b-4eee-a8db-71eec55fc8f5
+    owner_uuid: a9d68bf7-5000-49fe-8b00-33dde235b327 # Backoffice
+    identity: Individual
+    identity_uuid: d0daa7e4-07d1-47e6-93f2-0629adaa3b49 # Morgan
+    title:
+      en: Request closed
+      fr: Demande fermée
+    description:
+      en: Description ...
+      fr: Description ...
+
+prototype:
+  case: ~
+  uuid: ~
+  owner: BusinessUnit
+  owner_uuid: ~
+  identity: ~
+  identity_uuid: ~
+  title: {}
+  description: {}
+  data: {}
+  tenant: e5a2120d-6bf7-4c58-a900-bac1e55e986b # Tenant 1

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Fixtures;
+namespace App\Fixture;
 
 use Doctrine\Common\DataFixtures\FixtureInterface;
 use Doctrine\Common\DataFixtures\OrderedFixtureInterface;
@@ -8,9 +8,9 @@ use Ds\Component\Config\Fixture\Config;
 use Symfony\Component\DependencyInjection\ContainerAwareInterface;
 
 /**
- * Class Configs
+ * Class ConfigFixture
  */
-final class Configs implements FixtureInterface, OrderedFixtureInterface, ContainerAwareInterface
+final class ConfigFixture implements FixtureInterface, OrderedFixtureInterface, ContainerAwareInterface
 {
     use Config;
 
@@ -19,7 +19,7 @@ final class Configs implements FixtureInterface, OrderedFixtureInterface, Contai
      */
     public function __construct()
     {
-        $this->path = '/srv/api/config/fixtures/{fixtures}/configs.yaml';
+        $this->path = '/srv/api/config/fixtures/{fixtures}/config.yaml';
     }
 
     /**
