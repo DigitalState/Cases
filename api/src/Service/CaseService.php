@@ -17,7 +17,7 @@ final class CaseService extends EntityService
      * @param \Doctrine\ORM\EntityManagerInterface $manager
      * @param string $entity
      */
-    public function __construct(EntityManagerInterface $manager, $entity = CaseEntity::class)
+    public function __construct(EntityManagerInterface $manager, string $entity = CaseEntity::class)
     {
         parent::__construct($manager, $entity);
     }
