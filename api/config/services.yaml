@@ -28,15 +28,15 @@ services:
     arguments:
       - App\Entity\CaseStatus
 
-  AppBundle\Stat\CaseEntity\CountStat:
+  App\Stat\CaseEntity\CountStat:
     tags:
       - { name: ds_statistic.stat, alias: case.count }
 
-  AppBundle\Stat\CaseEntity\Count\State\ClosedStat:
+  App\Stat\CaseEntity\Count\State\ClosedStat:
     tags:
       - { name: ds_statistic.stat, alias: case.count.state.closed }
 
-  AppBundle\Stat\CaseEntity\Count\State\OpenStat:
+  App\Stat\CaseEntity\Count\State\OpenStat:
     tags:
       - { name: ds_statistic.stat, alias: case.count.state.open }
 
