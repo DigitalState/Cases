@@ -4,6 +4,7 @@
 
 - Feature [Composer] Upgrade apip dependency to 2.3.4
 - Feature [Fixture] Separate sequence reset fixture from entity fixture
+- Feature [Tests] Add wider range of behat tests
 - Feature [App] Case Status entity path changed from `case-statuses` to `case_statuses`
 
 ## 0.14.1 (2018-11-06)
