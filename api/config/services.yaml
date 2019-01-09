@@ -40,7 +40,7 @@ services:
     tags:
       - { name: ds_statistic.stat, alias: case.count.state.open }
 
-  App\Tenant\Loader\AccessLoader:
+  App\Tenant\Loader\AclLoader:
     tags:
       - { name: ds_tenant.loader }
 
