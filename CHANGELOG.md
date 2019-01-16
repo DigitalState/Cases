@@ -2,10 +2,12 @@
 
 ## 0.15.0
 
-- Feature [Composer] Upgrade apip dependency to 2.3.4
+- Feature [Composer] Upgrade apip dependency to 2.3.6
+- Feature [Composer] Upgrade symfony dependency to 4.2.0
 - Feature [Fixture] Separate sequence reset fixture from entity fixture
 - Feature [Tests] Add wider range of behat tests
 - Feature [App] Case Status entity path changed from `case-statuses` to `case_statuses`
+- Feature [Api] Rename pagination query parameters to `_page` and `_limit`
 
 ## 0.14.1 (2018-11-06)
 
