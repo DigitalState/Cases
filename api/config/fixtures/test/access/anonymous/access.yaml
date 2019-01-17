@@ -1,4 +1,21 @@
-objects: []
+objects:
+  - uuid: d09447da-0f24-4f14-8e85-36fb8b969b91
+    owner_uuid: 325e1004-8516-4ca9-a4d3-d7505bd9a7fe # Administration
+    tenant: b6ac25fe-3cd6-4100-a054-6bba2fc9ef18 # Tenant 1
+
+  - uuid: 6291ca40-a7f5-4e55-9e35-1567eee831eb
+    owner_uuid: 325e1004-8516-4ca9-a4d3-d7505bd9a7fe # Administration
+    assignee_uuid: ad1a4ee4-b707-4135-b8e9-498286d5830c # Anonymous
+    tenant: b6ac25fe-3cd6-4100-a054-6bba2fc9ef18 # Tenant 1
+
+  - uuid: dacf9e75-5a5e-45d7-a6c0-6beaec251a0b
+    owner_uuid: 72ecd949-6960-4d9d-8baa-3dc15c2cbd63 # Administration
+    tenant: 92000deb-b847-4838-915c-b95d2b28e960 # Tenant 2
+
+  - uuid: b20fd2f3-9699-43e8-bfc8-965659775d36
+    owner_uuid: 72ecd949-6960-4d9d-8baa-3dc15c2cbd63 # Administration
+    assignee_uuid: 7fd2e84f-b8d6-435d-9339-127e244e8fd0 # Anonymous
+    tenant: 92000deb-b847-4838-915c-b95d2b28e960 # Tenant 2
 
 prototype:
   uuid: ~
