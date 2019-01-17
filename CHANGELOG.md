@@ -8,6 +8,7 @@
 - Feature [Tests] Add wider range of behat tests
 - Feature [App] Case Status entity path changed from `case-statuses` to `case_statuses`
 - Feature [Api] Rename pagination query parameters to `_page` and `_limit`
+- Feature [Config] Config api filter `key` changed from `partial` to `exact` strategy
 
 ## 0.14.1 (2018-11-06)
 
