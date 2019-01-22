@@ -7,7 +7,7 @@ objects:
     title:
       en: Pothole - 123 Street - Urgent
       fr: Nid-de-poule - 123 rue - urgent
-    state: open
+    state: 1 # open
     tenant: b6ac25fe-3cd6-4100-a054-6bba2fc9ef18 # Tenant 1
 
   - uuid: bab73a48-659b-4543-91c0-6cd606e50ccf
@@ -18,7 +18,7 @@ objects:
     title:
       en: Pothole - Quality Review
       fr: Nid-de-poule - Examen de la qualité
-    state: open
+    state: 1 # open
     tenant: b6ac25fe-3cd6-4100-a054-6bba2fc9ef18 # Tenant 1
 
   - uuid: d866ac13-4488-47e8-80fd-dbe79822dd5e
@@ -29,7 +29,7 @@ objects:
     title:
       en: Pothole - 123 Street - Urgent
       fr: Nid-de-poule - 123 rue - urgent
-    state: open
+    state: 1 # open
     tenant: 92000deb-b847-4838-915c-b95d2b28e960 # Tenant 2
 
   - uuid: f3a611cc-8663-4156-b213-5aebd0706fa8
@@ -40,7 +40,7 @@ objects:
     title:
       en: Pothole - Quality Review
       fr: Nid-de-poule - Examen de la qualité
-    state: open
+    state: 1 # open
     tenant: 92000deb-b847-4838-915c-b95d2b28e960 # Tenant 2
 
 prototype:

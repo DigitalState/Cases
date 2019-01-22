@@ -7,7 +7,7 @@ objects:
     title:
       en: Pothole - 123 Street - Urgent
       fr: Nid-de-poule - 123 rue - urgent
-    state: open
+    state: 1 # open
 
   - uuid: 788e4c03-b97b-4f5c-8024-cd128121ca11
     custom_id: GOV-788e4c03
@@ -17,7 +17,7 @@ objects:
     title:
       en: Pothole - Quality Review
       fr: Nid-de-poule - Examen de la qualité
-    state: open
+    state: 1 # open
 
 prototype:
   uuid: ~

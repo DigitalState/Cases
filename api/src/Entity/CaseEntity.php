@@ -84,8 +84,8 @@ class CaseEntity implements Identifiable, Uuidentifiable, CustomIdentifiable, Ow
     /**
      * @const string
      */
-    const STATE_OPEN = 'open';
-    const STATE_CLOSED = 'closed';
+    const STATE_OPEN = 1;
+    const STATE_CLOSED = 2;
 
     /**
      * Returns translation entity class name
