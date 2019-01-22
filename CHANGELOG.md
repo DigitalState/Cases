@@ -9,6 +9,7 @@
 - Feature [App] Case Status entity path changed from `case-statuses` to `case_statuses`
 - Feature [Api] Rename pagination query parameters to `_page` and `_limit`
 - Feature [Config] Config api filter `key` changed from `partial` to `exact` strategy
+- Feature [Entity] Converted case state property to integer
 
 ## 0.14.1 (2018-11-06)
 
