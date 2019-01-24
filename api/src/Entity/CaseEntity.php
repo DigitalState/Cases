@@ -218,9 +218,8 @@ class CaseEntity implements Identifiable, Uuidentifiable, CustomIdentifiable, Ow
      * @var string
      * @ApiProperty
      * @Serializer\Groups({"case_output", "case_input"})
-     * @ORM\Column(name="state", type="string", length=255, nullable=true)
-     * @Assert\NotBlank
-     * @Assert\Length(min=1, max=255)
+     * @ORM\Column(name="state", type="integer", options={"default":0})
+     * @Assert\Type("integer")
      */
     private $state;
 
