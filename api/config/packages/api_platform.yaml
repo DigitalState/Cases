@@ -38,7 +38,7 @@ services:
   app.filter.case.search_translation:
     parent: ds_translation.doctrine.orm.filter.search
     arguments:
-      - title: partial
+      - title: ipartial
     tags:
       - { name: api_platform.filter, id: app.case.search_translation }
 
@@ -80,8 +80,8 @@ services:
   app.filter.case_status.search_translation:
     parent: ds_translation.doctrine.orm.filter.search
     arguments:
-      - title: partial
-        description: partial
+      - title: ipartial
+        description: ipartial
     tags:
       - { name: api_platform.filter, id: app.case_status.search_translation }
 
