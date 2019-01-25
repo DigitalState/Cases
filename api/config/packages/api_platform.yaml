@@ -32,6 +32,7 @@ services:
         ownerUuid: exact
         identity: exact
         identityUuid: exact
+        state: exact
     tags:
       - { name: api_platform.filter, id: app.case.search }
 
