@@ -1,24 +1,24 @@
-@api @security @firewall @metadata @deny
-Feature: Deny access to non-authenticated users to metadata endpoints
+@api @security @firewall @case_status
+Feature: Deny access to non-authenticated users to case status endpoints
 
-  Scenario: Browse metadata
+  Scenario: Browse case statuses
     When I add "Accept" header equal to "application/json"
-    And I send a "GET" request to "/metadata"
+    And I send a "GET" request to "/case_statuses"
     Then the response status code should be 401
     And the header "Content-Type" should be equal to "application/json"
     And the response should be in JSON
 
-  Scenario: Read a metadata
+  Scenario: Read a case status
     When I add "Accept" header equal to "application/json"
-    And I send a "GET" request to "/metadata/7d737f2c-253a-4e47-a419-183978af573a"
+    And I send a "GET" request to "/case_statuses/c61f05ce-468f-4b21-ad38-512ea549e210"
     Then the response status code should be 401
     And the header "Content-Type" should be equal to "application/json"
     And the response should be in JSON
 
-  Scenario: Add a metadata
+  Scenario: Add a case status
     When I add "Accept" header equal to "application/json"
     And I add "Content-Type" header equal to "application/json"
-    And I send a "POST" request to "/metadata" with body:
+    And I send a "POST" request to "/case_statuses" with body:
     """
     {}
     """
@@ -26,10 +26,10 @@ Feature: Deny access to non-authenticated users to metadata endpoints
     And the header "Content-Type" should be equal to "application/json"
     And the response should be in JSON
 
-  Scenario: Edit a metadata
+  Scenario: Edit a case status
     When I add "Accept" header equal to "application/json"
     And I add "Content-Type" header equal to "application/json"
-    And I send a "PUT" request to "/metadata/7d737f2c-253a-4e47-a419-183978af573a" with body:
+    And I send a "PUT" request to "/case_statuses/c61f05ce-468f-4b21-ad38-512ea549e210" with body:
     """
     {}
     """
@@ -37,9 +37,9 @@ Feature: Deny access to non-authenticated users to metadata endpoints
     And the header "Content-Type" should be equal to "application/json"
     And the response should be in JSON
 
-  Scenario: Delete a metadata
+  Scenario: Delete a case status
     When I add "Accept" header equal to "application/json"
-    And I send a "DELETE" request to "/metadata/c61f05ce-468f-4b21-ad38-512ea549e210"
+    And I send a "DELETE" request to "/case_statuses/c61f05ce-468f-4b21-ad38-512ea549e210"
     Then the response status code should be 401
     And the header "Content-Type" should be equal to "application/json"
     And the response should be in JSON

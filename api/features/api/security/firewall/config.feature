@@ -1,24 +1,35 @@
-@api @security @firewall @case_status @deny
-Feature: Deny access to non-authenticated users to case status endpoints
+@api @security @firewall @config
+Feature: Deny access to non-authenticated users to config endpoints
 
-  Scenario: Browse case statuses
+  Scenario: Browse configs
     When I add "Accept" header equal to "application/json"
-    And I send a "GET" request to "/case_statuses"
+    And I send a "GET" request to "/configs"
     Then the response status code should be 401
     And the header "Content-Type" should be equal to "application/json"
     And the response should be in JSON
 
-  Scenario: Read a case status
+  Scenario: Read a config
     When I add "Accept" header equal to "application/json"
-    And I send a "GET" request to "/case_statuses/c61f05ce-468f-4b21-ad38-512ea549e210"
+    And I send a "GET" request to "/configs/be5aea6f-7763-4418-b337-28eff7757fec"
     Then the response status code should be 401
     And the header "Content-Type" should be equal to "application/json"
     And the response should be in JSON
 
-  Scenario: Add a case status
+  Scenario: Add a config
     When I add "Accept" header equal to "application/json"
     And I add "Content-Type" header equal to "application/json"
-    And I send a "POST" request to "/case_statuses" with body:
+    And I send a "POST" request to "/configs" with body:
+    """
+    {}
+    """
+    Then the response status code should be 405
+    And the header "Content-Type" should be equal to "application/json"
+    And the response should be in JSON
+
+  Scenario: Edit a config
+    When I add "Accept" header equal to "application/json"
+    And I add "Content-Type" header equal to "application/json"
+    And I send a "PUT" request to "/configs/be5aea6f-7763-4418-b337-28eff7757fec" with body:
     """
     {}
     """
@@ -26,20 +37,9 @@ Feature: Deny access to non-authenticated users to case status endpoints
     And the header "Content-Type" should be equal to "application/json"
     And the response should be in JSON
 
-  Scenario: Edit a case status
+  Scenario: Delete a config
     When I add "Accept" header equal to "application/json"
-    And I add "Content-Type" header equal to "application/json"
-    And I send a "PUT" request to "/case_statuses/c61f05ce-468f-4b21-ad38-512ea549e210" with body:
-    """
-    {}
-    """
-    Then the response status code should be 401
-    And the header "Content-Type" should be equal to "application/json"
-    And the response should be in JSON
-
-  Scenario: Delete a case status
-    When I add "Accept" header equal to "application/json"
-    And I send a "DELETE" request to "/case_statuses/c61f05ce-468f-4b21-ad38-512ea549e210"
-    Then the response status code should be 401
+    And I send a "DELETE" request to "/configs/be5aea6f-7763-4418-b337-28eff7757fec"
+    Then the response status code should be 405
     And the header "Content-Type" should be equal to "application/json"
     And the response should be in JSON

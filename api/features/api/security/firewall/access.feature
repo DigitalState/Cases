@@ -1,4 +1,4 @@
-@api @security @firewall @access @deny
+@api @security @firewall @access
 Feature: Deny access to non-authenticated users to access endpoints
 
   Scenario: Browse accesses
@@ -15,10 +15,10 @@ Feature: Deny access to non-authenticated users to access endpoints
     And the header "Content-Type" should be equal to "application/json"
     And the response should be in JSON
 
-  Scenario: Add an access
+  Scenario: Edit an access
     When I add "Accept" header equal to "application/json"
     And I add "Content-Type" header equal to "application/json"
-    And I send a "POST" request to "/accesses" with body:
+    And I send a "PUT" request to "/accesses/4b41a446-f438-4f30-8049-6c41cb4e54fa" with body:
     """
     {}
     """
@@ -26,10 +26,10 @@ Feature: Deny access to non-authenticated users to access endpoints
     And the header "Content-Type" should be equal to "application/json"
     And the response should be in JSON
 
-  Scenario: Edit an access
+  Scenario: Add an access
     When I add "Accept" header equal to "application/json"
     And I add "Content-Type" header equal to "application/json"
-    And I send a "PUT" request to "/accesses/4b41a446-f438-4f30-8049-6c41cb4e54fa" with body:
+    And I send a "POST" request to "/accesses" with body:
     """
     {}
     """
