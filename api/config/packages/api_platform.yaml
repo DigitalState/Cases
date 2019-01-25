@@ -61,6 +61,7 @@ services:
         deletedAt: ~
         owner: ~
         identity: ~
+        state: ~
     tags:
       - { name: api_platform.filter, id: app.case.order }
 
