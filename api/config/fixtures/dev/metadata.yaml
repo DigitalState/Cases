@@ -1,4 +1,14 @@
-objects: []
+objects:
+  - uuid: c6615717-75c0-43a6-8088-bea075dffb2f
+    owner_uuid: a9d68bf7-5000-49fe-8b00-33dde235b327 # Backoffice
+    title:
+      en: Case States
+      fr: États de cas
+    slug: case-states
+    type: case
+    data:
+      1: Open
+      2: Closed
 
 prototype:
   uuid: ~
