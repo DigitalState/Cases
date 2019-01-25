@@ -4,7 +4,7 @@ Feature: Deny access to cases belonging to other tenants
   Background:
     Given I am authenticated as the "system@system.ds" user from the tenant "b6ac25fe-3cd6-4100-a054-6bba2fc9ef18"
 
-  Scenario: Browse accesses from your own tenant
+  Scenario: Browse cases from your own tenant
     When I add "Accept" header equal to "application/json"
     And I send a "GET" request to "/cases"
     Then the response status code should be 200
@@ -49,7 +49,7 @@ Feature: Deny access to cases belonging to other tenants
 
   Scenario: Delete a case from another tenant
     When I add "Accept" header equal to "application/json"
-    And I send a "DELETE" request to "/accesses/d866ac13-4488-47e8-80fd-dbe79822dd5e"
+    And I send a "DELETE" request to "/cases/d866ac13-4488-47e8-80fd-dbe79822dd5e"
     Then the response status code should be 404
     And the header "Content-Type" should be equal to "application/json"
     And the response should be in JSON
