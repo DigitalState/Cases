@@ -43,8 +43,11 @@ Feature: Add accesses
     Then the response status code should be 200
     And the header "Content-Type" should be equal to "application/json; charset=utf-8"
     And the response should be in JSON
-    And the response should be in JSON
     And the JSON should be valid according to this schema:
     """
-    { "type": "array", "minItems": 1, "maxItems": 1 }
+    {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 1
+    }
     """

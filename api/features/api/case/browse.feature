@@ -340,7 +340,6 @@ Feature: Browse cases
     Then the response status code should be 200
     And the header "Content-Type" should be equal to "application/json; charset=utf-8"
     And the response should be in JSON
-    And print last JSON response
     And the JSON should be valid according to this schema:
     """
     {
