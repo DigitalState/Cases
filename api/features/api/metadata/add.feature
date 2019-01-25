@@ -18,7 +18,9 @@ Feature: Add metadata
       },
       "slug": "slug-add",
       "type": "type-add",
-      "data": {},
+      "data": {
+        "value": "value-add"
+      },
       "version": 1
     }
     """
@@ -44,6 +46,9 @@ Feature: Add metadata
     And the JSON node "slug" should be equal to "slug-add"
     And the JSON node "type" should exist
     And the JSON node "type" should be equal to "type-add"
+    And the JSON node "data" should exist
+    And the JSON node "data.value" should exist
+    And the JSON node "data.value" should be equal to "value-add"
     And the JSON node "version" should exist
     And the JSON node "version" should be equal to the number 1
     And the JSON node "tenant" should exist
