@@ -1,38 +1,35 @@
-@api @case @read
-Feature: Read cases
+@api @metadata @read
+Feature: Read metadata
 
   Background:
     Given I am authenticated as the "system@system.ds" user from the tenant "b6ac25fe-3cd6-4100-a054-6bba2fc9ef18"
 
-  Scenario: Read a case
+  Scenario: Read a service
     When I add "Accept" header equal to "application/json"
-    And I send a "GET" request to "/cases/c61f05ce-468f-4b21-ad38-512ea549e210"
+    And I send a "GET" request to "/metadata/7d737f2c-253a-4e47-a419-183978af573a"
     Then the response status code should be 200
     And the header "Content-Type" should be equal to "application/json; charset=utf-8"
     And the response should be in JSON
     And the JSON node "id" should exist
     And the JSON node "id" should be equal to the number 1
     And the JSON node "uuid" should exist
-    And the JSON node "uuid" should be equal to the string "c61f05ce-468f-4b21-ad38-512ea549e210"
-    And the JSON node "customId" should exist
-    And the JSON node "customId" should be equal to the string "GOV-c61f05ce"
+    And the JSON node "uuid" should be equal to the string "7d737f2c-253a-4e47-a419-183978af573a"
     And the JSON node "createdAt" should exist
     And the JSON node "updatedAt" should exist
     And the JSON node "deletedAt" should exist
-    And the JSON node "deletedAt" should be null
     And the JSON node "owner" should exist
     And the JSON node "owner" should be equal to the string "BusinessUnit"
     And the JSON node "ownerUuid" should exist
-    And the JSON node "ownerUuid" should be equal to the string "83bf8f26-7181-4bed-92f3-3ce5e4c286d7"
-    And the JSON node "identity" should exist
-    And the JSON node "identity" should be equal to the string "Individual"
-    And the JSON node "identityUuid" should exist
-    And the JSON node "identityUuid" should be equal to the string "9ce3bdb9-47e1-43c9-81ee-0dcc2106ba42"
+    And the JSON node "ownerUuid" should be equal to the string "325e1004-8516-4ca9-a4d3-d7505bd9a7fe"
     And the JSON node "title" should exist
     And the JSON node "title.en" should exist
-    And the JSON node "title.en" should be equal to "Pothole - 123 Street - Urgent"
+    And the JSON node "title.en" should be equal to "Acl Scopes"
     And the JSON node "title.fr" should exist
-    And the JSON node "title.fr" should be equal to "Nid-de-poule - 123 rue - urgent"
+    And the JSON node "title.fr" should be equal to "Portée acl"
+    And the JSON node "slug" should exist
+    And the JSON node "slug" should be equal to "acl-scopes"
+    And the JSON node "type" should exist
+    And the JSON node "type" should be equal to "acl"
     And the JSON node "data" should exist
     And the JSON node "version" should exist
     And the JSON node "version" should be equal to the number 1
