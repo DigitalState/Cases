@@ -1,0 +1,21 @@
+objects:
+  - uuid: c6615717-75c0-43a6-8088-bea075dffb2f
+    owner_uuid: a9d68bf7-5000-49fe-8b00-33dde235b327 # Backoffice
+    title:
+      en: Case States
+      fr: États de cas
+    slug: case-states
+    type: case
+    data:
+      1: Open
+      2: Closed
+
+prototype:
+  uuid: ~
+  owner: BusinessUnit
+  owner_uuid: c11c546e-bd01-47cf-97da-e25388357b5a # Administration
+  title: {}
+  slug: ~
+  type: ~
+  data: {}
+  tenant: e5a2120d-6bf7-4c58-a900-bac1e55e986b # Tenant 1

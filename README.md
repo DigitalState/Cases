@@ -1,6 +1,6 @@
 # Cases
 
-The Cases microservice provides a light weight and expandable case/ticketing system.
+The DigitalState Cases Microservice
 
 [![Build Status](https://travis-ci.org/DigitalState/Cases.svg?branch=develop)](https://travis-ci.org/DigitalState/Cases)
 [![Coverage Status](https://coveralls.io/repos/github/DigitalState/Cases/badge.svg?branch=develop)](https://coveralls.io/github/DigitalState/Cases?branch=develop)
@@ -20,10 +20,10 @@ Further documentation can be found in the [Documentation Repository](https://git
 
 ## References
 
-- [Api](references/api.md)
-- [Configurations](references/configurations.md)
-- [Permissions](references/permissions.md)
-- [Docker](references/docker.md)
+- [Api](reference/api.md)
+- [Configurations](reference/configurations.md)
+- [Permissions](reference/permissions.md)
+- [Docker](reference/docker.md)
 
 ## Contributing
 
