@@ -118,8 +118,8 @@ class CaseEntity implements Identifiable, Uuidentifiable, CustomIdentifiable, Ow
 
     /**
      * @var string
-     * @ApiProperty(writable=false)
-     * @Serializer\Groups({"case_output"})
+     * @ApiProperty
+     * @Serializer\Groups({"case_output", "case_input"})
      * @ORM\Column(name="custom_id", type="string", length=255, nullable=true)
      */
     private $customId;
