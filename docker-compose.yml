@@ -15,10 +15,7 @@ services:
           - cases_database
 
   php:
-    image: digitalstate/cases-php
-    build:
-      context: ./api
-      target: api_platform_php
+    image: digitalstate/cases:php-0.16.0
     depends_on:
       - database
     env_file:
@@ -44,10 +41,7 @@ services:
           - cases_php
 
   api:
-    image: digitalstate/cases-api
-    build:
-      context: ./api
-      target: api_platform_nginx
+    image: digitalstate/cases:api-0.16.0
     depends_on:
       - php
     networks:
