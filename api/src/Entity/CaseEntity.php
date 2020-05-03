@@ -238,6 +238,7 @@ class CaseEntity implements Identifiable, Uuidentifiable, CustomIdentifiable, Ow
      * @ApiProperty(writable=false)
      * @Serializer\Groups({"case_output", "case_input"})
      * @ORM\OneToMany(targetEntity="CaseStatus", mappedBy="case")
+     * @ORM\OrderBy({"id"="ASC"})
      * @ORM\Cache(usage="NONSTRICT_READ_WRITE")
      */
     private $statuses;
