@@ -15,7 +15,7 @@ services:
           - cases_database
 
   php:
-    image: digitalstate/cases:php-0.18.1
+    image: digitalstate/cases:php-0.18.2
     depends_on:
       - database
     env_file:
@@ -44,7 +44,7 @@ services:
           - cases_php
 
   api:
-    image: digitalstate/cases:api-0.18.1
+    image: digitalstate/cases:api-0.18.2
     depends_on:
       - php
     networks:
