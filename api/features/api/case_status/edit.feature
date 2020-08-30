@@ -10,6 +10,7 @@ Feature: Edit case statuses
     And I send a "PUT" request to "/case_statuses/300a5225-641e-4cda-b8de-b8515e568cda" with body:
     """
     {
+      "createdAt": "2000-01-01 12:00:00",
       "identityUuid": "683153c6-9d82-43f3-a9f3-6f49890a0500",
       "title": {
         "en": "Request submitted - edit",
@@ -33,6 +34,7 @@ Feature: Edit case statuses
     Then the response status code should be 200
     And the header "Content-Type" should be equal to "application/json; charset=utf-8"
     And the response should be in JSON
+    And the JSON node "createdAt" should be equal to the string "2000-01-01T12:00:00+00:00"
     And the JSON node "identityUuid" should be equal to "683153c6-9d82-43f3-a9f3-6f49890a0500"
     And the JSON node "title.en" should be equal to "Request submitted - edit"
     And the JSON node "title.fr" should be equal to "Demande soumise - edit"
@@ -48,6 +50,7 @@ Feature: Edit case statuses
     Then the response status code should be 200
     And the header "Content-Type" should be equal to "application/json; charset=utf-8"
     And the response should be in JSON
+    And the JSON node "createdAt" should be equal to the string "2000-01-01T12:00:00+00:00"
     And the JSON node "identityUuid" should be equal to "683153c6-9d82-43f3-a9f3-6f49890a0500"
     And the JSON node "title.en" should be equal to "Request submitted - edit"
     And the JSON node "title.fr" should be equal to "Demande soumise - edit"
@@ -65,7 +68,6 @@ Feature: Edit case statuses
     {
       "id": 9999,
       "uuid": "ce0bc895-8d99-4133-9223-a5d24cadf273",
-      "createdAt":"2000-01-01T12:00:00+00:00",
       "updatedAt":"2000-01-01T12:00:00+00:00",
       "deletedAt":"2000-01-01T12:00:00+00:00",
       "tenant": "3f773232-65ca-4eaf-abdd-513a8eb2ef71"
@@ -76,7 +78,6 @@ Feature: Edit case statuses
     And the response should be in JSON
     And the JSON node "id" should be equal to the number 1
     And the JSON node "uuid" should be equal to the string "300a5225-641e-4cda-b8de-b8515e568cda"
-    And the JSON node "createdAt" should not contain "2000-01-01T12:00:00+00:00"
     And the JSON node "updatedAt" should not contain "2000-01-01T12:00:00+00:00"
     And the JSON node "deletedAt" should not contain "2000-01-01T12:00:00+00:00"
     And the JSON node "tenant" should be equal to "b6ac25fe-3cd6-4100-a054-6bba2fc9ef18"
@@ -89,7 +90,6 @@ Feature: Edit case statuses
     And the response should be in JSON
     And the JSON node "id" should be equal to the number 1
     And the JSON node "uuid" should be equal to the string "300a5225-641e-4cda-b8de-b8515e568cda"
-    And the JSON node "createdAt" should not contain "2000-01-01T12:00:00+00:00"
     And the JSON node "updatedAt" should not contain "2000-01-01T12:00:00+00:00"
     And the JSON node "deletedAt" should not contain "2000-01-01T12:00:00+00:00"
     And the JSON node "tenant" should be equal to "b6ac25fe-3cd6-4100-a054-6bba2fc9ef18"

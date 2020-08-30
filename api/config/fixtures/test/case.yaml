@@ -46,6 +46,7 @@ objects:
 prototype:
   uuid: ~
   custom_id: ~
+  created_at: ~
   owner: BusinessUnit
   owner_uuid: ~
   identity: ~

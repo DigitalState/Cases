@@ -11,6 +11,7 @@ Feature: Add case statuses
     """
     {
       "case": "/cases/c61f05ce-468f-4b21-ad38-512ea549e210",
+      "createdAt": "2000-01-01 12:00:00",
       "owner": "BusinessUnit",
       "ownerUuid": "83bf8f26-7181-4bed-92f3-3ce5e4c286d7",
       "identity": "Individual",
@@ -41,6 +42,7 @@ Feature: Add case statuses
     And the JSON node "id" should be equal to the number 13
     And the JSON node "uuid" should exist
     And the JSON node "createdAt" should exist
+    And the JSON node "createdAt" should be equal to the string "2000-01-01T12:00:00+00:00"
     And the JSON node "updatedAt" should exist
     And the JSON node "deletedAt" should exist
     And the JSON node "deletedAt" should be null

@@ -3,6 +3,7 @@
 namespace App\Fixture;
 
 use App\Entity\CaseEntity;
+use DateTime;
 use Doctrine\Common\Persistence\ObjectManager;
 use Ds\Component\Database\Fixture\Yaml;
 
@@ -39,6 +40,13 @@ trait CaseTrait
                 ->setState($object->state)
                 ->setPriority($object->priority)
                 ->setTenant($object->tenant);
+
+            if (null !== $object->created_at) {
+                $date = new DateTime;
+                $date->setTimestamp($object->created_at);
+                $case->setCreatedAt($date);
+            }
+
             $manager->persist($case);
             $this->setReference($object->uuid, $case);
         }

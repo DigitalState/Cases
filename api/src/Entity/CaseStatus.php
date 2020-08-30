@@ -91,8 +91,9 @@ class CaseStatus implements Identifiable, Uuidentifiable, Ownable, Translatable,
 
     /**
      * @var \DateTime
-     * @ApiProperty(writable=false)
-     * @Serializer\Groups({"case_status_output"})
+     * @ApiProperty
+     * @Serializer\Groups({"case_status_output", "case_status_input"})
+     * @Assert\DateTime
      */
     protected $createdAt;
 
