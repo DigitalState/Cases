@@ -126,8 +126,9 @@ class CaseEntity implements Identifiable, Uuidentifiable, CustomIdentifiable, Ow
 
     /**
      * @var \DateTime
-     * @ApiProperty(writable=false)
-     * @Serializer\Groups({"case_output"})
+     * @ApiProperty
+     * @Serializer\Groups({"case_output", "case_input"})
+     * @Assert\DateTime
      */
     protected $createdAt;
 

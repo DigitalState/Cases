@@ -4,6 +4,7 @@ namespace App\Fixture;
 
 use App\Entity\CaseEntity;
 use App\Entity\CaseStatus as CaseStatusEntity;
+use DateTime;
 use Doctrine\Common\Persistence\ObjectManager;
 use Ds\Component\Database\Fixture\Yaml;
 use LogicException;
@@ -46,6 +47,13 @@ trait CaseStatus
                 ->setDescription((array) $object->description)
                 ->setData((array) $object->data)
                 ->setTenant($object->tenant);
+
+            if (null !== $object->created_at) {
+                $date = new DateTime;
+                $date->setTimestamp($object->created_at);
+                $status->setCreatedAt($date);
+            }
+
             $manager->persist($status);
         }
 

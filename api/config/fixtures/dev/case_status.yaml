@@ -74,6 +74,7 @@ objects:
 prototype:
   case: ~
   uuid: ~
+  created_at: ~
   owner: BusinessUnit
   owner_uuid: ~
   identity: ~
